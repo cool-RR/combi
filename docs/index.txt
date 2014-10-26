@@ -1,0 +1,38 @@
+..
+   Copyright 2009-2015 Ram Rachum. This work is licensed under a Creative
+   Commons Attribution-ShareAlike 3.0 Unported License, with attribution to
+   "Ram Rachum at ram.rachum.com" including link. The license may be obtained
+   at http://creativecommons.org/licenses/by-sa/3.0/
+
+.. _index:
+
+=======================
+The Combi Documentation
+=======================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+   
+   topics/index
+   misc/index
+   
+   ..
+      ref/index
+
+This documentation is still incomplete. If you have any questions or feedback,
+say hello on the `mailing list`_!
+      
+-------------------------------------------------------------------------------
+
+The Combi repository is at: https://github.com/cool-RR/combi
+
+Feel free to fork and send pull requests!
+
+
+
+.. _mailing list: https://groups.google.com/forum/#!forum/combi-users
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`

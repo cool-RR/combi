@@ -1,0 +1,24 @@
+..
+   Copyright 2009-2015 Ram Rachum. This work is licensed under a Creative
+   Commons Attribution-ShareAlike 3.0 Unported License, with attribution to
+   "Ram Rachum at ram.rachum.com" including link. The license may be obtained
+   at http://creativecommons.org/licenses/by-sa/3.0/
+
+.. _misc-mailing-lists:
+
+=============
+Mailing Lists
+=============
+
+There are three Combi groups, a.k.a. mailing lists:
+
+- If you need help with Combi, post a message on `the combi-users
+  Google Group <https://groups.google.com/forum/#!forum/combi-users>`_.
+
+- If you want to help on the development of Combi itself, come say
+  hello on `the combi-dev Google Group
+  <https://groups.google.com/forum/#!forum/combi-dev>`_.
+
+- If you want to be informed on new releases of the Python Toolbox, sign up for
+  `the low-traffic combi-announce Google Group
+  <https://groups.google.com/forum/#!forum/combi-announce>`_.

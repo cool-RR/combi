@@ -1,0 +1,30 @@
+..
+   Copyright 2009-2015 Ram Rachum. This work is licensed under a Creative
+   Commons Attribution-ShareAlike 3.0 Unported License, with attribution to
+   "Ram Rachum at ram.rachum.com" including link. The license may be obtained
+   at http://creativecommons.org/licenses/by-sa/3.0/
+
+.. _installation:
+
+================
+Installing Combi
+================
+
+Requirements
+============
+
+* Python, version 2.7 or 3.3 or above. If you're new to Python, `download
+  the newest version from here <http://python.org/download>`_.
+ 
+* `Setuptools`_.
+
+
+Installation
+============
+
+The simplest way to install the Python Toolbox is using `pip`_:
+
+* ``pip install combi``
+
+.. _pip: http://pypi.python.org/pypi/pip
+.. _distribute: http://pypi.python.org/pypi/distribute

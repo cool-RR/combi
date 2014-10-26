@@ -1,0 +1,52 @@
+#!wing
+#!version=5.0
+##################################################################
+# Wing IDE project file                                          #
+##################################################################
+[project attributes]
+debug.launch-configs = (1,
+                        {'launch-OHU716PSo2P5T54y': ({},
+        {'buildcmd': ('default',
+                      None),
+         'env': ('project',
+                 [u'']),
+         'name': u'Launch Config 1',
+         'pyexec': ('default',
+                    u''),
+         'pypath': ('default',
+                    ''),
+         'pyrunargs': ('project',
+                       u''),
+         'runargs': u'',
+         'rundir': ('default',
+                    u'')})})
+proj.directory-list = [{'dirloc': loc('../../..'),
+                        'excludes': [u'dist',
+                                     u'source_py2',
+                                     u'.coverage_html_report',
+                                     u'build',
+                                     u'source_py3/.coverage_html_report',
+                                     u'nosetests.xml',
+                                     u'docs/_build',
+                                     u'combi.egg-info'],
+                        'filter': '*',
+                        'include_hidden': False,
+                        'recursive': True,
+                        'watch_for_changes': True}]
+proj.file-type = 'shared'
+proj.home-dir = loc('../../..')
+proj.shared-attribute-names = ['proj.shared-attribute-names',
+                               'proj.directory-list',
+                               'proj.file-list',
+                               'proj.file-type',
+                               'proj.main-file',
+                               'proj.home-dir',
+                               'testing.auto-test-file-specs',
+                               'testing.test-file-list',
+                               'testing.test-framework',
+                               'debug.named-entry-points',
+                               'debug.launch-configs',
+                               'console.toolbox']
+testing.auto-test-file-specs = [('regex',
+                                 'test_combi(/test[^/.]*)+[.]py')]
+testing.test-framework = {None: 'nose'}
