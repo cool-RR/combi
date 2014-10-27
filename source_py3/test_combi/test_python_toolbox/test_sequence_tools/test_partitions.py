@@ -5,7 +5,7 @@
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.sequence_tools import partitions
+from combi._python_toolbox.sequence_tools import partitions
 
 
 def test():

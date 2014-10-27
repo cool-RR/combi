@@ -7,7 +7,7 @@ import uuid
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.misc_tools import ProxyProperty
+from combi._python_toolbox.misc_tools import ProxyProperty
 
 
 class Object:

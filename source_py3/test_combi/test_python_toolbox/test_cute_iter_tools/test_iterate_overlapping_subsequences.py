@@ -10,7 +10,8 @@ from combi._python_toolbox import nifty_collections
 from combi._python_toolbox import cute_testing
 from combi._python_toolbox import sequence_tools
 
-from python_toolbox.cute_iter_tools import iterate_overlapping_subsequences
+from combi._python_toolbox.cute_iter_tools import \
+                                               iterate_overlapping_subsequences
 
 
 def test_length_2():

@@ -3,7 +3,7 @@
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.misc_tools import NonInstatiable
+from combi._python_toolbox.misc_tools import NonInstatiable
 
 
 def test():

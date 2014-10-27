@@ -11,7 +11,7 @@ import re
 try:
     import pathlib
 except:
-    from python_toolbox.third_party import pathlib
+    from combi._python_toolbox.third_party import pathlib
 
 import fnmatch
 

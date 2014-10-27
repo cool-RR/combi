@@ -6,7 +6,7 @@ from combi._python_toolbox import math_tools
 from combi._python_toolbox import cute_testing
 
 from combi._python_toolbox import combi
-from python_toolbox.combi import *
+from combi._python_toolbox.combi import *
 
 
 def test():

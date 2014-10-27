@@ -5,7 +5,7 @@
 
 import sys
 
-from python_toolbox.sys_tools import OutputCapturer
+from combi._python_toolbox.sys_tools import OutputCapturer
 
 
 def test():

@@ -6,7 +6,7 @@ import pickle
 import abc
 import collections
 import decimal as decimal_module
-from python_toolbox.third_party import unittest2
+from combi._python_toolbox.third_party import unittest2
 import copy
 
 import nose
@@ -17,9 +17,10 @@ from combi._python_toolbox import sequence_tools
 from combi._python_toolbox import cute_testing
 
 from combi._python_toolbox import nifty_collections
-from python_toolbox.nifty_collections import (Bag, OrderedBag,
-                                              FrozenBag, FrozenOrderedBag,
-                                              OrderedDict)
+from combi._python_toolbox.nifty_collections import (Bag, OrderedBag,
+                                                     FrozenBag,
+                                                     FrozenOrderedBag,
+                                                     OrderedDict)
 
 infinity = float('inf')
 infinities = (infinity, -infinity)

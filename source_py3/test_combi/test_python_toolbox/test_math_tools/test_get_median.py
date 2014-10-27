@@ -5,7 +5,7 @@ import sys
 
 import nose
 
-from python_toolbox.math_tools import get_median
+from combi._python_toolbox.math_tools import get_median
 
 
 def test_median():

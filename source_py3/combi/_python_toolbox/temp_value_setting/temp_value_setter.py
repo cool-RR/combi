@@ -7,7 +7,7 @@ Defines the `TempValueSetter` class.
 See its documentation for more details.
 '''
 
-from python_toolbox.context_management import ContextManager
+from combi._python_toolbox.context_management import ContextManager
 
 
 __all__ = ['TempValueSetter']

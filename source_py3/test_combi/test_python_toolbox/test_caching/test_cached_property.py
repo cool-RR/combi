@@ -8,7 +8,7 @@ import nose
 from combi._python_toolbox import context_management
 from combi._python_toolbox import misc_tools
 
-from python_toolbox.caching import cache, CachedType, CachedProperty
+from combi._python_toolbox.caching import cache, CachedType, CachedProperty
 
 
 @misc_tools.set_attributes(i=0)

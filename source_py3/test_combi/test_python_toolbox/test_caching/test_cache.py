@@ -11,7 +11,7 @@ import weakref
 import nose.tools
 
 from combi._python_toolbox import caching
-from python_toolbox.caching import cache
+from combi._python_toolbox.caching import cache
 from combi._python_toolbox import misc_tools
 from combi._python_toolbox import temp_value_setting
 from combi._python_toolbox import cute_testing

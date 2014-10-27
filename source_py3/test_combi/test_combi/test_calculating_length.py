@@ -1,7 +1,7 @@
 # Copyright 2009-2015 Ram Rachum.
 # This program is distributed under the MIT license.
 
-from python_toolbox.combi.perming.calculating_length import * 
+from combi._python_toolbox.combi.perming.calculating_length import * 
 
 def test_recurrent_perm_space_length():
     assert calculate_length_of_recurrent_perm_space(3, (3, 1, 1)) == 13

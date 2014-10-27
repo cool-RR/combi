@@ -6,7 +6,7 @@ import multiprocessing.queues
 import queue as queue_module
 
 from combi._python_toolbox import nifty_collections
-from python_toolbox.nifty_collections import Ordered, DefinitelyUnordered
+from combi._python_toolbox.nifty_collections import Ordered, DefinitelyUnordered
 
 
 def _make_instance_of_type(type_):

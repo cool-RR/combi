@@ -3,7 +3,7 @@
 
 '''Defines exceptions.'''
 
-from python_toolbox.exceptions import CuteException
+from combi._python_toolbox.exceptions import CuteException
 
 
 class SleekRefDied(CuteException):

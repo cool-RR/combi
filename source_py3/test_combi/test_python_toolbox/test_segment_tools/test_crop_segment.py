@@ -3,7 +3,7 @@
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.segment_tools import crop_segment
+from combi._python_toolbox.segment_tools import crop_segment
 
 
 base_segment = (10, 20)

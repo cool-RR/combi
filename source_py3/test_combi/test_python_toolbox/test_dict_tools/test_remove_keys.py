@@ -3,7 +3,7 @@
 
 import numbers
 
-from python_toolbox.dict_tools import remove_keys
+from combi._python_toolbox.dict_tools import remove_keys
 
 
 def test():

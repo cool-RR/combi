@@ -3,7 +3,7 @@
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.cute_iter_tools import get_single_if_any
+from combi._python_toolbox.cute_iter_tools import get_single_if_any
 
 
 def test_get_single_if_any():

@@ -13,7 +13,7 @@ import datetime as datetime_module
 from combi._python_toolbox import misc_tools
 from combi._python_toolbox import binary_search
 from combi._python_toolbox import decorator_tools
-from python_toolbox.sleek_reffing import SleekCallArgs
+from combi._python_toolbox.sleek_reffing import SleekCallArgs
 
 infinity = float('inf')
 
@@ -68,7 +68,7 @@ def cache(max_size=infinity, time_to_keep=None):
     # have to go through so much shit. update: probably it will help only for
     # completely argumentless function. so do one for those.
     
-    from python_toolbox.nifty_collections import OrderedDict
+    from combi._python_toolbox.nifty_collections import OrderedDict
     
     if time_to_keep is not None:
         if max_size != infinity:

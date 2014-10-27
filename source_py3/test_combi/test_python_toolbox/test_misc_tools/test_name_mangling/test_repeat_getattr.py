@@ -3,7 +3,7 @@
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.misc_tools import repeat_getattr
+from combi._python_toolbox.misc_tools import repeat_getattr
 
 
 class Object:

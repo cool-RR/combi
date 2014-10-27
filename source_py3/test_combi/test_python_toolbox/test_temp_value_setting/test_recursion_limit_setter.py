@@ -7,7 +7,7 @@ import sys
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.temp_value_setting import TempRecursionLimitSetter
+from combi._python_toolbox.temp_value_setting import TempRecursionLimitSetter
 
 
 def test():

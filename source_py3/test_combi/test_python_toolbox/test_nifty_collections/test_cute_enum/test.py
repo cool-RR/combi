@@ -3,7 +3,7 @@
 
 import nose
 
-from python_toolbox.nifty_collections import CuteEnum
+from combi._python_toolbox.nifty_collections import CuteEnum
 
 
 def test():

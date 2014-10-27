@@ -8,9 +8,9 @@ import sys
 
 import nose
 
-from python_toolbox.context_management import (ContextManager,
-                                                    ContextManagerType,
-                                                    SelfHook)
+from combi._python_toolbox.context_management import (ContextManager,
+                                                      ContextManagerType,
+                                                      SelfHook)
 
 def test_abstractness():
     '''

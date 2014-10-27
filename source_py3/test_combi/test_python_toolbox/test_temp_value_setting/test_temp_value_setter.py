@@ -6,7 +6,7 @@
 from combi._python_toolbox import misc_tools
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.temp_value_setting import TempValueSetter
+from combi._python_toolbox.temp_value_setting import TempValueSetter
 
 
 class Object:

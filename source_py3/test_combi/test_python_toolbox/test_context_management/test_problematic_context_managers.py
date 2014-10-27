@@ -7,7 +7,7 @@ import nose
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.context_management import (ContextManager,
+from combi._python_toolbox.context_management import (ContextManager,
                                                     ContextManagerType,
                                                     SelfHook)
 

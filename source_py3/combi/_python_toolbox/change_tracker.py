@@ -9,7 +9,7 @@ See its documentation for more information.
 
 import pickle
 
-from python_toolbox.nifty_collections import WeakKeyIdentityDict
+from combi._python_toolbox.nifty_collections import WeakKeyIdentityDict
 
 
 class ChangeTracker: 

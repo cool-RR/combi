@@ -3,7 +3,7 @@
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.combi import *
+from combi._python_toolbox.combi import *
 
 
 def test_chain_spaces():

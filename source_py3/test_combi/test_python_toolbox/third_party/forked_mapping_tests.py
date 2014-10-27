@@ -1,4 +1,4 @@
-from python_toolbox.third_party import unittest2
+from combi._python_toolbox.third_party import unittest2
 
 __test__ = False
 

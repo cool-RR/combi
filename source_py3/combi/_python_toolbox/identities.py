@@ -8,7 +8,7 @@ See its documentation for more information.
 '''
 
 from combi._python_toolbox import misc_tools
-from python_toolbox.persistent import CrossProcessPersistent
+from combi._python_toolbox.persistent import CrossProcessPersistent
 
 
 class HasIdentity:

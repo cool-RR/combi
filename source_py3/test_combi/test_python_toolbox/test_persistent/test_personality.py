@@ -5,7 +5,7 @@
 
 import colorsys
 
-from python_toolbox.persistent import CrossProcessPersistent
+from combi._python_toolbox.persistent import CrossProcessPersistent
 
 
 def test():

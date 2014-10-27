@@ -7,7 +7,7 @@ import sys
 
 import nose
 
-from python_toolbox.math_tools import convert_to_base_in_tuple
+from combi._python_toolbox.math_tools import convert_to_base_in_tuple
 from combi._python_toolbox import cute_testing
 
 

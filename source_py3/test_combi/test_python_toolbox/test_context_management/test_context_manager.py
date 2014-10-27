@@ -3,9 +3,9 @@
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.context_management import (ContextManager,
-                                             ContextManagerType,
-                                             SelfHook)
+from combi._python_toolbox.context_management import (ContextManager,
+                                                      ContextManagerType,
+                                                      SelfHook)
 
 flag = None
 exception_type_caught = None

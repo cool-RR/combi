@@ -7,7 +7,7 @@ import os
 try:
     import pathlib
 except:
-    from python_toolbox.third_party import pathlib
+    from combi._python_toolbox.third_party import pathlib
 
 import shutil
 import tempfile
@@ -15,7 +15,7 @@ import tempfile
 from combi._python_toolbox import cute_testing
 from combi._python_toolbox import temp_file_tools
 
-from python_toolbox.temp_value_setting import \
+from combi._python_toolbox.temp_value_setting import \
      TempWorkingDirectorySetter
 
 class MyException(Exception):

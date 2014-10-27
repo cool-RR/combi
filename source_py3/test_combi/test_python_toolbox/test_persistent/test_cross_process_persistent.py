@@ -15,7 +15,7 @@ from combi._python_toolbox import import_tools
 from combi._python_toolbox import queue_tools
 
 from combi._python_toolbox import persistent
-from python_toolbox.persistent import CrossProcessPersistent
+from combi._python_toolbox.persistent import CrossProcessPersistent
 
 
 class AbstractCrossProcessPersistent(CrossProcessPersistent,

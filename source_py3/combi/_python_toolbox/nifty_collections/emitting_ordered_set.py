@@ -17,7 +17,7 @@ class EmittingOrderedSet(OrderedSet):
     
     def __init__(self, emitter, items=()):
         if emitter:
-            from python_toolbox.emitting import Emitter
+            from combi._python_toolbox.emitting import Emitter
             assert isinstance(emitter, Emitter)
         self.emitter = emitter
         OrderedSet.__init__(self, items)

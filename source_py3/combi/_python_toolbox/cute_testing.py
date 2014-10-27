@@ -6,11 +6,11 @@
 import nose
 import sys
 
-from python_toolbox.third_party import unittest2
+from combi._python_toolbox.third_party import unittest2
 
 from combi._python_toolbox import cute_inspect
 from combi._python_toolbox import context_management
-from python_toolbox.exceptions import CuteException
+from combi._python_toolbox.exceptions import CuteException
 from combi._python_toolbox import logic_tools
 from combi._python_toolbox import misc_tools
 

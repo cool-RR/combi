@@ -8,7 +8,7 @@ import itertools
 from combi._python_toolbox import nifty_collections
 from combi._python_toolbox import context_management
 
-from python_toolbox.cute_iter_tools import iter_with
+from combi._python_toolbox.cute_iter_tools import iter_with
 
 
 class MyContextManager(context_management.ContextManager):

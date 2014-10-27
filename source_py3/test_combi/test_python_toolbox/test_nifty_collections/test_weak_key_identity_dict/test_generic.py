@@ -14,7 +14,7 @@ from test_python_toolbox.third_party import forked_mapping_tests
 
 from combi._python_toolbox import gc_tools
 
-from python_toolbox.nifty_collections import WeakKeyIdentityDict
+from combi._python_toolbox.nifty_collections import WeakKeyIdentityDict
 
 # Used in ReferencesTestCase.test_ref_created_during_del() .
 ref_from_del = None

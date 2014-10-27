@@ -2,8 +2,8 @@
 # This program is distributed under the MIT license.
 
 
-from python_toolbox.misc_tools import name_mangling
-from python_toolbox.misc_tools.name_mangling import \
+from combi._python_toolbox.misc_tools import name_mangling
+from combi._python_toolbox.misc_tools.name_mangling import \
                                               unmangle_attribute_name_if_needed
 
 

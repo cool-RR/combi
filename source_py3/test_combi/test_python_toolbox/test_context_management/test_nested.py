@@ -6,7 +6,8 @@
 from combi._python_toolbox import freezing
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.context_management import ReentrantContextManager, nested
+from combi._python_toolbox.context_management import (ReentrantContextManager,
+                                                      nested)
 
 
 

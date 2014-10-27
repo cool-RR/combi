@@ -3,7 +3,7 @@
 
 from combi._python_toolbox import math_tools
 
-from python_toolbox.sequence_tools import CanonicalSlice
+from combi._python_toolbox.sequence_tools import CanonicalSlice
 
 
 infinity = float('inf')

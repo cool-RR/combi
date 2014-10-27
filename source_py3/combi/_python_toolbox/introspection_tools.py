@@ -5,7 +5,7 @@
 
 from combi._python_toolbox import cute_inspect
 
-from python_toolbox.nifty_collections import OrderedDict
+from combi._python_toolbox.nifty_collections import OrderedDict
 
 
 def get_default_args_dict(function):

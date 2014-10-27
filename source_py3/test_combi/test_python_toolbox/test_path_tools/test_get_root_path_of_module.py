@@ -1,7 +1,7 @@
 # Copyright 2009-2015 Ram Rachum.
 # This program is distributed under the MIT license.
 
-from python_toolbox.path_tools import get_root_path_of_module
+from combi._python_toolbox.path_tools import get_root_path_of_module
 
 def test():
     ''' '''

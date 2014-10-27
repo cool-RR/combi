@@ -7,7 +7,8 @@ import functools
 import inspect
 import types
 
-from python_toolbox.third_party import decorator as michele_decorator_module
+from combi._python_toolbox.third_party import decorator as \
+                                                       michele_decorator_module
 
 def decorator(caller, func=None):
     '''

@@ -5,7 +5,7 @@ import nose.tools
 
 from combi._python_toolbox import temp_file_tools
 
-from python_toolbox.misc_tools import add_extension_if_plain
+from combi._python_toolbox.misc_tools import add_extension_if_plain
 
 
 def test():

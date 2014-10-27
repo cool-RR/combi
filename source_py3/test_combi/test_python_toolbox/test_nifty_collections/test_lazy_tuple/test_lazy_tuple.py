@@ -12,7 +12,7 @@ from combi._python_toolbox import sequence_tools
 from combi._python_toolbox import cute_testing
 
 
-from python_toolbox.nifty_collections import LazyTuple
+from combi._python_toolbox.nifty_collections import LazyTuple
 
 
 class SelfAwareUuidIterator(collections.Iterator):

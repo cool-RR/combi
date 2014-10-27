@@ -7,7 +7,7 @@ import nose
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.nifty_collections.ordered_dict import OrderedDict
+from combi._python_toolbox.nifty_collections.ordered_dict import OrderedDict
 
 
 def test():

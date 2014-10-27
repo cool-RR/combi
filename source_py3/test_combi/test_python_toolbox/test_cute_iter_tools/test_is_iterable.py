@@ -6,7 +6,7 @@
 import nose.tools
 
 from combi._python_toolbox import cute_iter_tools
-from python_toolbox.cute_iter_tools import is_iterable
+from combi._python_toolbox.cute_iter_tools import is_iterable
 
 
 infinity = float('inf')

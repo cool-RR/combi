@@ -7,12 +7,12 @@ import marshal
 try:
     import pathlib
 except:
-    from python_toolbox.third_party import pathlib
+    from combi._python_toolbox.third_party import pathlib
 
 import abc
 import pstats
 
-from python_toolbox.third_party import envelopes
+from combi._python_toolbox.third_party import envelopes
 
 from combi._python_toolbox import caching
 from combi._python_toolbox import misc_tools

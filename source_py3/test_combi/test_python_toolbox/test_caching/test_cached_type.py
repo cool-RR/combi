@@ -3,7 +3,7 @@
 
 '''Testing module for `python_toolbox.caching.CachedType`.'''
 
-from python_toolbox.caching import CachedType
+from combi._python_toolbox.caching import CachedType
 
         
 def test():

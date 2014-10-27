@@ -3,7 +3,7 @@
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.cute_iter_tools import PushbackIterator
+from combi._python_toolbox.cute_iter_tools import PushbackIterator
 
 
 def test_pushback_iterator():

@@ -5,7 +5,7 @@
 
 import nose
 
-from python_toolbox.nifty_collections import WeakKeyIdentityDict
+from combi._python_toolbox.nifty_collections import WeakKeyIdentityDict
 
 
 class WeakreffableList(list):

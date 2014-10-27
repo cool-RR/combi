@@ -7,7 +7,7 @@ This module defines the `DontCopyPersistent` class.
 See its documentation for more information.
 '''
 
-from python_toolbox.copy_mode import CopyMode
+from combi._python_toolbox.copy_mode import CopyMode
 
 class DontCopyPersistent(CopyMode):
     '''

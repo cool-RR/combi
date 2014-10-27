@@ -12,7 +12,7 @@ import itertools
 
 from combi._python_toolbox import freezing
 from combi._python_toolbox import cute_iter_tools
-from python_toolbox.context_management import ReentrantContextManager
+from combi._python_toolbox.context_management import ReentrantContextManager
 
 from .emitter import Emitter
 

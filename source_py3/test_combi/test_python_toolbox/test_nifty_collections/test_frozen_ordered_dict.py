@@ -11,7 +11,7 @@ from combi._python_toolbox import sequence_tools
 from combi._python_toolbox import cute_testing
 
 
-from python_toolbox.nifty_collections import FrozenOrderedDict
+from combi._python_toolbox.nifty_collections import FrozenOrderedDict
 
 
 def test():

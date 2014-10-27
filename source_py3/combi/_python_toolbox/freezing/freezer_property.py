@@ -9,7 +9,7 @@ See its documentation for more information.
 
 
 from combi._python_toolbox import caching
-from python_toolbox.misc_tools import do_nothing
+from combi._python_toolbox.misc_tools import do_nothing
 
 from .freezer_property_freezer import FreezerPropertyFreezer
 from .freezer import Freezer

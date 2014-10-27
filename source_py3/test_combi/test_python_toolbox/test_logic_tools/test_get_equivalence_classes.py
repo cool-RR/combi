@@ -3,7 +3,7 @@
 
 import itertools
 
-from python_toolbox.logic_tools import get_equivalence_classes
+from combi._python_toolbox.logic_tools import get_equivalence_classes
 
 
 def test():

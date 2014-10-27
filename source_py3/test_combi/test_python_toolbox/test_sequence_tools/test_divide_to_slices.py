@@ -1,7 +1,7 @@
 # Copyright 2009-2015 Ram Rachum.
 # This program is distributed under the MIT license.
 
-from python_toolbox.sequence_tools import divide_to_slices
+from combi._python_toolbox.sequence_tools import divide_to_slices
 
 
 def test():

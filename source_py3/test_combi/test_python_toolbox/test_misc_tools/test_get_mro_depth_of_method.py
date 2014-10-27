@@ -1,7 +1,7 @@
 # Copyright 2009-2015 Ram Rachum.
 # This program is distributed under the MIT license.
 
-from python_toolbox.misc_tools import get_mro_depth_of_method
+from combi._python_toolbox.misc_tools import get_mro_depth_of_method
 
 
 def test():

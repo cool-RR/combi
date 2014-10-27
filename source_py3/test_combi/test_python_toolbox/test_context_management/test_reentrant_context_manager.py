@@ -5,7 +5,7 @@
 
 import queue as queue_module
 
-from python_toolbox.context_management import ReentrantContextManager
+from combi._python_toolbox.context_management import ReentrantContextManager
 from combi._python_toolbox import cute_testing
 
 

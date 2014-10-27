@@ -6,7 +6,7 @@ import math
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.math_tools import cute_floor_div, cute_divmod
+from combi._python_toolbox.math_tools import cute_floor_div, cute_divmod
 from combi._python_toolbox import logic_tools
 from combi._python_toolbox import math_tools
 

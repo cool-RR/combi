@@ -5,7 +5,7 @@ from combi._python_toolbox import exceptions
 from combi._python_toolbox import cute_iter_tools
 from combi._python_toolbox import nifty_collections
 from combi._python_toolbox import caching
-from python_toolbox.third_party import sortedcontainers
+from combi._python_toolbox.third_party import sortedcontainers
 
 from ..selection_space import SelectionSpace
 

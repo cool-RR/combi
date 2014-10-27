@@ -5,7 +5,7 @@
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.nifty_collections import OrderedSet
+from combi._python_toolbox.nifty_collections import OrderedSet
 
 
 def test():

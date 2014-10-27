@@ -3,7 +3,7 @@
 
 '''Testing module for `python_toolbox.version_info.VersionInfo`.'''
 
-from python_toolbox.version_info import VersionInfo
+from combi._python_toolbox.version_info import VersionInfo
 
 
 def test():

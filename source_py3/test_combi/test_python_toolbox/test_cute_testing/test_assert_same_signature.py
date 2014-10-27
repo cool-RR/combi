@@ -3,9 +3,9 @@
 
 '''Testing module for `python_toolbox.cute_testing.assert_same_signature`.'''
 
-from python_toolbox.third_party import decorator as decorator_module
+from combi._python_toolbox.third_party import decorator as decorator_module
 
-from python_toolbox.cute_testing import (assert_same_signature,
+from combi._python_toolbox.cute_testing import (assert_same_signature,
                                                  RaiseAssertor,
                                                  Failure)
 

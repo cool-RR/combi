@@ -6,7 +6,7 @@ import sys
 
 import nose
 
-from python_toolbox.math_tools import restrict_number_to_range
+from combi._python_toolbox.math_tools import restrict_number_to_range
 
 
 def test_restrict_number_to_range():

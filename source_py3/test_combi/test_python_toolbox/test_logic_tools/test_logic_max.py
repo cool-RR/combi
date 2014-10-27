@@ -3,7 +3,7 @@
 
 import itertools
 
-from python_toolbox.logic_tools import logic_max
+from combi._python_toolbox.logic_tools import logic_max
 
 
 def test():

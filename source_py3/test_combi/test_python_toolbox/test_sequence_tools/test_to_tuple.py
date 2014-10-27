@@ -8,7 +8,7 @@ import nose
 from combi._python_toolbox import cute_testing
 
 from combi._python_toolbox import sequence_tools
-from python_toolbox.sequence_tools import to_tuple
+from combi._python_toolbox.sequence_tools import to_tuple
 
 
 def test():

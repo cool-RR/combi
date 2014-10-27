@@ -3,7 +3,7 @@
 
 '''Testing module for `freezing.FreezerProperty`.'''
 
-from python_toolbox.freezing import FreezerProperty, Freezer
+from combi._python_toolbox.freezing import FreezerProperty, Freezer
 from combi._python_toolbox import caching
 
 

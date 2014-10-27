@@ -6,7 +6,7 @@
 import nose.tools
 
 from combi._python_toolbox import import_tools
-from python_toolbox.import_tools import exists
+from combi._python_toolbox.import_tools import exists
 
 def test():
     '''Test the basic workings of `exists`.'''

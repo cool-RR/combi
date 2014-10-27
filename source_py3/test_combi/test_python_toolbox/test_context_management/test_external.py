@@ -6,10 +6,10 @@
 import sys
 
 import nose
-from python_toolbox.third_party import unittest2
+from combi._python_toolbox.third_party import unittest2
 
 import combi._python_toolbox
-from python_toolbox.context_management import (ContextManager,
+from combi._python_toolbox.context_management import (ContextManager,
                                                     ContextManagerType)
 
 

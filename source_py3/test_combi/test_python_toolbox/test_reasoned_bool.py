@@ -3,7 +3,7 @@
 
 '''Testing module for `python_toolbox.reasoned_bool.ReasonedBool`.'''
 
-from python_toolbox.reasoned_bool import ReasonedBool
+from combi._python_toolbox.reasoned_bool import ReasonedBool
 
 def test():
     '''Test the basic workings of `ReasonedBool`.'''

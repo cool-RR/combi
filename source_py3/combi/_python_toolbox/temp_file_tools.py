@@ -8,7 +8,7 @@ import shutil
 try:
     import pathlib
 except:
-    from python_toolbox.third_party import pathlib
+    from combi._python_toolbox.third_party import pathlib
 
 
 from combi._python_toolbox import context_management 

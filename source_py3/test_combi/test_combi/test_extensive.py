@@ -16,7 +16,7 @@ from combi._python_toolbox import misc_tools
 from combi._python_toolbox import sequence_tools
 
 from combi._python_toolbox import combi
-from python_toolbox.combi import *
+from combi._python_toolbox.combi import *
 
 infinity = float('inf')
 infinities = (infinity, -infinity)

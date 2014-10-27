@@ -8,14 +8,14 @@ import sys
 try:
     import pathlib
 except:
-    from python_toolbox.third_party import pathlib
+    from combi._python_toolbox.third_party import pathlib
 
 import io
 
-from python_toolbox.context_management import (ContextManager,
-                                                    BlankContextManager)
-from python_toolbox.temp_value_setting import TempValueSetter
-from python_toolbox.reasoned_bool import ReasonedBool
+from combi._python_toolbox.context_management import (ContextManager,
+                                                      BlankContextManager)
+from combi._python_toolbox.temp_value_setting import TempValueSetter
+from combi._python_toolbox.reasoned_bool import ReasonedBool
 from combi._python_toolbox import sequence_tools
 
 

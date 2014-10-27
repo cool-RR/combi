@@ -3,7 +3,7 @@
 
 import nose.tools
 
-from python_toolbox.misc_tools import find_clear_place_on_circle
+from combi._python_toolbox.misc_tools import find_clear_place_on_circle
 
 def test_wraparound():
     '''Test when clear place is on the wraparound.'''

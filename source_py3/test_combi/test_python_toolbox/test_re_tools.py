@@ -6,7 +6,7 @@
 import re
 
 from combi._python_toolbox import re_tools
-from python_toolbox.re_tools import searchall
+from combi._python_toolbox.re_tools import searchall
 
 
 def test_searchall():

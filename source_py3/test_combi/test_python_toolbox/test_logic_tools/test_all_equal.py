@@ -5,7 +5,7 @@
 
 import itertools
 
-from python_toolbox.logic_tools import all_equal
+from combi._python_toolbox.logic_tools import all_equal
 
 
 def test():

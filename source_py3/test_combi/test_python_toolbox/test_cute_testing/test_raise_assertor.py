@@ -8,7 +8,7 @@ import re
 import nose
 
 from combi._python_toolbox import cute_testing
-from python_toolbox.cute_testing import RaiseAssertor, Failure
+from combi._python_toolbox.cute_testing import RaiseAssertor, Failure
 
 
 class MyException(Exception):

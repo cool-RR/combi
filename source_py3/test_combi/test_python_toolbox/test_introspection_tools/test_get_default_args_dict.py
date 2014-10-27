@@ -3,8 +3,8 @@
 
 '''Testing for `python_toolbox.introspection_tools.get_default_args_dict`.'''
 
-from python_toolbox.introspection_tools import get_default_args_dict
-from python_toolbox.nifty_collections import OrderedDict
+from combi._python_toolbox.introspection_tools import get_default_args_dict
+from combi._python_toolbox.nifty_collections import OrderedDict
 
 
 def test():

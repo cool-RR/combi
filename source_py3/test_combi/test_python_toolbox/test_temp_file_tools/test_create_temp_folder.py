@@ -8,14 +8,14 @@ import os.path
 try:
     import pathlib
 except:
-    from python_toolbox.third_party import pathlib
+    from combi._python_toolbox.third_party import pathlib
 
 
 import nose.tools
 
 import combi._python_toolbox
 
-from python_toolbox.temp_file_tools import create_temp_folder
+from combi._python_toolbox.temp_file_tools import create_temp_folder
 
 
 def test_basic():

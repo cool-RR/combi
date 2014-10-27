@@ -4,7 +4,7 @@
 # We're importing `pickle_module` from `pickle_tools`, so we get the exact same
 # pickle module it's using. (Giving it the freedom to change between `cPickle`
 # and `pickle`.)
-from python_toolbox.pickle_tools import pickle_module
+from combi._python_toolbox.pickle_tools import pickle_module
 
 import nose
 

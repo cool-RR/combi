@@ -5,14 +5,14 @@
 
 ### Monkeypatching envelopes: #################################################
 #                                                                             #
-from python_toolbox.third_party import envelopes
+from combi._python_toolbox.third_party import envelopes
 from combi._python_toolbox import monkeypatching_tools
 
 
 @monkeypatching_tools.monkeypatch(envelopes.Envelope)
 def add_attachment_from_string(self, file_data, file_name, 
                                mimetype='application/octet-stream'):
-    from python_toolbox.third_party.envelopes.envelope import \
+    from combi._python_toolbox.third_party.envelopes.envelope import \
                                                    MIMEBase, email_encoders, os
     type_maj, type_min = mimetype.split('/')
         

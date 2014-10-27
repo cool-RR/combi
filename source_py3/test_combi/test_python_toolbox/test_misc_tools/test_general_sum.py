@@ -1,7 +1,7 @@
 # Copyright 2009-2015 Ram Rachum.
 # This program is distributed under the MIT license.
 
-from python_toolbox.misc_tools import general_sum
+from combi._python_toolbox.misc_tools import general_sum
 
 
 def test():

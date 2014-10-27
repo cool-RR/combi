@@ -8,7 +8,7 @@ import abc
 
 import nose
 
-from python_toolbox.abc_tools import AbstractStaticMethod
+from combi._python_toolbox.abc_tools import AbstractStaticMethod
 
 
 def test_instantiate_without_subclassing():

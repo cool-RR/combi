@@ -3,7 +3,7 @@
 
 from combi._python_toolbox import nifty_collections
 
-from python_toolbox.cute_iter_tools import double_filter
+from combi._python_toolbox.cute_iter_tools import double_filter
 
 
 def test_double_filter():

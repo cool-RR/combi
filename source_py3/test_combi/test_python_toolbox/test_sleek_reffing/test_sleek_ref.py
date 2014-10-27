@@ -9,10 +9,10 @@ import nose.tools
 
 from combi._python_toolbox import gc_tools
 
-from python_toolbox.sleek_reffing import (SleekCallArgs,
-                                          SleekRef,
-                                          SleekRefDied,
-                                          CuteSleekValueDict)
+from combi._python_toolbox.sleek_reffing import (SleekCallArgs,
+                                                 SleekRef,
+                                                 SleekRefDied,
+                                                 CuteSleekValueDict)
 
 from .shared import _is_weakreffable, A, counter
 

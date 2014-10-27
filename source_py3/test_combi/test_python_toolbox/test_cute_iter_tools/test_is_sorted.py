@@ -5,7 +5,7 @@ import nose.tools
 
 from combi._python_toolbox import nifty_collections
 from combi._python_toolbox import cute_iter_tools
-from python_toolbox.cute_iter_tools import is_sorted
+from combi._python_toolbox.cute_iter_tools import is_sorted
 
 
 infinity = float('inf')

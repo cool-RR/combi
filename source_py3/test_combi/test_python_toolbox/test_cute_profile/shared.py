@@ -5,7 +5,7 @@
 
 import sys
 
-from python_toolbox.sys_tools import OutputCapturer
+from combi._python_toolbox.sys_tools import OutputCapturer
 from combi._python_toolbox import logic_tools
 
 segments = ('function calls in', 'Ordered by', 'ncalls', 'tottime', 'percall',

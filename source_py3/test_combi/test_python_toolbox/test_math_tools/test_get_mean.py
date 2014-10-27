@@ -5,7 +5,7 @@ import sys
 
 import nose
 
-from python_toolbox.math_tools import get_mean
+from combi._python_toolbox.math_tools import get_mean
 
 
 def test_mean():

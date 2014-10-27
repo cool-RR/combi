@@ -5,7 +5,7 @@ import sys
 
 import nose
 
-from python_toolbox.math_tools import binomial
+from combi._python_toolbox.math_tools import binomial
 
 
 def test():

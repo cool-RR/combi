@@ -17,7 +17,7 @@ from combi._python_toolbox import sys_tools
 from combi._python_toolbox import cute_testing
 from combi._python_toolbox import import_tools
 from combi._python_toolbox import temp_file_tools
-from python_toolbox.import_tools import exists
+from combi._python_toolbox.import_tools import exists
 
 from . import resources as __resources_package
 resources_package = __resources_package.__name__

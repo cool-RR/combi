@@ -5,7 +5,7 @@
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.exceptions import CuteBaseException, CuteException
+from combi._python_toolbox.exceptions import CuteBaseException, CuteException
 
 
 def test():

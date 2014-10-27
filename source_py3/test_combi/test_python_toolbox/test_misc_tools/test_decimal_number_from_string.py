@@ -5,7 +5,7 @@ import nose.tools
 
 from combi._python_toolbox import cute_testing
 
-from python_toolbox.misc_tools import decimal_number_from_string
+from combi._python_toolbox.misc_tools import decimal_number_from_string
 
 
 def test():

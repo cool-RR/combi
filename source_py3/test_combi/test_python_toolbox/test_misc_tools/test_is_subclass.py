@@ -1,7 +1,7 @@
 # Copyright 2009-2015 Ram Rachum.
 # This program is distributed under the MIT license.
 
-from python_toolbox.misc_tools import is_subclass
+from combi._python_toolbox.misc_tools import is_subclass
 
 
 def test():

@@ -47,7 +47,7 @@ class VersionInfo(tuple):
         '''
         Return a new `OrderedDict` which maps field names to their values.
         '''
-        from python_toolbox.nifty_collections import OrderedDict
+        from combi._python_toolbox.nifty_collections import OrderedDict
         return OrderedDict(zip(self._fields, self))
 
     

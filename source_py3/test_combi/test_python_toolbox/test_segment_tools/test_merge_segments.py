@@ -1,7 +1,7 @@
 # Copyright 2009-2015 Ram Rachum.
 # This program is distributed under the MIT license.
 
-from python_toolbox.segment_tools import merge_segments
+from combi._python_toolbox.segment_tools import merge_segments
 
 segments_to_fixed_segments = {
     (): (),

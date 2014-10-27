@@ -5,7 +5,7 @@
 
 import copy
 
-from python_toolbox.cheat_hashing import cheat_hash
+from combi._python_toolbox.cheat_hashing import cheat_hash
 
 
 def test_cheat_hash():

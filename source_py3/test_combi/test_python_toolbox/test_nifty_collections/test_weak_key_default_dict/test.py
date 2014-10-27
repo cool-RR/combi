@@ -3,7 +3,7 @@
 
 import nose
 
-from python_toolbox.nifty_collections import WeakKeyDefaultDict
+from combi._python_toolbox.nifty_collections import WeakKeyDefaultDict
 from combi._python_toolbox import gc_tools
 
 
