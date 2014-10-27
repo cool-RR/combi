@@ -4,7 +4,7 @@
 # This program is distributed under the MIT license.
 
 '''
-Script for launching `python_toolbox` tests when installed in local Python.
+Script for launching `combi` tests when installed in local Python.
 '''
 
 
