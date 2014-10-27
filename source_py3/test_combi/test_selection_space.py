@@ -1,7 +1,7 @@
 # Copyright 2009-2015 Ram Rachum.
 # This program is distributed under the MIT license.
 
-from combi._python_toolbox.combi import *
+from combi import *
 
 
 def test():

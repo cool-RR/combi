@@ -13,8 +13,8 @@ from combi._python_toolbox import nifty_collections
 from combi._python_toolbox import caching
 from combi._python_toolbox import sequence_tools
 
-from combi._python_toolbox import combi
-from combi._python_toolbox.combi import *
+import combi
+from combi import *
 
 infinity = float('inf')
 infinities = (infinity, -infinity)
