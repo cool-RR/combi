@@ -4,7 +4,7 @@
 # This program is distributed under the MIT license.
 
 '''
-Script for launching `python_toolbox` tests when installed in local Python.
+Script for launching `combi` tests when installed in local Python.
 '''
 
 
@@ -12,4 +12,4 @@ import test_python_toolbox
 
 
 if __name__ == '__main__':
-    test_python_toolbox.invoke_nose()
+    test_combi.invoke_nose()
