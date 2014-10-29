@@ -27,7 +27,7 @@ def test_on_locally_defined_class():
     # Testing for locally defined class:
     
     
-    if python_toolbox.__version_info__ <= (0, 7, 0, 'release'):
+    if combi._python_toolbox.__version_info__ <= (0, 7, 0, 'release'):
         raise nose.SkipTest("This test doesn't pass in `python_toolbox` "
                             "version 0.7.0 and below, because `describe` :"
                             "doesn't support nested classes yet.")
@@ -73,6 +73,8 @@ def test_on_stdlib():
     
 def test_on_python_toolbox():
     '''Test `describe` for various `python_toolbox` modules.'''
+    
+    raise nose.SkipTest('Not doing this test in `combi`.')
     
     import combi._python_toolbox.caching
     result = describe(python_toolbox.caching.cached_property.CachedProperty)
@@ -150,7 +152,7 @@ def test_on_local_modules():
     result = describe(z, shorten=True, root=w, namespace='email')
     assert result == 'w.y.z'
     
-    result = describe(z, shorten=True, root=python_toolbox, namespace=w)
+    result = describe(z, shorten=True, root=combi, namespace=w)
     assert result == 'y.z'
     
     result = describe(z, shorten=True, root=w.x)
@@ -245,7 +247,7 @@ def test_bad_module_name():
 
 def test_function_in_something():
     '''Test `describe` doesn't fail when describing `{1: sum}`.'''
-    if python_toolbox.__version_info__ <= (0, 7, 0, 'release'):
+    if combi._python_toolbox.__version_info__ <= (0, 7, 0, 'release'):
         raise nose.SkipTest("This test doesn't pass in `python_toolbox`"
                             "version 0.7.0 and below.")
     assert describe({1: sum}) == '{1: sum}'

@@ -82,6 +82,9 @@ def test_on_stdlib():
 def test_python_toolbox():
     '''Test `resolve` on `python_toolbox` modules.'''
     
+    raise nose.SkipTest('Not doing this test in `combi`.')
+    
+    
     result = resolve('python_toolbox.caching')
     import combi._python_toolbox
     assert python_toolbox.caching is result

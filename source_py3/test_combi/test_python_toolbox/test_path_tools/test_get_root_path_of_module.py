@@ -10,6 +10,6 @@ def test():
            get_root_path_of_module(email.charset)
     
     import combi._python_toolbox.path_tools
-    assert get_root_path_of_module(python_toolbox) == \
-           get_root_path_of_module(python_toolbox.path_tools)
+    assert get_root_path_of_module(combi._python_toolbox) == \
+           get_root_path_of_module(combi._python_toolbox.path_tools)
     
