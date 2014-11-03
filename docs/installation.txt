@@ -22,9 +22,9 @@ Requirements
 Installation
 ============
 
-The simplest way to install the Python Toolbox is using `pip`_:
+Use `pip`_ to install Combi:
 
 * ``pip install combi``
 
-.. _pip: http://pypi.python.org/pypi/pip
-.. _distribute: http://pypi.python.org/pypi/distribute
+.. _pip: https://pypi.python.org/pypi/pip
+.. _Setuptools: https://pypi.python.org/pypi/setuptools

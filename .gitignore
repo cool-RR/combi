@@ -22,3 +22,5 @@ _build
 __pycache__
 
 .pylint
+
+Thumbs.db

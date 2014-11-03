@@ -17,6 +17,6 @@ import combi._python_toolbox.monkeypatch_copyreg
 import combi._python_toolbox.monkeypatch_envelopes
 from .version_info import VersionInfo
 
-__version_info__ = VersionInfo(0, 7, 0)
+__version_info__ = VersionInfo(0, 1, 0)
 __version__ = __version_info__.version_text
 

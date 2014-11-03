@@ -1,0 +1,73 @@
+..
+   Copyright 2009-2015 Ram Rachum. This work is licensed under a Creative
+   Commons Attribution-ShareAlike 3.0 Unported License, with attribution to
+   "Ram Rachum at ram.rachum.com" including link. The license may be obtained
+   at http://creativecommons.org/licenses/by-sa/3.0/
+
+.. intro:
+
+Getting started with Combi
+==========================
+
+Combi is a Pythonic framework for combinatorics. Combi lets you explore spaces
+of permutations and combinations as if they were Python sequences, but without
+generating all the permutations/combinations in advance. It also lets you
+specify a lot of special conditions on these spaces.
+
+Let’s look at the simplest example of using Combi. Check out this $5 padlock
+in the picture:
+
+.. image:: /images/padlock.jpg
+   :align: right
+
+I use this padlock for my gym locker, so people won’t steal my stuff when
+I’m swimming in the pool. It has 8 buttons, and to open it you have to press
+down a secret combination of 4 buttons. I wonder though, how easy is it to
+crack?
+
+    >>> from combi import *
+    >>> padlock_space = CombSpace(range(1, 9), 4)
+    >>> padlock_space
+    <CombSpace: range(1, 9), n_elements=4>
+    
+``padlock_space`` is the space of all possible combinations for our padlock. At
+this point, the combinations weren’t really generated; if we’ll ask for a
+combination from the space, it’ll be generated on-demand:
+
+    >>> padlock_space[7]
+    <Comb, n_elements=4: (1, 2, 4, 7)>
+    
+As you can see, padlock_space behaves like a sequence. We can get a combination by index number. We can also do other sequence-y things, like getting the index number of a combination, or slicing it, or getting the length using len. This is a huge benefit because then we can explore these spaces in a declarative rather than imperative style of programming. (i.e. we don’t have to think about generating the permutations, we simply assume that the permutation space exists and we’re taking items from it at leisure.) Let’s try looking at the length of padlock_space:
+    >>> len(padlock_space)
+    70
+Only 70 combinations. That’s pretty lame… At 3 seconds to try a combination, this means this padlock is crackable in under 4 minutes. Not very secure.
+In the example above, I used CombSpace, which is a space of combinations. It’s a thin subclass over PermSpace, which is a space of permutations. A combination is like a permutation, except order doesn’t matter.
+Now, because the permutations/combinations are generated on-demand, I can do something like this:
+    >>> huge_perm_space = PermSpace(1000)
+    >>> huge_perm_space
+    <PermSpace: 0..999>
+This is a perm space of all permutations of the numbers between 0 and 999. It is ginormous. The number of permutations is around 10**2500 (a number that far exceeds the number of particles in the universe.) I’m not even going to show its length in the shell session because the length number alone would fill this entire blog post. And yet you can fetch any permutation from this space by index number in a fraction of a second:
+    >>> huge_perm_space[7]
+    <Perm: (0, 1, 2, 3, 4, ... 997, 996, 999, 998)>
+Note that the permutation huge_perm_space[7] is a sequence by itself, where every item is a number in range(1000).
+Combi lets you specify a myriad of options on the the spaces that you create. For example, you can make some elements be fixed:
+    >>> fixed_perm_space = PermSpace(4, fixed_map={3: 3,})
+    >>> fixed_perm_space
+    <PermSpace: 0..3, fixed_map={3: 3}>
+    >>> tuple(fixed_perm_space)
+    (<Perm: (0, 1, 2, 3)>,
+     <Perm: (0, 2, 1, 3)>,
+     <Perm: (1, 0, 2, 3)>,
+     <Perm: (1, 2, 0, 3)>,
+     <Perm: (2, 0, 1, 3)>,
+     <Perm: (2, 1, 0, 3)>)
+This limits the space and makes it smaller. This is useful when you’re making explorations on a huge PermSpace and want to inspect only a smaller subset of it that would be easier to handle.
+There are many more variations that you could have on a PermSpace or a CombSpace. You can specify a custom domain and a custom range to a space. You can constrain it to permutations of a certain degree (e.g. degrees=1 to limit to transformations only.) You can do k-permutations by specifying the length of the desired permutations as n_elements. You can have the permutation objects be of a custom subclass that you define, so you could provide extra methods on them that fit your use case. You can provide sequences that have some items appear multiple times and Combi would be smart about it and consider multiple occurrences of the same item to be interchangable. You can also toggle that behavior so it would treat them as unique. It’s very customizable :)
+Combi has a bunch more useful features that are beyond the scope of this blog post (click for links to documentation):
+MapSpace is like Python’s builtin map, except it’s a sequence that allows index access.
+ProductSpace is like Python’s itertools.product, except it’s a sequence that allows index access.
+ChainSpace is like Python’s itertools.chain, except it’s a sequence that allows index access.
+SelectionSpace is a space of all selections from a sequence, of all possible lengths.
+The Bag class is like Python’s collections.Counter, except it offers far more functionality, like more arithmetic operations between bags, comparison between bags, and more. (It can do that because unlike Python’s collections.Counter, it only allows natural numbers as keys.)
+Classes FrozenBag, OrderedBag and FrozenOrderedBag are provided, which are variations on Bag.
+I hope that the Combi package will be useful for you!
