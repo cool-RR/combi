@@ -16,25 +16,55 @@ Combi provides 4 bag classes:
 * :class:`OrderedBag` - A bag class where items are ordered by insertion order
 * :class:`FrozenOrderedBag` - An immutable, ordered bag class
 
-What is a bag?
---------------
+.. class:: Bag(iterable={})
 
-The :class:`Bag` class is an implementation of the mathematical concept of a
-`multiset`_; meaning something like a set, except that every item could appear
-multiple times, and crucially, we only save the count of the item in memory
-instead of saving multiple copies of the same item, which would be a waste of
-memory.
+   The :class:`Bag` class is an implementation of the mathematical concept of a
+   `multiset`_; meaning something like a set, except that every item could appear
+   multiple times, and crucially, we only save the count of the item in memory
+   instead of saving multiple copies of the same item, which would be a waste of
+   memory.
+   
+   You may know the :class:`collections.Counter` class from Python's standard
+   library; the bag classes provided by Combi are very similar, except that they
+   are more strictly defined as multisets, meaning that counts must be positive
+   integers. (Zeros are allowed in input but they are weeded out.) By contrast,
+   :class:`collections.Counter` allows any value as an item's count.
+   
+   This restriction makes the bag classes more powerful than
+   :class:`collections.Counter` because it allows more methods to be defined. More
+   arithmetical operations are defined, comparison between bags is supported, and
+   more.
 
-You may know the :class:`collections.Counter` class from Python's standard
-library; the bag classes provided by Combi are very similar, except that they
-are more strictly defined as multisets, meaning that counts must be positive
-integers. (Zeros are allowed in input but they are weeded out.) By contrast,
-:class:`collections.Counter` allows any value as an item's count.
+   .. attribute:: maps
 
-This restriction makes the bag classes more powerful than
-:class:`collections.Counter` because it allows more methods to be defined. More
-arithmetical operations are defined, comparison between bags is supported, and
-more.
+       A user updateable list of mappings.  The list is ordered from
+       first-searched to last-searched.  It is the only stored state and can
+       be modified to change which mappings are searched.  The list should
+       always contain at least one mapping.
+
+   .. method:: new_child(m=None)
+
+       Returns a new :class:`ChainMap` containing a new map followed by
+       all of the maps in the current instance.  If ``m`` is specified,
+       it becomes the new map at the front of the list of mappings; if not
+       specified, an empty dict is used, so that a call to ``d.new_child()``
+       is equivalent to: ``ChainMap({}, *d.maps)``.  This method is used for
+       creating subcontexts that can be updated without altering values in any
+       of the parent mappings.
+
+       .. versionchanged:: 3.4
+          The optional ``m`` parameter was added.
+
+   .. attribute:: parents
+
+       Property returning a new :class:`ChainMap` containing all of the maps in
+       the current instance except the first one.  This is useful for skipping
+       the first map in the search.  Use cases are similar to those for the
+       :keyword:`nonlocal` keyword used in :term:`nested scopes <nested
+       scope>`.  The use cases also parallel those for the built-in
+       :func:`super` function.  A reference to ``d.parents`` is equivalent to:
+       ``ChainMap(*d.maps[1:])``.
+
 
 
 .. _multiset: https://en.wikipedia.org/wiki/Multiset
