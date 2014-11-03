@@ -64,11 +64,22 @@ something like this:
     >>> huge_perm_space = PermSpace(1000)
     >>> huge_perm_space
     <PermSpace: 0..999>
-This is a perm space of all permutations of the numbers between 0 and 999. It is ginormous. The number of permutations is around 10**2500 (a number that far exceeds the number of particles in the universe.) I’m not even going to show its length in the shell session because the length number alone would fill this entire blog post. And yet you can fetch any permutation from this space by index number in a fraction of a second:
+    
+This is a perm space of all permutations of the numbers between 0 and 999. It
+is ginormous. The number of permutations is around 10**2500 (a number that far
+exceeds the number of particles in the universe.) I’m not even going to show
+its length in the shell session because the length number alone would fill the
+entire page. And yet you can fetch any permutation from this space by index
+number in a fraction of a second:
+
     >>> huge_perm_space[7]
     <Perm: (0, 1, 2, 3, 4, ... 997, 996, 999, 998)>
-Note that the permutation huge_perm_space[7] is a sequence by itself, where every item is a number in range(1000).
-Combi lets you specify a myriad of options on the the spaces that you create. For example, you can make some elements be fixed:
+    
+Note that the permutation ``huge_perm_space[7]`` is a sequence by itself, where every item is a number in ``range(1000)``.
+
+Combi lets you specify a myriad of options on the the spaces that you create.
+For example, you can make some elements be fixed:
+
     >>> fixed_perm_space = PermSpace(4, fixed_map={3: 3,})
     >>> fixed_perm_space
     <PermSpace: 0..3, fixed_map={3: 3}>
@@ -79,9 +90,25 @@ Combi lets you specify a myriad of options on the the spaces that you create. Fo
      <Perm: (1, 2, 0, 3)>,
      <Perm: (2, 0, 1, 3)>,
      <Perm: (2, 1, 0, 3)>)
-This limits the space and makes it smaller. This is useful when you’re making explorations on a huge PermSpace and want to inspect only a smaller subset of it that would be easier to handle.
-There are many more variations that you could have on a PermSpace or a CombSpace. You can specify a custom domain and a custom range to a space. You can constrain it to permutations of a certain degree (e.g. degrees=1 to limit to transformations only.) You can do k-permutations by specifying the length of the desired permutations as n_elements. You can have the permutation objects be of a custom subclass that you define, so you could provide extra methods on them that fit your use case. You can provide sequences that have some items appear multiple times and Combi would be smart about it and consider multiple occurrences of the same item to be interchangable. You can also toggle that behavior so it would treat them as unique. It’s very customizable :)
-Combi has a bunch more useful features that are beyond the scope of this blog post (click for links to documentation):
+     
+This limits the space and makes it smaller. This is useful when you’re making
+explorations on a huge :class:`PermSpace` and want to inspect only a smaller
+subset of it that would be easier to handle.
+
+
+There are many more variations that you could have on a :class:`PermSpace` or a
+:class:`CombSpace`. You can specify a custom domain and a custom range to a
+space. You can constrain it to permutations of a certain degree (e.g. degrees=1
+to limit to transformations only.) You can do k-permutations by specifying the
+length of the desired permutations as n_elements. You can have the permutation
+objects be of a custom subclass that you define, so you could provide extra
+methods on them that fit your use case. You can provide sequences that have
+some items appear multiple times and Combi would be smart about it and consider
+multiple occurrences of the same item to be interchangable. You can also toggle
+that behavior so it would treat them as unique. It’s very customizable :) For
+more information on doing that, please refer to the documentation for
+:class:`PermSpace` and :class:`CombSpace`.
+
 MapSpace is like Python’s builtin map, except it’s a sequence that allows index access.
 ProductSpace is like Python’s itertools.product, except it’s a sequence that allows index access.
 ChainSpace is like Python’s itertools.chain, except it’s a sequence that allows index access.
