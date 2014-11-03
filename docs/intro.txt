@@ -10,9 +10,9 @@ Getting started with Combi
 ==========================
 
 Combi is a Pythonic framework for combinatorics. Combi lets you explore spaces
-of permutations and combinations as if they were Python sequences, but without
-generating all the permutations/combinations in advance. It also lets you
-specify a lot of special conditions on these spaces.
+of `permutations`_ and `combinations`_ as if they were Python sequences, but
+without generating all the permutations/combinations in advance. It also lets
+you specify a lot of special conditions on these spaces.
 
 Let’s look at the simplest example of using Combi. Check out this $5 padlock
 in the picture:
@@ -37,12 +37,30 @@ combination from the space, it’ll be generated on-demand:
     >>> padlock_space[7]
     <Comb, n_elements=4: (1, 2, 4, 7)>
     
-As you can see, padlock_space behaves like a sequence. We can get a combination by index number. We can also do other sequence-y things, like getting the index number of a combination, or slicing it, or getting the length using len. This is a huge benefit because then we can explore these spaces in a declarative rather than imperative style of programming. (i.e. we don’t have to think about generating the permutations, we simply assume that the permutation space exists and we’re taking items from it at leisure.) Let’s try looking at the length of padlock_space:
+As you can see, ``padlock_space`` behaves like a sequence. We can get a
+combination by index number. We can also do other sequence-y things, like
+getting the index number of a combination, or slicing it, or getting the length
+using ``len``. This is a huge benefit because then we can explore these spaces
+in a declarative rather than imperative style of programming. (i.e. we don’t
+have to think about generating the permutations, we simply assume that the
+permutation space exists and we’re taking items from it at leisure.) Let’s
+try looking at the length of ``padlock_space``:
+
     >>> len(padlock_space)
     70
-Only 70 combinations. That’s pretty lame… At 3 seconds to try a combination, this means this padlock is crackable in under 4 minutes. Not very secure.
-In the example above, I used CombSpace, which is a space of combinations. It’s a thin subclass over PermSpace, which is a space of permutations. A combination is like a permutation, except order doesn’t matter.
-Now, because the permutations/combinations are generated on-demand, I can do something like this:
+    
+Only 70 combinations. That’s pretty lame... At 3 seconds to try a
+combination, this means this padlock is crackable in under 4 minutes. Not very
+secure.
+
+In the example above, I used :class:`CombSpace`, which is a space of
+combinations. It’s a thin subclass over :class:`PermSpace`, which is a space
+of permutations. A combination is like a permutation, except order doesn’t
+matter.
+
+Now, because the permutations/combinations are generated on-demand, I can do
+something like this:
+
     >>> huge_perm_space = PermSpace(1000)
     >>> huge_perm_space
     <PermSpace: 0..999>
@@ -71,3 +89,6 @@ SelectionSpace is a space of all selections from a sequence, of all possible len
 The Bag class is like Python’s collections.Counter, except it offers far more functionality, like more arithmetic operations between bags, comparison between bags, and more. (It can do that because unlike Python’s collections.Counter, it only allows natural numbers as keys.)
 Classes FrozenBag, OrderedBag and FrozenOrderedBag are provided, which are variations on Bag.
 I hope that the Combi package will be useful for you!
+
+.. _permutations: https://en.wikipedia.org/wiki/Permutation
+.. _combinations: https://en.wikipedia.org/wiki/Combination
