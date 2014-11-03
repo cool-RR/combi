@@ -17,7 +17,7 @@ Combi provides 4 bag classes:
 * :class:`FrozenOrderedBag` - An immutable, ordered bag class
 
 What is a bag?
-==============
+--------------
 
 The :class:`Bag` class is an implementation of the mathematical concept of a
 `multiset`_; meaning something like a set, except that every item could appear
