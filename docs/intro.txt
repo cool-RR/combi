@@ -109,11 +109,19 @@ that behavior so it would treat them as unique. It’s very customizable :) For
 more information on doing that, please refer to the documentation for
 :class:`PermSpace` and :class:`CombSpace`.
 
-MapSpace is like Python’s builtin map, except it’s a sequence that allows index access.
-ProductSpace is like Python’s itertools.product, except it’s a sequence that allows index access.
-ChainSpace is like Python’s itertools.chain, except it’s a sequence that allows index access.
-SelectionSpace is a space of all selections from a sequence, of all possible lengths.
-The Bag class is like Python’s collections.Counter, except it offers far more functionality, like more arithmetic operations between bags, comparison between bags, and more. (It can do that because unlike Python’s collections.Counter, it only allows natural numbers as keys.)
+:class:`PermSpace` and :class:`CombSpace` are the flagship classes of Combi;
+but it also provides a few more useful features (Click on the links to see
+details documentation):
+
+ * :class:`MapSpace` is like Python’s builtin ``map``, except it’s a
+   sequence that allows index access.
+ * :class:`ProductSpace` is like Python’s ``itertools.product``, except it’s a 
+   sequence that allows index access.
+ * :class:`ChainSpace` is like Python’s ``itertools.chain``, except it’s a sequence
+   that allows index access.
+ * :class:`SelectionSpace` is a space of all selections from a sequence, of all
+   possible lengths.
+ * The :class:`Bag` class is like Python’s collections.Counter, except it offers far more functionality, like more arithmetic operations between bags, comparison between bags, and more. (It can do that because unlike Python’s collections.Counter, it only allows natural numbers as keys.)
 Classes FrozenBag, OrderedBag and FrozenOrderedBag are provided, which are variations on Bag.
 I hope that the Combi package will be useful for you!
 
