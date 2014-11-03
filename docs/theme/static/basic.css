@@ -422,3 +422,8 @@ span.eqno {
         display: none;
     }
 }
+
+.align-right {
+    float: right;
+    margin: 25px;
+}
