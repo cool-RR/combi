@@ -40,11 +40,11 @@ combination from the space, it’ll be generated on-demand:
 As you can see, ``padlock_space`` behaves like a sequence. We can get a
 combination by index number. We can also do other sequence-y things, like
 getting the index number of a combination, or slicing it, or getting the length
-using ``len``. This is a huge benefit because then we can explore these spaces
-in a declarative rather than imperative style of programming. (i.e. we don’t
-have to think about generating the permutations, we simply assume that the
-permutation space exists and we’re taking items from it at leisure.) Let’s
-try looking at the length of ``padlock_space``:
+using :func:`len`. This is a huge benefit because then we can explore these
+spaces in a declarative rather than imperative style of programming. (i.e. we
+don’t have to think about generating the permutations, we simply assume that
+the permutation space exists and we’re taking items from it at leisure.)
+Let’s try looking at the length of ``padlock_space``:
 
     >>> len(padlock_space)
     70
@@ -95,35 +95,45 @@ This limits the space and makes it smaller. This is useful when you’re making
 explorations on a huge :class:`PermSpace` and want to inspect only a smaller
 subset of it that would be easier to handle.
 
-
+.. 
+   blocktododoc add links in the following paragraph to details in
+   documentation.
+   
+   
 There are many more variations that you could have on a :class:`PermSpace` or a
 :class:`CombSpace`. You can specify a custom domain and a custom range to a
-space. You can constrain it to permutations of a certain degree (e.g. degrees=1
-to limit to transformations only.) You can do k-permutations by specifying the
-length of the desired permutations as n_elements. You can have the permutation
-objects be of a custom subclass that you define, so you could provide extra
-methods on them that fit your use case. You can provide sequences that have
-some items appear multiple times and Combi would be smart about it and consider
-multiple occurrences of the same item to be interchangable. You can also toggle
-that behavior so it would treat them as unique. It’s very customizable :) For
-more information on doing that, please refer to the documentation for
-:class:`PermSpace` and :class:`CombSpace`.
+space. You can constrain it to permutations of a certain degree (e.g.
+``degrees=1`` to limit to transformations only.) You can do `k-permutations`_
+by specifying the length of the desired permutations as ``n_elements``. You can
+have the permutation objects be of a custom subclass that you define, so you
+could provide extra methods on them that fit your use case. You can provide
+sequences that have some items appear multiple times and Combi would be smart
+about it and consider multiple occurrences of the same item to be
+interchangable. You can also toggle that behavior so it would treat them as
+unique. It’s very customizable :) For more information on doing that, please
+refer to the documentation for :class:`PermSpace` and :class:`CombSpace`.
 
 :class:`PermSpace` and :class:`CombSpace` are the flagship classes of Combi;
 but it also provides a few more useful features (Click on the links to see
 details documentation):
 
- * :class:`MapSpace` is like Python’s builtin ``map``, except it’s a
-   sequence that allows index access.
- * :class:`ProductSpace` is like Python’s ``itertools.product``, except it’s a 
-   sequence that allows index access.
- * :class:`ChainSpace` is like Python’s ``itertools.chain``, except it’s a sequence
-   that allows index access.
- * :class:`SelectionSpace` is a space of all selections from a sequence, of all
-   possible lengths.
- * The :class:`Bag` class is like Python’s collections.Counter, except it offers far more functionality, like more arithmetic operations between bags, comparison between bags, and more. (It can do that because unlike Python’s collections.Counter, it only allows natural numbers as keys.)
-Classes FrozenBag, OrderedBag and FrozenOrderedBag are provided, which are variations on Bag.
-I hope that the Combi package will be useful for you!
+* :class:`MapSpace` is like Python’s builtin :func:`map`, except it’s a 
+  sequence that allows index access.
+* :class:`ProductSpace` is like Python’s :func:`itertools.product`, except it’s
+  a sequence that allows index access.
+* :class:`ChainSpace` is like Python’s :func:`itertools.chain`, except it’s a 
+  sequence that allows index access.
+* :class:`SelectionSpace` is a space of all selections from a sequence, of all
+  possible lengths. (It's like :class:`CombSpace` except that it includes 
+  combinations of all possible lengths.)
+* The :class:`Bag` class is like Python’s :class:`collections.Counter`, except 
+  it offers far more functionality, like more arithmetic operations between 
+  bags, comparison between bags, and more. (It can do that because unlike 
+  Python’s :class:`collections.Counter`, it only allows natural numbers as 
+  keys.)
+* Classes :class:`FrozenBag`, :class:`OrderedBag` and :class:`FrozenOrderedBag`
+  are provided, which are variations on Bag.
 
 .. _permutations: https://en.wikipedia.org/wiki/Permutation
 .. _combinations: https://en.wikipedia.org/wiki/Combination
+.. _k-permutations: https://en.wikipedia.org/wiki/Permutation#k-permutations_of_n
