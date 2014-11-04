@@ -4,10 +4,10 @@
    "Ram Rachum at ram.rachum.com" including link. The license may be obtained
    at http://creativecommons.org/licenses/by-sa/3.0/
 
-.. bagging:
+.. bags:
 
-Bag classes
-===========
+Bags
+====
 
 Combi provides 4 bag classes: 
 
@@ -34,6 +34,10 @@ Combi provides 4 bag classes:
    :class:`collections.Counter` because it allows more methods to be defined. More
    arithmetical operations are defined, comparison between bags is supported, and
    more.
+   
+   When you create a bag, it will be populated with the ``iterable`` argument. If ``iterable`` is a plain sequence, its items will be PHRASING 
+   
+   
 
    .. attribute:: maps
 

@@ -17,7 +17,7 @@ Contents:
    
    installation
    intro
-   bagging
+   bags
    topics/index
    misc/index
    
