@@ -47,7 +47,36 @@ Combi provides 4 bag classes:
       Bag({'meow': 2, 'woof': 5})
 
    
+   :class:`Bag` can be accessed similarly to a :class:`dict` or :class:`Counter
+   <collections.Counter>`:
    
+      >>> my_bag = Bag('abracadabra')
+      >>> my_bag['b']
+      2
+      >>> 'x' in my_bag
+      False
+      >>> my_bag['x'] = 7
+      >>> my_bag
+      Bag({'r': 2, 'x': 7, 'b': 2, 'a': 5, 'd': 1, 'c': 1})
+      >>> 'x' in my_bag
+      True
+      >>> my_bag['y'] # If it's not in the bag, the count is zero:
+      0
+      >>> for key, count in my_bag.items():
+      ...     print((key, count))
+      ... 
+      ('r', 2)
+      ('x', 7)
+      ('b', 2)
+      ('a', 5)
+      ('d', 1)
+      ('c', 1)
+
+      
+   Bag arithmetic
+   ==============
+   
+   Tits are yummy.
 
    .. attribute:: maps
 
