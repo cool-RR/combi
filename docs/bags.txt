@@ -74,14 +74,14 @@ Combi provides 4 bag classes:
 
       
 
-   .. attribute:: maps
+   .. attribute:: blocktododoc fill in 
 
        A user updateable list of mappings.  The list is ordered from
        first-searched to last-searched.  It is the only stored state and can
        be modified to change which mappings are searched.  The list should
        always contain at least one mapping.
 
-   .. method:: new_child(m=None)
+   .. method:: new_child(m=None) blocktododoc fill in 
 
        Returns a new :class:`ChainMap` containing a new map followed by
        all of the maps in the current instance.  If ``m`` is specified,
@@ -94,15 +94,6 @@ Combi provides 4 bag classes:
        .. versionchanged:: 3.4
           The optional ``m`` parameter was added.
 
-   .. attribute:: parents
-
-       Property returning a new :class:`ChainMap` containing all of the maps in
-       the current instance except the first one.  This is useful for skipping
-       the first map in the search.  Use cases are similar to those for the
-       :keyword:`nonlocal` keyword used in :term:`nested scopes <nested
-       scope>`.  The use cases also parallel those for the built-in
-       :func:`super` function.  A reference to ``d.parents`` is equivalent to:
-       ``ChainMap(*d.maps[1:])``.
 
 
 Comparisons between bags
@@ -112,6 +103,7 @@ One of the advantages of :class:`Bag` over :class:`collections.Counter` is that
 :class:`Bag` provides comparison methods between bags. This makes it easy to
 see whether one bag is contained by another. Example:
 
+   >>> big_bag = Bag('')
 
 
 
