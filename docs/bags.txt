@@ -19,21 +19,21 @@ Combi provides 4 bag classes:
 .. class:: Bag(iterable={})
 
    The :class:`Bag` class is an implementation of the mathematical concept of a
-   `multiset`_; meaning something like a set, except that every item could appear
-   multiple times, and crucially, we only save the count of the item in memory
-   instead of saving multiple copies of the same item, which would be a waste of
-   memory.
+   `multiset`_; meaning something like a set, except that every item could
+   appear multiple times, and crucially, we only save the *count* of the item
+   in memory instead of saving multiple copies of the same item, which would be
+   a waste of memory.
    
    You may know the :class:`collections.Counter` class from Python's standard
-   library; the bag classes provided by Combi are very similar, except that they
-   are more strictly defined as multisets, meaning that counts must be positive
-   integers. (Zeros are allowed in input but they are weeded out.) By contrast,
-   :class:`collections.Counter` allows any value as an item's count.
+   library; the bag classes provided by Combi are very similar, except that
+   they are more strictly defined as multisets, meaning that counts must be
+   positive integers. (Zeros are allowed in input but they are weeded out.) By
+   contrast, :class:`collections.Counter` allows any value as an item's count.
    
    This restriction makes the bag classes more powerful than
-   :class:`collections.Counter` because it allows more methods to be defined. More
-   arithmetical operations are defined, comparison between bags is supported, and
-   more.
+   :class:`collections.Counter` because it allows more methods to be defined.
+   More arithmetical operations are defined, comparison between bags is
+   supported, and more.
    
    When you create a bag, it will be populated with the ``iterable`` argument.
    If ``iterable`` is a plain sequence, its items will be added one-by-one:
