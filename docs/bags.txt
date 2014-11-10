@@ -73,10 +73,6 @@ Combi provides 4 bag classes:
       ('c', 1)
 
       
-   Bag arithmetic
-   ==============
-   
-   Tits are yummy.
 
    .. attribute:: maps
 
@@ -109,6 +105,10 @@ Combi provides 4 bag classes:
        ``ChainMap(*d.maps[1:])``.
 
 
+Bag arithmetic
+--------------
+
+Sup.
 
 .. _multiset: https://en.wikipedia.org/wiki/Multiset
 ..
