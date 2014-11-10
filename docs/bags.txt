@@ -37,14 +37,14 @@ Combi provides 4 bag classes:
    
    When you create a bag, it will be populated with the ``iterable`` argument.
    If ``iterable`` is a plain sequence, its items will be added one-by-one:
-   
-       >>> Bag('abracadabra')
-       Bag({'c': 1, 'b': 2, 'd': 1, 'a': 5, 'r': 2})
+       
+      >>> Bag('abracadabra')
+      Bag({'c': 1, 'b': 2, 'd': 1, 'a': 5, 'r': 2})
        
    If ``iterable`` is a mapping, its values will be taken as item counts:
    
-       >>> Bag({'meow': 2, 'woof': 5,})
-       Bag({'meow': 2, 'woof': 5})
+      >>> Bag({'meow': 2, 'woof': 5,})
+      Bag({'meow': 2, 'woof': 5})
 
    
    
