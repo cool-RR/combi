@@ -105,10 +105,15 @@ Combi provides 4 bag classes:
        ``ChainMap(*d.maps[1:])``.
 
 
-Bag comparisons
----------------
+Comparisons between bags
+------------------------
 
-Sup.
+One of the advantages of :class:`Bag` over :class:`collections.Counter` is that
+:class:`Bag` provides comparison methods between bags. This makes it easy to
+see whether one bag is contained by another. Example:
+
+
+
 
 Arithmetic operations on bags
 -----------------------------
