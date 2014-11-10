@@ -105,8 +105,13 @@ Combi provides 4 bag classes:
        ``ChainMap(*d.maps[1:])``.
 
 
-Bag arithmetic
---------------
+Bag comparisons
+---------------
+
+Sup.
+
+Arithmetic operations on bags
+-----------------------------
 
 Sup.
 
