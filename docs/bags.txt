@@ -128,7 +128,53 @@ Arithmetic operations on bags
 -----------------------------
 
 Another advantage of :class:`Bag` over :class:`collections.Counter` is that
-:class:`Bag` 
+:class:`Bag` provides a *wealth* of arithmetic operations (addition,
+subtraction, etc.) between bags, and between bags and integers.
+
+The basic arithmetic operations do what you expect them to, operating on the
+counts of items:
+
+   >>> sandwich = Bag({'bread': 2, 'cheese': 1, 'tomato': 2, 'burger': 1,})
+   >>> salad = Bag({'tomato': 2, 'bell pepper': 1,})
+   >>> single_tomato = Bag({'tomato': 1,})
+   >>> sandwich + single_tomato # Addition
+   Bag({'cheese': 1, 'bread': 2, 'tomato': 3, 'burger': 1})
+   >>> sandwich - single_tomato # Subtraction 
+   Bag({'cheese': 1, 'bread': 2, 'tomato': 1, 'burger': 1})
+   >>> sandwich * 3 # Multiplication
+   Bag({'cheese': 3, 'bread': 6, 'tomato': 6, 'burger': 3})
+   
+As for division: You can divide one bag by another to get an integer saying how
+many times the second bag would go into the first. You can also divide a bag by
+an integer, which will divide all the counts by that integer, rounding down.
+**All bag division is done with the floor-division operator ``//``, because it's
+always rounded-down.** Examples:
+
+   >>> sandwich // single_tomato # Floor-division by another bag
+   2
+   >>> sandwich // 2 # Floor-division by integer
+   Bag({'bread': 1, 'tomato': 1})
+   
+   
+blocktododoc more operators
+
+Did someone say logical operations?
+
+   >>> sandwich | salad # Logical or
+   Bag({'bread': 2, 'cheese': 1, 'burger': 1, 'tomato': 2, 'bell pepper': 1})
+   >>> sandwich & salad # Logical and
+   Bag({'tomato': 2})
+   
+As a final note about arithmetic operations, augmented assignment is supported
+for all operations, so you can elegantly mutate bags in-place like this:
+
+   >>> sandwich += Bag({'bacon': 2, 'egg': 1,})
+   >>> sandwich
+   Bag({'cheese': 1, 'bacon': 2, 'bread': 2, 'egg': 1, 'burger': 1, 'tomato': 2})
+   >>> sandwich **= 2
+   >>> sandwich
+   Bag({'cheese': 1, 'bacon': 4, 'bread': 4, 'egg': 1, 'burger': 1, 'tomato': 4})
+   
 
 .. _multiset: https://en.wikipedia.org/wiki/Multiset
 .. _partial order: https://en.wikipedia.org/wiki/Partially_ordered_set
