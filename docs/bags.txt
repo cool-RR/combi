@@ -127,7 +127,8 @@ y`` nor ``y >= x`` holds true. This is similar to set comparison in Python.
 Arithmetic operations on bags
 -----------------------------
 
-Sup.
+Another advantage of :class:`Bag` over :class:`collections.Counter` is that
+:class:`Bag` 
 
 .. _multiset: https://en.wikipedia.org/wiki/Multiset
 .. _partial order: https://en.wikipedia.org/wiki/Partially_ordered_set
