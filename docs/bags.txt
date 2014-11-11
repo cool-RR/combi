@@ -109,8 +109,8 @@ one bag is contained by another. Example:
    >>> vegan_sandwich < sandwich
    True
    >>> salad = Bag({'tomato': 2, 'bell pepper': 1,})
-   >>> salad < sandwich
-   False
+   >>> salad < sandwich # False because there's no bell pepper in our sandwich
+   False 
 
 A bag is smaller-or-equal to another bag if it's "contained" in it, meaning
 that every key in the contained bag also exists in the containing bag, and with
@@ -147,8 +147,8 @@ counts of items:
 As for division: You can divide one bag by another to get an integer saying how
 many times the second bag would go into the first. You can also divide a bag by
 an integer, which will divide all the counts by that integer, rounding down.
-**All bag division is done with the floor-division operator ``//``, because it's
-always rounded-down.** Examples:
+All bag division is done with the floor-division operator ``//``, because it's
+always rounded-down. Examples:
 
    >>> sandwich // single_tomato # Floor-division by another bag
    2
