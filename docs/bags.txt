@@ -100,12 +100,29 @@ Comparisons between bags
 ------------------------
 
 One of the advantages of :class:`Bag` over :class:`collections.Counter` is that
-:class:`Bag` provides comparison methods between bags. This makes it easy to
-see whether one bag is contained by another. Example:
+:class:`Bag` provides comparison methods between bags, that act similarly to
+comparisons between Python's built-in sets. This makes it easy to see whether
+one bag is contained by another. Example:
 
-   >>> big_bag = Bag('')
+   >>> sandwich = Bag({'bread': 2, 'cheese': 1, 'tomato': 2, 'burger': 1,})
+   >>> vegan_sandwich = Bag({'bread': 2, 'tomato': 2,})
+   >>> vegan_sandwich < sandwich
+   True
+   >>> salad = Bag({'tomato': 2, 'bell pepper': 1,})
+   >>> salad < sandwich
+   False
 
+A bag is smaller-or-equal to another bag if it's "contained" in it, meaning
+that every key in the contained bag also exists in the containing bag, and with
+a count that's bigger or equal to its count in the contained bag.
 
+A bag is strictly smaller than another bag if the above holds, and there's at
+least one key for which the count in the containing bag is strictly bigger than
+its count in the contained bag.
+
+Please note that unlike most comparisons in Python, this is a `partial order`_
+rather than a total one, meaning that for some pairs of bags, neither ``x >=
+y`` nor ``y >= x`` holds true. This is similar to set comparison in Python.
 
 Arithmetic operations on bags
 -----------------------------
@@ -113,5 +130,6 @@ Arithmetic operations on bags
 Sup.
 
 .. _multiset: https://en.wikipedia.org/wiki/Multiset
+.. _partial order: https://en.wikipedia.org/wiki/Partially_ordered_set
 ..
    blocktodo remove this comment
