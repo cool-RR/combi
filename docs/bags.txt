@@ -155,8 +155,14 @@ always rounded-down. Examples:
    >>> sandwich // 2 # Floor-division by integer
    Bag({'bread': 1, 'tomato': 1})
    
-   
-blocktododoc more operators
+The more advanced operations are also supported:
+
+   >>> sandwich % salad
+   Bag({'bread': 2, 'cheese': 1, 'burger': 1, 'tomato': 2})
+   >>> salad % 2
+   Bag({'bell pepper': 1})
+   >>> salad ** 3
+   Bag({'tomato': 8, 'bell pepper': 1})
 
 Did someone say logical operations?
 
@@ -178,5 +184,3 @@ for all operations, so you can elegantly mutate bags in-place like this:
 
 .. _multiset: https://en.wikipedia.org/wiki/Multiset
 .. _partial order: https://en.wikipedia.org/wiki/Partially_ordered_set
-..
-   blocktodo remove this comment
