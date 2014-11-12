@@ -96,7 +96,12 @@ Combi provides 4 bag classes for you to choose from according to your needs:
       
    .. attribute:: n_elements
    
-      The number of elements in the bag, i.e. the sum of all the counts.
+      The number of elements in the bag, i.e. the sum of all the counts. 
+      Example:
+      
+          >>> bag = Bag({'a': 1, 'b': 2, 'c': 3,})
+          >>> bag.n_elements
+          6
 
    .. method:: clear()
 
@@ -174,7 +179,7 @@ Combi provides 4 bag classes for you to choose from according to your needs:
    
    - If you want to have your bag as a key in a :class:`set`, :class:`dict`,
      or any other kind of hashtable. (A normal bag can't be used for this 
-     because it's mutable and thus not hashable)
+     because it's mutable and thus not hashable.)
    - If you want to make it clear in your program that a certain bag should 
      never be changed after it's created.
      
@@ -195,8 +200,8 @@ Combi provides 4 bag classes for you to choose from according to your needs:
    ordered. Items have a defined order, which is by default the order in which
    they were inserted. :class:`OrderedBag` is a subclass over :class:`Bag`.
    
-   :class:`OrderedBag` is to :class:`Bag` what :class:`collections.OrderedDict`
-   is to :class:`dict`.
+   Another way to think of it is that :class:`OrderedBag` is to :class:`Bag`
+   what :class:`collections.OrderedDict` is to :class:`dict`.
    
    Example:   
    
@@ -208,9 +213,6 @@ Combi provides 4 bag classes for you to choose from according to your needs:
       >>> ordered_bag.index('b')
       1
 
-   
-   {'reversed', 'move_to_end', 'sort', 'index'}
-   
    .. attribute:: reversed
    
       Get a version of this ordered bag with order reversed. Example:
@@ -233,6 +235,7 @@ Combi provides 4 bag classes for you to choose from according to your needs:
       the start instead.
       
    .. method:: sort(key=None, reverse=False)
+   
       Sort the keys, changing the order in-place.
       
       The optional ``key`` argument, (not to be confused with the bag keys,) is
@@ -243,7 +246,7 @@ Combi provides 4 bag classes for you to choose from according to your needs:
       
 .. class:: FrozenOrderedBag(iterable={})
 
-   :class:`FrozenBag` is a multiset just like :class:`Bag`, except it's
+   :class:`FrozenOrderedBag` is a multiset just like :class:`Bag`, except it's
    immutable *and* ordered. You can think of it as a combination of
    :class:`FrozenBag` and :class:`OrderedBag`.
    
