@@ -10,6 +10,37 @@
 The Combi Documentation
 =======================
 
+Combi is a Pythonic package for combinatorics.
+
+Combi lets you explore spaces of `permutations`_ and `combinations`_ as if they
+were Python sequences, but without generating all the permutations/combinations
+in advance. It also lets you specify a lot of special conditions on these
+spaces. 
+
+Features
+========
+
+blocktododoc
+
+
+
+Requirements
+============
+
+* Python, version 2.7 or 3.3 or above. If you're new to Python, `download
+  the newest version from here <http://python.org/download>`_.
+ 
+* `Setuptools`_.
+
+
+Installation
+============
+
+Use `pip`_ to install Combi:
+
+* ``pip install combi``
+
+
 Contents:
 
 .. toctree::
@@ -36,6 +67,8 @@ Feel free to fork and send pull requests!
 
 
 .. _mailing list: https://groups.google.com/forum/#!forum/combi-users
+.. _permutations: https://en.wikipedia.org/wiki/Permutation
+.. _combinations: https://en.wikipedia.org/wiki/Combination
 
 .. * :ref:`genindex`
 .. * :ref:`modindex`
