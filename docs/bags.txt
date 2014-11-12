@@ -93,6 +93,10 @@ Combi provides 4 bag classes:
       :class:`FrozenOrderedBag <combi.FrozenOrderedBag>`, the items will be
       yielded by their canonical order (usually insertion order), otherwise
       they'll be yielded in arbitrary order, just like dicts and sets.
+      
+   .. attribute:: n_elements
+   
+      The number of elements in the bag, i.e. the sum of all the counts.
 
    .. method:: clear()
 
@@ -139,6 +143,24 @@ Combi provides 4 bag classes:
       
          >>> Bag('abracadabra').most_common(3)
          (('a', 5), ('r', 2), ('b', 2))
+         
+   .. method:: pop(key, [default])
+   
+      Get the count of ``key`` and remove it from the bag, optionally with a
+      default fallback.
+         
+   .. method:: popitem()
+   
+      Remove a key from the bag, and get a tuple ``(key, count)``.
+      
+   .. method:: setdefault(key, [default])
+   
+      Get the count of `key`, optionally with a default fallback. If `key` is
+      missing, its count in the bag will be set to the default.
+
+   .. method:: update(mapping)
+      
+      Update the bag with a mapping of key to count.
 
 
 Comparisons between bags
