@@ -9,7 +9,7 @@
 Bags
 ====
 
-Combi provides 4 bag classes: 
+Combi provides 4 bag classes for you to choose from according to your needs: 
 
 * :class:`Bag` - The simplest bag class
 * :class:`FrozenBag` - An immutable (and thus hashable) bag class
@@ -187,9 +187,67 @@ Combi provides 4 bag classes:
          FrozenBag({'d': 1, 'c': 1, 'b': 2, 'a': 5, 'r': 2})
          >>> frozen_bag.get_mutable()
          Bag({'d': 1, 'c': 1, 'b': 2, 'a': 5, 'r': 2})
+         
+   
+.. class:: OrderedBag(iterable={})
+
+   :class:`OrderedBag` is a multiset just like :class:`Bag`, except it's also
+   ordered. Items have a defined order, which is by default the order in which
+   they were inserted. :class:`OrderedBag` is a subclass over :class:`Bag`.
+   
+   :class:`OrderedBag` is to :class:`Bag` what :class:`collections.OrderedDict`
+   is to :class:`dict`.
+   
+   Example:   
+   
+      >>> ordered_bag = OrderedBag('abbcccdddd')
+      >>> tuple(ordered_bag.elements) # Items ordered by insertion order:
+      ('a', 'b', 'b', 'c', 'c', 'c', 'd', 'd', 'd', 'd')
+      >>> tuple(ordered_bag.items())
+      (('a', 1), ('b', 2), ('c', 3), ('d', 4))
+      >>> ordered_bag.index('b')
+      1
 
    
+   {'reversed', 'move_to_end', 'sort', 'index'}
+   
+   .. attribute:: reversed
+   
+      Get a version of this ordered bag with order reversed. Example:
+      
+         >>> ordered_bag = OrderedBag('abbcccdddd')
+         >>> ordered_bag
+         OrderedBag(OrderedDict([('a', 1), ('b', 2), ('c', 3), ('d', 4)]))
+         >>> ordered_bag.reversed
+         OrderedBag(OrderedDict([('d', 4), ('c', 3), ('b', 2), ('a', 1)]))
+         
+      This does *not* change the existing bag, but creates a new one. 
+   
+   .. method:: index(key)
+   
+      Get the index number (i.e. position) of ``key`` in the ordered bag.
+   
+   .. method:: move_to_end(key, last=True)
+   
+      Move a key to the end of the order. Specify `last=False` to move it to
+      the start instead.
+      
+   .. method:: sort(key=None, reverse=False)
+      Sort the keys, changing the order in-place.
+      
+      The optional ``key`` argument, (not to be confused with the bag keys,) is
+      a key function. If it's not passed in, default Python ordering will be
+      used.
+      
+      If ``reverse=True`` is used, the keys will be sorted in reverse order.
+      
+.. class:: FrozenOrderedBag(iterable={})
 
+   :class:`FrozenBag` is a multiset just like :class:`Bag`, except it's
+   immutable *and* ordered. You can think of it as a combination of
+   :class:`FrozenBag` and :class:`OrderedBag`.
+   
+   
 Comparisons between bags
 ------------------------
 
