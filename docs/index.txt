@@ -64,8 +64,6 @@ For more details, :ref:`try the tutorial <intro>` or see the
 Features
 ========
 
-blocktododoc: Links from as many items here as possible to documentation.
-
 - :class:`PermSpace` lets you explore a space of permutations as if it was a
   Python sequence.
   
