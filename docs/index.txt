@@ -17,6 +17,17 @@ were Python sequences, but without generating all the permutations/combinations
 in advance. It also lets you specify a lot of special conditions on these
 spaces. 
 
+.. _index-contents:
+
+Documentation contents
+======================
+
+.. toctree::
+   :maxdepth: 2
+   
+   intro
+   bags
+   
 Basic usage
 ===========
 
@@ -116,18 +127,6 @@ Use `pip`_ to install Combi::
 
    $ pip install combi
 
-
-.. _index-contents:
-
-Documentation contents
-======================
-
-.. toctree::
-   :maxdepth: 2
-   
-   intro
-   bags
-   
 
 Community
 =========
