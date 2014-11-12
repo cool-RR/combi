@@ -53,7 +53,32 @@ For more details, :ref:`try the tutorial <intro>` or see the
 Features
 ========
 
-blocktododoc
+blocktododoc: Links from as many items here as possible to documentation.
+
+- :class:`PermSpace` lets you explore a space of permutations as if it was a
+  Python sequence.
+  
+  * Permutations are generated on-demand, so huge permutation spaces can be 
+    created easily without big memory footprint.
+  * :class:`PermSpace` will notice if you have repeating elements in your
+    sequence, and treat all occurences of the same value as interchangable 
+    rather than create redundant permutations
+  * A custom domain can be specified instead of just using index numbers.
+  * You may specify some elements to be fixed, so they'll point to the same
+    value in all permutations. (Useful for limiting an experiment to a subset 
+    of the original permutation space.)
+  * Permutation spaces may be limited to a certain degree of permutations. (A
+    permutation's degree is the number of transformations it takes to make it.)
+  * `k-permutations`_ are supported.
+  * You may specify a custom type for the generated permutations, so you could 
+    implement your own functionality on them.
+    
+- :class:`CombSpace` lets you explore a space of combinations as if it was a
+  Python sequence.
+  
+- :class:`ProductSpace` is like Python's :class:`itertools.product`, except
+  it's a sequence that allows index access.
+
 
 
 Requirements
@@ -113,6 +138,7 @@ There are three Combi groups, a.k.a. mailing lists:
 .. _mailing list: https://groups.google.com/forum/#!forum/combi-users
 .. _combinatorics: https://en.wikipedia.org/wiki/Combinatorics
 .. _permutations: https://en.wikipedia.org/wiki/Permutation
+.. _k-permutations: https://en.wikipedia.org/wiki/Permutation#k-permutations_of_n
 .. _combinations: https://en.wikipedia.org/wiki/Combination
 .. _Setuptools: https://pypi.python.org/pypi/setuptools
 .. _pip: https://pypi.python.org/pypi/pip
