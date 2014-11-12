@@ -9,6 +9,9 @@
 Bags
 ====
 
+The 4 bag classes
+-----------------
+
 Combi provides 4 bag classes for you to choose from according to your needs: 
 
 * :class:`Bag` - The simplest bag class
