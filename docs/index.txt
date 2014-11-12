@@ -40,9 +40,9 @@ Requirements
 Installation
 ============
 
-Use `pip`_ to install Combi:
+Use `pip`_ to install Combi::
 
-* ``pip install combi``
+   $ pip install combi
 
 
 Documentation contents
