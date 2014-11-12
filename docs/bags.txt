@@ -165,7 +165,7 @@ The more advanced operations are also supported:
    Bag({'bell pepper': 1})
    >>> divmod(salad, 2) # Divmod by integer
    (Bag({'tomato': 1}), Bag({'bell pepper': 1}))
-   >>> salad ** 3 # Exponentation
+   >>> salad ** 3 # Exponentiation
    Bag({'tomato': 8, 'bell pepper': 1})
    >>> pow(salad, 3, 5) # Exponentiation with modulo
    Bag({'tomato': 3, 'bell pepper': 1})
