@@ -45,8 +45,8 @@ Use `pip`_ to install Combi:
 * ``pip install combi``
 
 
-Contents
-========
+Documentation contents
+======================
 
 .. toctree::
    :maxdepth: 2
