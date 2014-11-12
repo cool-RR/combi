@@ -170,7 +170,8 @@ The more advanced operations are also supported:
    >>> pow(salad, 3, 5) # Exponentiation with modulo
    Bag({'tomato': 3, 'bell pepper': 1})
 
-And... Did someone say logical operations?
+And... Did someone say logical operations? Like in Python sets, these do
+`union`_ and `intersection`_:
 
    >>> sandwich | salad # Logical or
    Bag({'bread': 2, 'cheese': 1, 'burger': 1, 'tomato': 2, 'bell pepper': 1})
@@ -190,3 +191,5 @@ for all operations, so you can elegantly mutate bags in-place like this:
 
 .. _multiset: https://en.wikipedia.org/wiki/Multiset
 .. _partial order: https://en.wikipedia.org/wiki/Partially_ordered_set
+.. _union: http://en.wikipedia.org/wiki/Union_(set_theory)
+.. _intersection: http://en.wikipedia.org/wiki/Intersection_(set_theory)
