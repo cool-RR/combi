@@ -76,7 +76,6 @@ Combi provides 4 bag classes for you to choose from according to your needs:
       ('c', 1)
 
       
-
    .. attribute:: elements
 
       An iterator over the elements in the bag. If an item has a count of 7 in
@@ -169,7 +168,23 @@ Combi provides 4 bag classes for you to choose from according to your needs:
    .. method:: update(mapping)
       
       Update the bag with a mapping of key to count.
-
+      
+   .. method:: get_contained_bags()
+        
+      Get all bags that are subsets of this bag.
+      
+      This means all bags that have counts identical or smaller for each key.
+      
+      Example:
+      
+         >>>bag = Bag({'a': 1, 'b': 2, 'c': 3,})
+         >>> contained_bags = bag.get_contained_bags()
+         >>> len(contained_bags)
+         24
+         >>> contained_bags[7]
+         Bag({'c': 2, 'b': 1})
+         >>> contained_bags[7] < bag # Contained bag is contained.
+         True
 
 .. class:: FrozenBag(iterable={})
 
