@@ -106,8 +106,6 @@ Features
 - Classes :class:`FrozenBag`, :class:`OrderedBag` and 
   :class:`FrozenOrderedBag` are provided, which are variations on :class:`Bag`.
 
-blocktododoc add everything
-
 
 Requirements
 ============
