@@ -79,6 +79,7 @@ blocktododoc: Links from as many items here as possible to documentation.
 - :class:`ProductSpace` is like Python's :func:`itertools.product`, except
   it's a sequence that allows index access.
 
+blocktododoc add everything
 
 
 Requirements
@@ -113,7 +114,8 @@ Documentation contents
 Community
 =========
 
-Combi on GitHub: https://github.com/cool-RR/combi Feel free to fork and send pull requests!
+Combi on GitHub: https://github.com/cool-RR/combi Feel free to fork and send
+pull requests!
 
 There are three Combi groups, a.k.a. mailing lists:
 
