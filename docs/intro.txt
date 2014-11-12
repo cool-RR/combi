@@ -9,7 +9,7 @@
 Getting started with Combi
 ==========================
 
-Combi is a Pythonic framework for combinatorics. 
+Combi is a Pythonic package for `combinatorics`_.
 
 Combi lets you explore spaces of `permutations`_ and `combinations`_ as if they
 were Python sequences, but without generating all the permutations/combinations
@@ -136,6 +136,7 @@ details documentation):
 * Classes :class:`FrozenBag`, :class:`OrderedBag` and :class:`FrozenOrderedBag`
   are provided, which are variations on Bag.
 
+.. _combinatorics: https://en.wikipedia.org/wiki/Combinatorics
 .. _permutations: https://en.wikipedia.org/wiki/Permutation
 .. _combinations: https://en.wikipedia.org/wiki/Combination
 .. _k-permutations: https://en.wikipedia.org/wiki/Permutation#k-permutations_of_n

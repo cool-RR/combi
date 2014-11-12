@@ -10,18 +10,22 @@
 The Combi Documentation
 =======================
 
-Combi is a Pythonic package for combinatorics.
+Combi is a Pythonic package for `combinatorics`_.
 
 Combi lets you explore spaces of `permutations`_ and `combinations`_ as if they
 were Python sequences, but without generating all the permutations/combinations
 in advance. It also lets you specify a lot of special conditions on these
 spaces. 
 
+Basic usage
+===========
+
+blocktododoc
+
 Features
 ========
 
 blocktododoc
-
 
 
 Requirements
@@ -41,7 +45,8 @@ Use `pip`_ to install Combi:
 * ``pip install combi``
 
 
-Contents:
+Contents
+========
 
 .. toctree::
    :maxdepth: 2
@@ -55,20 +60,32 @@ Contents:
    ..
       ref/index
 
-This documentation is still incomplete. If you have any questions or feedback,
-say hello on the `mailing list`_!
-      
--------------------------------------------------------------------------------
 
-The Combi repository is at: https://github.com/cool-RR/combi
+Community
+=========
 
-Feel free to fork and send pull requests!
+Combi on GitHub: https://github.com/cool-RR/combi Feel free to fork and send pull requests!
 
+There are three Combi groups, a.k.a. mailing lists:
+
+- If you need help with Combi, post a message on `the combi-users
+  Google Group <https://groups.google.com/forum/#!forum/combi-users>`_.
+
+- If you want to help on the development of Combi itself, come say
+  hello on `the combi-dev Google Group
+  <https://groups.google.com/forum/#!forum/combi-dev>`_.
+
+- If you want to be informed on new releases of Combi, sign up for
+  `the low-traffic combi-announce Google Group
+  <https://groups.google.com/forum/#!forum/combi-announce>`_.
 
 
 .. _mailing list: https://groups.google.com/forum/#!forum/combi-users
+.. _combinatorics: https://en.wikipedia.org/wiki/Combinatorics
 .. _permutations: https://en.wikipedia.org/wiki/Permutation
 .. _combinations: https://en.wikipedia.org/wiki/Combination
+.. _Setuptools: https://pypi.python.org/pypi/setuptools
+.. _pip: https://pypi.python.org/pypi/pip
 
 .. * :ref:`genindex`
 .. * :ref:`modindex`
