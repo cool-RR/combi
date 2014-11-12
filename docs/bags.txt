@@ -157,14 +157,20 @@ always rounded-down. Examples:
    
 The more advanced operations are also supported:
 
-   >>> sandwich % salad
+   >>> sandwich % salad # Modulo by bag
    Bag({'bread': 2, 'cheese': 1, 'burger': 1, 'tomato': 2})
-   >>> salad % 2
+   >>> divmod(sandwich, salad) # Divmod by bag
+   (0, Bag({'tomato': 2, 'cheese': 1, 'bread': 2, 'burger': 1}))
+   >>> salad % 2 # Modulo by integer
    Bag({'bell pepper': 1})
-   >>> salad ** 3
+   >>> divmod(salad, 2) # Divmod by integer
+   (Bag({'tomato': 1}), Bag({'bell pepper': 1}))
+   >>> salad ** 3 # Exponentation
    Bag({'tomato': 8, 'bell pepper': 1})
+   >>> pow(salad, 3, 5) # Exponentiation with modulo
+   Bag({'tomato': 3, 'bell pepper': 1})
 
-Did someone say logical operations?
+And... Did someone say logical operations?
 
    >>> sandwich | salad # Logical or
    Bag({'bread': 2, 'cheese': 1, 'burger': 1, 'tomato': 2, 'bell pepper': 1})
