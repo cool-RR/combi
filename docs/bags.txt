@@ -101,7 +101,44 @@ Combi provides 4 bag classes:
    .. method:: copy()
 
       Create a shallow copy of the bag.
+      
+   .. method:: get(key, default=None)
 
+      Get a key's count with a default fallback, just like :meth:`dict.get`.
+      
+   .. method:: keys()
+
+      Get an iterator over the keys in a bag:
+      
+         >>> bag = Bag({'a': 1, 'b': 2, 'c': 3,})
+         >>> tuple(bag.keys())
+         ('b', 'c', 'a')
+         
+   .. method:: values()
+
+      Get an iterator over the counts in a bag:
+      
+         >>> bag = Bag({'a': 1, 'b': 2, 'c': 3,})
+         >>> tuple(bag.values())
+         (2, 3, 1)
+         
+   .. method:: items()
+
+      Get an iterator over the items in a bag, i.e. keys with counts:
+      
+         >>> bag = Bag({'a': 1, 'b': 2, 'c': 3,})
+         >>> tuple(bag.items())
+         (('b', 2), ('c', 3), ('a', 1))
+
+   .. method:: most_common([n])
+   
+      Get a tuple of the ``n`` most common elements and their counts from the
+      most common to the least. If n is not specified, :meth:`most_common()`
+      returns all elements in the bag. Elements with equal counts are ordered
+      arbitrarily:
+      
+         >>> Bag('abracadabra').most_common(3)
+         (('a', 5), ('r', 2), ('b', 2))
 
 
 Comparisons between bags
