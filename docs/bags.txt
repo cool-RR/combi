@@ -163,6 +163,33 @@ Combi provides 4 bag classes:
       Update the bag with a mapping of key to count.
 
 
+.. class:: FrozenBag(iterable={})
+
+   :class:`FrozenBag` is a multiset just like :class:`Bag`, except it's
+   immutable. After it's created, it can't be modified. It's a subclass over
+   :class:`Bag`.
+   
+   In which cases would you want to use :class:`FrozenBag` rather than
+   :class:`Bag`?
+   
+   - If you want to have your bag as a key in a :class:`set`, :class:`dict`,
+     or any other kind of hashtable. (A normal bag can't be used for this 
+     because it's mutable and thus not hashable)
+   - If you want to make it clear in your program that a certain bag should 
+     never be changed after it's created.
+     
+   .. method:: get_mutable()
+   
+      Get a mutable version of this frozen bag. Example:
+      
+         >>> frozen_bag = FrozenBag('abracadabra')
+         >>> frozen_bag
+         FrozenBag({'d': 1, 'c': 1, 'b': 2, 'a': 5, 'r': 2})
+         >>> frozen_bag.get_mutable()
+         Bag({'d': 1, 'c': 1, 'b': 2, 'a': 5, 'r': 2})
+
+   
+
 Comparisons between bags
 ------------------------
 
