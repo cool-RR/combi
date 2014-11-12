@@ -61,6 +61,8 @@ matter:
 For more details, :ref:`try the tutorial <intro>` or see the
 :ref:`documentation contents <index-contents>`.
 
+.. _index-features:
+
 Features
 ========
 
