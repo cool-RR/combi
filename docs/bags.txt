@@ -173,9 +173,9 @@ The more advanced operations are also supported:
 And... Did someone say logical operations? Like in Python sets, these do
 `union`_ and `intersection`_:
 
-   >>> sandwich | salad # Logical or
+   >>> sandwich | salad # Logical or, a.k.a. set union
    Bag({'bread': 2, 'cheese': 1, 'burger': 1, 'tomato': 2, 'bell pepper': 1})
-   >>> sandwich & salad # Logical and
+   >>> sandwich & salad # Logical and, a.k.a. set intersection
    Bag({'tomato': 2})
    
 As a final note about arithmetic operations, augmented assignment is supported
