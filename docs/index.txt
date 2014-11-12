@@ -76,7 +76,7 @@ blocktododoc: Links from as many items here as possible to documentation.
 - :class:`CombSpace` lets you explore a space of combinations as if it was a
   Python sequence.
   
-- :class:`ProductSpace` is like Python's :class:`itertools.product`, except
+- :class:`ProductSpace` is like Python's :func:`itertools.product`, except
   it's a sequence that allows index access.
 
 
@@ -106,15 +106,9 @@ Documentation contents
 .. toctree::
    :maxdepth: 2
    
-   installation
    intro
    bags
-   topics/index
-   misc/index
    
-   ..
-      ref/index
-
 
 Community
 =========
