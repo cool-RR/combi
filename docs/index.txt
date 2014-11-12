@@ -20,7 +20,35 @@ spaces.
 Basic usage
 ===========
 
-blocktododoc
+Use :class:`PermSpace` to create a permutation space:
+
+   >>> from combi import *
+   >>> perm_space = PermSpace('meow')
+   
+It behaves like a sequence:
+
+   >>> len(perm_space)
+   24
+   >>> perm_space[7]
+   <Perm: ('e', 'm', 'w', 'o')>
+   >>> perm_space.index('mowe')
+   3
+   
+And yet the permutations are created on-demand rather than in advance.
+
+Use :class:`CombSpace` to create a combination space, where order doesn't
+matter:
+
+   >>> comb_space = CombSpace(('vanilla', 'chocolate', 'strawberry'), 2)
+   >>> comb_space
+   <CombSpace: ('vanilla', 'chocolate', 'strawberry'), n_elements=2>
+   >>> comb_space[2]
+   <Comb, n_elements=2: ('chocolate', 'strawberry')>
+   >>> len(comb_space)
+   3
+
+For more details, :ref:`try the tutorial <intro>` or see the
+:ref:`documentation contents <index-contents>`.
 
 Features
 ========
@@ -44,6 +72,8 @@ Use `pip`_ to install Combi::
 
    $ pip install combi
 
+
+.. _index-contents:
 
 Documentation contents
 ======================
