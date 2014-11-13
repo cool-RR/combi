@@ -19,7 +19,7 @@
    permutation space can have its range and domain specified, some items can be
    fixed, and more.
    
-   Here is the simplest possible `PermSpace`:
+   Here is the simplest possible :class:`PermSpace`:
    
       >>> perm_space = PermSpace(3)
       <PermSpace: 0..2>
@@ -43,59 +43,59 @@
    :class:`PermSpace` allows the creation of various special kinds of
    permutation spaces. For example, you can specify an integer to
    ``n_elements`` to set a permutation length that's smaller than the sequence
-   length. (a.k.a. `k-permutaions`_.) This variation of a :class:`PermSpace` is
+   length. (a.k.a. `k-permutations`_.) This variation of a :class:`PermSpace` is
    called "partial" and it's one of 8 different variations, that are listed
    below.
-   
-    - **Rapplied (Range-applied):** having an arbitrary sequence as a range.
-      To make one, pass your sequence as the first argument instead of the
-      length.
-      
-    - **Dapplied (Domain-applied):** having an arbitrary sequence as a domain.
-      To make one, pass a sequence into the `domain` argument.
-      
-    - **Recurrent:** If you provide a sequence (making the space rapplied) and
-      that sequence has repeating items, you've made a recurrent `PermSpace`.
-      It'll be shorter because all of the copies of same item will be 
-      considered the same item. (Though they will appear more than once, 
-      according to their count in the sequence.)
-      
-    - **Fixed:** Having a specified number of indices always pointing at certain
-      values, making the space smaller. To make one, pass a dict from each
-      key to the value it should be fixed to as the argument ``fixed_map``.
-      
-    - **Sliced:** A perm space can be sliced like any Python sequence (except you
-      can't change the step.) To make one, use slice notation on an existing
-      perm space, e.g. ``perm_space[56:100]``.
-      
-    - **Degreed:** A perm space can be limited to perms of a certain degree. (A
-      perm's degree is the number of transformations it takes to make it.)
-      To make one, pass into the ``degrees`` argument either a single degree
-      (like ``5``) or a tuple of different degrees (like ``(1, 3, 7)``)
-      
-    - **Partial:** A perm space can be partial, in which case not all elements
-      are used in perms. E.g. you can have a perm space of a sequence of
-      length 5 but with ``n_elements=3``, so every perm will have only 3 items.
-      (These are usually called `k-permutations`_ in math-land.) To make one,
-      pass a number as the argument ``n_elements``.
-      
-    - **Combination:** If you pass in ``is_combination=True`` or use the subclass
-      `CombSpace`, then you'll have a space of `combinations`_ (:class:`Comb`s) 
-      instead of perms. :class:`Comb`s are like :class:`Perm``s except there's 
-      no order to the elements. (They are always forced into canonical order.)
-      
-    - **Typed:** If you pass in a perm subclass as ``perm_type``, you'll get a 
-      typed :class:`PermSpace`, meaning that the perms will use the class you 
-      provide rather than the default :class:`Perm`. This is useful when you want 
-      to provide extra functionality on top of `Perm` that's specific to your use 
-      case.
-
+  
+   - **Rapplied (Range-applied):** Having an arbitrary sequence as a range.
+     To make one, pass your sequence as the first argument instead of the
+     length.
+     
+   - **Dapplied (Domain-applied):** Having an arbitrary sequence as a domain.
+     To make one, pass a sequence into the `domain` argument.
+     
+   - **Recurrent:** If you provide a sequence (making the space rapplied) and
+     that sequence has repeating items, you've made a recurrent `PermSpace`.
+     It'll be shorter because all of the copies of same item will be 
+     considered the same item. (Though they will appear more than once, 
+     according to their count in the sequence.)
+     
+   - **Fixed:** Having a specified number of indices always pointing at certain
+     values, making the space smaller. To make one, pass a dict from each
+     key to the value it should be fixed to as the argument ``fixed_map``.
+     
+   - **Sliced:** A perm space can be sliced like any Python sequence (except you
+     can't change the step.) To make one, use slice notation on an existing
+     perm space, e.g. ``perm_space[56:100]``.
+     
+   - **Degreed:** A perm space can be limited to perms of a certain degree. (A
+     perm's degree is the number of transformations it takes to make it.)
+     To make one, pass into the ``degrees`` argument either a single degree
+     (like ``5``) or a tuple of different degrees (like ``(1, 3, 7)``)
+     
+   - **Partial:** A perm space can be partial, in which case not all elements
+     are used in perms. E.g. you can have a perm space of a sequence of
+     length 5 but with ``n_elements=3``, so every perm will have only 3 items.
+     (These are usually called `k-permutations`_ in math-land.) To make one,
+     pass a number as the argument ``n_elements``.
+     
+   - **Combination:** If you pass in ``is_combination=True`` or use the subclass
+     `CombSpace`, then you'll have a space of `combinations`_ (:class:`Comb`\ s) 
+     instead of perms. :class:`Comb`\ s are like :class:`Perm`\ s except there's 
+     no order to the elements. (They are always forced into canonical order.)
+     
+   - **Typed:** If you pass in a perm subclass as ``perm_type``, you'll get a 
+     typed :class:`PermSpace`, meaning that the perms will use the class you 
+     provide rather than the default :class:`Perm`. This is useful when you want 
+     to provide extra functionality on top of `Perm` that's specific to your use 
+     case.
+  
    Most of these variations can be used in conjuction with each other, but
    some cannot:
    
-    - A combination space can't be dapplied, degreed, or fixed.
-    - A partial permutation space can't be degreed.
-    - A recurrent permutation space must be rapplied and can't be degreed.
+   - A combination space can't be dapplied, degreed, or fixed.
+   - A partial permutation space can't be degreed.
+   - A recurrent permutation space must be rapplied and can't be degreed.
     
    For each of these variations, there's a function to make a perm space have
    that variation and get rid of it. For example, if you want to make a normal
