@@ -73,7 +73,7 @@ Features
     created easily without big memory footprint.
   * :class:`PermSpace` will notice if you have repeating elements in your
     sequence, and treat all occurences of the same value as interchangable 
-    rather than create redundant permutations
+    rather than create redundant permutations.
   * A custom domain can be specified instead of just using index numbers.
   * You may specify some elements to be fixed, so they'll point to the same
     value in all permutations. (Useful for limiting an experiment to a subset 
