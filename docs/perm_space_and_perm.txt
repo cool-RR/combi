@@ -99,14 +99,22 @@
     
    For each of these variations, there's a function to make a perm space have
    that variation and get rid of it. For example, if you want to make a normal
-   perm space be degreed, call :meth:`.get_degreed()` on it with the desired
+   perm space be degreed, call :meth:`get_degreed()` on it with the desired
    degrees. If you want to make a degreed perm space non-degreed, access its
-   :attribute:`.undegreed` property. The same is true for all other variations.
+   :attr:`undegreed` property. The same is true for all other variations.
    
    A perm space that has none of these variations is called **pure**.
 
    
    .. method:: index(key)
+   
+      Sup yo
+   
+   .. method:: get_degreed(degrees)
+   
+      Sup yo
+      
+   .. attribute:: undegreed()
    
       Sup yo
    
