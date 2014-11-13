@@ -26,8 +26,8 @@ Documentation contents
    :maxdepth: 2
    
    intro
-   perm_space
-   comb_space
+   perm_space_and_perm
+   comb_space_and_comb
    map_space
    product_space
    chain_space

@@ -1,0 +1,115 @@
+..
+   Copyright 2009-2015 Ram Rachum. This work is licensed under a Creative
+   Commons Attribution-ShareAlike 3.0 Unported License, with attribution to
+   "Ram Rachum at ram.rachum.com" including link. The license may be obtained
+   at http://creativecommons.org/licenses/by-sa/3.0/
+
+.. _perm_space_and_perm:
+
+:class:`PermSpace` and :class:`Perm`
+====================================
+
+.. class:: PermSpace(iterable_or_length, n_elements=None, *, domain=None, fixed_map=None, degrees=None, is_combination=False, slice_=None, perm_type=None)
+
+   A space of `permutations`_ on a sequence.
+   
+   Each item in a :class:`PermSpace` is a :class:`Perm`, i.e. a permutation.
+   This is similar to :func:`itertools.permutations`, except it offers far, far
+   more functionality. The permutations may be accessed by index number, the
+   permutation space can have its range and domain specified, some items can be
+   fixed, and more.
+   
+   Here is the simplest possible `PermSpace`:
+   
+      >>> perm_space = PermSpace(3)
+      <PermSpace: 0..2>
+      >>> perm_space[2]
+      <Perm: (1, 0, 2)>
+      >>> tuple(perm_space)
+      (<Perm: (0, 1, 2)>, <Perm: (0, 2, 1)>, <Perm: (1, 0, 2)>,
+       <Perm: (1, 2, 0)>, <Perm: (2, 0, 1)>, <Perm: (2, 1, 0)>)
+
+   The members are :class:`Perm` objects, which are sequence-like objects that
+   have extra functionality. (See documentation of :class:`Perm` for more
+   info.)
+   
+   The permutations are generated on-demand, not in advance. This means you
+   can easily create something like ``PermSpace(1000)``, which has about
+   10**2500 permutations in it (a number that far exceeds the number of
+   particles in the universe), in a fraction of a second. You can then fetch
+   by index number any permutation of the 10**2500 permutations in a fraction
+   of a second as well.
+   
+   :class:`PermSpace` allows the creation of various special kinds of
+   permutation spaces. For example, you can specify an integer to
+   ``n_elements`` to set a permutation length that's smaller than the sequence
+   length. (a.k.a. `k-permutaions`_.) This variation of a :class:`PermSpace` is
+   called "partial" and it's one of 8 different variations, that are listed
+   below.
+   
+    - **Rapplied (Range-applied):** having an arbitrary sequence as a range.
+      To make one, pass your sequence as the first argument instead of the
+      length.
+      
+    - **Dapplied (Domain-applied):** having an arbitrary sequence as a domain.
+      To make one, pass a sequence into the `domain` argument.
+      
+    - **Recurrent:** If you provide a sequence (making the space rapplied) and
+      that sequence has repeating items, you've made a recurrent `PermSpace`.
+      It'll be shorter because all of the copies of same item will be 
+      considered the same item. (Though they will appear more than once, 
+      according to their count in the sequence.)
+      
+    - **Fixed:** Having a specified number of indices always pointing at certain
+      values, making the space smaller. To make one, pass a dict from each
+      key to the value it should be fixed to as the argument ``fixed_map``.
+      
+    - **Sliced:** A perm space can be sliced like any Python sequence (except you
+      can't change the step.) To make one, use slice notation on an existing
+      perm space, e.g. ``perm_space[56:100]``.
+      
+    - **Degreed:** A perm space can be limited to perms of a certain degree. (A
+      perm's degree is the number of transformations it takes to make it.)
+      To make one, pass into the ``degrees`` argument either a single degree
+      (like ``5``) or a tuple of different degrees (like ``(1, 3, 7)``)
+      
+    - **Partial:** A perm space can be partial, in which case not all elements
+      are used in perms. E.g. you can have a perm space of a sequence of
+      length 5 but with ``n_elements=3``, so every perm will have only 3 items.
+      (These are usually called `k-permutations`_ in math-land.) To make one,
+      pass a number as the argument ``n_elements``.
+      
+    - **Combination:** If you pass in ``is_combination=True`` or use the subclass
+      `CombSpace`, then you'll have a space of `combinations`_ (:class:`Comb`s) 
+      instead of perms. :class:`Comb`s are like :class:`Perm``s except there's 
+      no order to the elements. (They are always forced into canonical order.)
+      
+    - **Typed:** If you pass in a perm subclass as ``perm_type``, you'll get a 
+      typed :class:`PermSpace`, meaning that the perms will use the class you 
+      provide rather than the default :class:`Perm`. This is useful when you want 
+      to provide extra functionality on top of `Perm` that's specific to your use 
+      case.
+
+   Most of these variations can be used in conjuction with each other, but
+   some cannot:
+   
+    - A combination space can't be dapplied, degreed, or fixed.
+    - A partial permutation space can't be degreed.
+    - A recurrent permutation space must be rapplied and can't be degreed.
+    
+   For each of these variations, there's a function to make a perm space have
+   that variation and get rid of it. For example, if you want to make a normal
+   perm space be degreed, call :meth:`.get_degreed()` on it with the desired
+   degrees. If you want to make a degreed perm space non-degreed, access its
+   :attribute:`.undegreed` property. The same is true for all other variations.
+   
+   A perm space that has none of these variations is called **pure**.
+
+   
+   .. method:: index(key)
+   
+      Sup yo
+   
+.. _permutations: https://en.wikipedia.org/wiki/Permutation
+.. _k-permutations: https://en.wikipedia.org/wiki/Permutation#k-permutations_of_n
+.. _combinations: https://en.wikipedia.org/wiki/Combination
