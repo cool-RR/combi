@@ -26,6 +26,12 @@ Documentation contents
    :maxdepth: 2
    
    intro
+   perm_space
+   comb_space
+   map_space
+   product_space
+   chain_space
+   selection_space
    bags
    
 Basic usage
