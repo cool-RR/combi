@@ -128,4 +128,5 @@ These are smaller, simpler classes that are included in ``combi``.
 
    .. method:: index(selection)
    
-      Find the index number of set ``selection`` in this :class:`SelectionSpace`.
+      Find the index number of set ``selection`` in this 
+      :class:`SelectionSpace`.
