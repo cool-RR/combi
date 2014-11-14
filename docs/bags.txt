@@ -181,7 +181,7 @@ Combi provides 4 bag classes for you to choose from according to your needs:
       
       Example:
       
-         >>>bag = Bag({'a': 1, 'b': 2, 'c': 3,})
+         >>> bag = Bag({'a': 1, 'b': 2, 'c': 3,})
          >>> contained_bags = bag.get_contained_bags()
          >>> len(contained_bags)
          24
