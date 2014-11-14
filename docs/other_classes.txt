@@ -63,6 +63,11 @@ These are smaller, simpler classes that are included in ``combi``.
       (('a', 0), ('a', 1), ('a', 2), ('a', 3), ('b', 0), ('b', 1), ('b', 2),
        ('b', 3), ('c', 0), ('c', 1), ('c', 2), ('c', 3))
 
+   .. method:: index(given_sequence)
+      
+      Get the index number of ``given_sequence`` in this product space.
+
+
 
 :class:`ChainSpace`
 -------------------
@@ -85,6 +90,11 @@ These are smaller, simpler classes that are included in ``combi``.
       ('a', 'b', 'c', 1, 2, 3)
       >>> chain_space.index(2)
       4
+      
+   .. method:: index(item)
+   
+      Get the index number of ``item`` in this space.
+
 
 
 :class:`SelectionSpace`
@@ -115,3 +125,7 @@ These are smaller, simpler classes that are included in ``combi``.
        
    Even though the length of this space is around 10 ** 3010, which is much
    bigger than the number of particles in the universe.
+
+   .. method:: index(selection)
+   
+      Find the index number of set ``selection`` in this :class:`SelectionSpace`.
