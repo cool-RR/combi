@@ -305,7 +305,7 @@
       
    .. method:: index(member)
    
-      Get the index number of `member` in the permutation.
+      Get the index number of ``member`` in the permutation.
 
       Example:
       
