@@ -28,11 +28,8 @@ Documentation contents
    intro
    perm_space_and_perm
    comb_space_and_comb
-   map_space
-   product_space
-   chain_space
-   selection_space
    bags
+   other_classes
    
 Basic usage
 ===========

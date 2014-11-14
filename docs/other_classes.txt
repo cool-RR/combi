@@ -1,0 +1,80 @@
+..
+   Copyright 2009-2015 Ram Rachum. This work is licensed under a Creative
+   Commons Attribution-ShareAlike 3.0 Unported License, with attribution to
+   "Ram Rachum at ram.rachum.com" including link. The license may be obtained
+   at http://creativecommons.org/licenses/by-sa/3.0/
+
+.. _other_classes:
+
+Other classes
+=============
+
+These are smaller, simpler classes that are included in ``combi``.
+
+:class:`MapSpace`
+----------------
+
+.. class:: MapSpace(function, sequence)
+
+   A space of a function applied to a sequence.
+   
+   This is similar to Python's builtin :func:`map`, except that it behaves
+   like a sequence rather than an iterable. (Though it's also iterable.) You
+   can access any item by its index number.
+    
+    
+.. class:: ProductSpace(sequences)
+
+   A product space between sequences.
+   
+   This is similar to Python's builtin :func:`itertools.product`, except that
+   it behaves like a sequence rather than an iterable. (Though it's also
+   iterable.) You can access any item by its index number.
+   
+   Example:
+   
+      >>> product_space = ProductSpace(('abc', range(4)))
+      >>> product_space
+      <ProductSpace: 3 * 4>
+      >>> product_space.length
+      12
+      >>> product_space[10]
+      ('c', 2)
+      >>> tuple(product_space)
+      (('a', 0), ('a', 1), ('a', 2), ('a', 3), ('b', 0), ('b', 1), ('b', 2),
+       ('b', 3), ('c', 0), ('c', 1), ('c', 2), ('c', 3))
+
+
+.. class:: ChainSpace(sequences)
+
+   A space of sequences chained together.
+   
+   This is similar to :func:`itertools.chain`, except that items can be fetched
+   by index number rather than just iteration.
+    
+
+.. class:: SelectionSpace(sequence)
+
+   Space of possible selections of any number of items from ``sequence``.
+   
+   For example:
+   
+      >>> tuple(SelectionSpace(range(2)))
+      (set(), {1}, {0}, {0, 1})
+       
+   The selections (which are sets) can be for any number of items, from zero to
+   the length of the sequence.
+
+   Of course, this is a smart object that doesn't really create all these sets
+   in advance, but rather on demand. So you can create a `SelectionSpace` like
+   this:
+   
+      >>> selection_space = SelectionSpace(range(10**4))
+       
+   And take a random selection from it:
+   
+      >>> selection_space.take_random()
+      {0, 3, 4, ..., 9996, 9997}
+       
+   Even though the length of this space is around 10 ** 3010, which is much
+   bigger than the number of particles in the universe.
