@@ -12,6 +12,8 @@
 ..
    blocktododoc: There should be some examples of permspace arguments
 
+:class:`PermSpace`
+------------------
 
 .. class:: PermSpace(iterable_or_length, n_elements=None, *, domain=None, fixed_map=None, degrees=None, is_combination=False, slice_=None, perm_type=None)
 
@@ -222,6 +224,16 @@
    
       An untyped version of this :class:`PermSpace`.
        
+
+:class:`Perm`
+-------------
+
+.. class:: Perm(perm_sequence, perm_space=None)
+   
+   Tits
+       
+       
 .. _permutations: https://en.wikipedia.org/wiki/Permutation
 .. _k-permutations: https://en.wikipedia.org/wiki/Permutation#k-permutations_of_n
 .. _combinations: https://en.wikipedia.org/wiki/Combination
+
