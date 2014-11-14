@@ -170,7 +170,7 @@
    .. method:: get_partialled(n_elements):
    
       Get a partialled version of this :class:`PermSpace`, i.e. a 
-      `k_permutation`_.
+      `k-permutation`_.
     
    .. attribute:: combinationed:
    
@@ -303,8 +303,18 @@
       of relation. (e.g. specify ``degrees=(1, 2)`` to get both the closest
       neighbors and the second-closest neighbors.)
       
-   .. method:: index(*, degrees=(1,), perm_space=None)
+   .. method:: index(member)
    
+      Get the index number of `member` in the permutation.
+
+      Example:
+      
+         >>> perm = PermSpace(5)[10]
+         >>> perm
+         <Perm: (0, 2, 4, 1, 3)>
+         >>> perm.index(3)
+         4
+        
    .. attribute:: inverse
    
       The inverse of this permutation, i.e. the permutation that we need to
@@ -322,7 +332,40 @@
          >>> perm * ~perm
          <Perm: (0, 1, 2, 3, 4)>
       
-       
+   .. attribute:: items
+      
+      A viewer of a perm's items, similar to ``dict.items()``.
+      
+      This is useful for dapplied perms; it lets you view the perm (both index
+      access and iteration) as a sequence where each item is a 2-tuple, where the
+      first item is from the domain and the second item is its corresponding item
+      from the sequence.
+      
+   .. attribute:: length
+      
+      The permutation's length.
+      
+   .. attribute:: n_cycles
+      
+      The number of cycles in this permutation.
+      
+      If item 1 points at item 7, and item 7 points at item 3, and item 3
+      points at item 1 again, then that's one cycle. ``n_cycles`` is the total
+      number of cycles in this permutation.
+            
+   .. attribute:: unrapplied
+   
+      A version of this permutation without a custom sequence. (Using
+      ``range(len(sequence))``.)
+            
+   .. attribute:: undapplied
+   
+      A version of this permutation without a custom domain.
+            
+   .. attribute:: uncombinationed
+   
+      A non-combination version of this permutation.
+   
        
 Examples of :class:`PermSpace`\ s
 =================================
@@ -331,6 +374,7 @@ Tits
        
 .. _permutation: https://en.wikipedia.org/wiki/Permutation
 .. _permutations: https://en.wikipedia.org/wiki/Permutation
+.. _k-permutation: https://en.wikipedia.org/wiki/Permutation#k-permutations_of_n
 .. _k-permutations: https://en.wikipedia.org/wiki/Permutation#k-permutations_of_n
 .. _combinations: https://en.wikipedia.org/wiki/Combination
 
