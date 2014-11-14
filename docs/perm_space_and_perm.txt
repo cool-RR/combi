@@ -230,8 +230,25 @@
 
 .. class:: Perm(perm_sequence, perm_space=None)
    
-   Tits
+    A permutation of items from a `PermSpace`
+    
+    In combinatorics, a `permutation`_ is a sequence of items taken from the
+    original sequence.
+    
+    Example:
+    
+        >>> perm_space = PermSpace('abcd')
+        >>> perm = Perm('dcba', perm_space)
+        >>> perm
+        <Perm: ('d', 'c', 'b', 'a')>
+        >>> perm_space.index(perm)
+        23
        
+       
+Examples of :class:`PermSpace`s
+===============================
+
+Tits
        
 .. _permutations: https://en.wikipedia.org/wiki/Permutation
 .. _k-permutations: https://en.wikipedia.org/wiki/Permutation#k-permutations_of_n
