@@ -230,23 +230,47 @@
 
 .. class:: Perm(perm_sequence, perm_space=None)
    
-    A permutation of items from a `PermSpace`
-    
-    In combinatorics, a `permutation`_ is a sequence of items taken from the
-    original sequence.
-    
-    Example:
-    
-        >>> perm_space = PermSpace('abcd')
-        >>> perm = Perm('dcba', perm_space)
-        >>> perm
-        <Perm: ('d', 'c', 'b', 'a')>
-        >>> perm_space.index(perm)
-        23
+   A permutation of items from a `PermSpace`
+   
+   In combinatorics, a `permutation`_ is a sequence of items taken from the
+   original sequence.
+   
+   Example:
+   
+      >>> perm_space = PermSpace('abcd')
+      >>> perm = Perm('dcba', perm_space)
+      >>> perm
+      <Perm: ('d', 'c', 'b', 'a')>
+      >>> perm_space.index(perm)
+      23
+       
+   
+   ..
+      blocktododoc add methods and attributes
+      
+   .. method:: apply(sequence, result_type=None)
+   
+      Apply the perm to a sequence, choosing items from it.
+      
+      This can also be used as `sequence * perm`. Example:
+      
+      >>> perm = PermSpace(5)[10]
+      >>> perm
+      <Perm: (0, 2, 4, 1, 3)>
+      >>> perm.apply('growl')
+      'golrw'
+      >>> 'growl' * perm
+      'golrw'
+      
+      Specify `result_type` to determine the type of the result returned. If
+      `result_type=None`, will use `tuple`, except when `other` is a `str` or
+      `Perm`, in which case that same type would be used.
+
+   
        
        
-Examples of :class:`PermSpace`s
-===============================
+Examples of :class:`PermSpace`\ s
+=================================
 
 Tits
        
