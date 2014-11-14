@@ -150,10 +150,9 @@
       Get a partialled version of this :class:`PermSpace`, i.e. a 
       `k_permutation`_.
     
-   .. method:: combinationed():
+   .. attribute:: combinationed:
    
-      Get a combination version of this perm space. (i.e. a
-      :class:`CombSpace`.)
+      A combination version of this perm space. (i.e. a :class:`CombSpace`.)
     
    .. method:: get_typed(perm_type)
       
