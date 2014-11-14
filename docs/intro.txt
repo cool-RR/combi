@@ -97,11 +97,6 @@ This limits the space and makes it smaller. This is useful when you’re making
 explorations on a huge :class:`PermSpace` and want to inspect only a smaller
 subset of it that would be easier to handle.
 
-.. 
-   blocktododoc add links in the following paragraph to details in
-   documentation.
-   
-   
 There are many more variations that you could have on a :class:`PermSpace` or a
 :class:`CombSpace`. You can specify a custom domain and a custom range to a
 space. You can constrain it to permutations of a certain degree (e.g.

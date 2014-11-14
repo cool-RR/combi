@@ -11,8 +11,6 @@ Other classes
 
 These are smaller, simpler classes that are included in ``combi``.
 
-..
-   blocktododoc add any methods?
 
 :class:`MapSpace`
 -----------------

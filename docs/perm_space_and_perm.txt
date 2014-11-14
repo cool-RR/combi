@@ -243,9 +243,6 @@
       23
        
    
-   ..
-      blocktododoc add methods and attributes
-      
    .. method:: apply(sequence, result_type=None)
    
       Apply the perm to a sequence, choosing items from it.
