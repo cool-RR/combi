@@ -11,14 +11,17 @@ Other classes
 
 These are smaller, simpler classes that are included in ``combi``.
 
+..
+   blocktododoc add any methods?
+
 :class:`MapSpace`
-----------------
+-----------------
 
 .. class:: MapSpace(function, sequence)
 
    A space of a function applied to a sequence.
    
-   This is similar to Python's builtin :func:`map`, except that it behaves
+   This is similar to Python's built-in :func:`map`, except that it behaves
    like a sequence rather than an iterable. (Though it's also iterable.) You
    can access any item by its index number.
     
@@ -27,7 +30,7 @@ These are smaller, simpler classes that are included in ``combi``.
 
    A product space between sequences.
    
-   This is similar to Python's builtin :func:`itertools.product`, except that
+   This is similar to Python's :func:`itertools.product`, except that
    it behaves like a sequence rather than an iterable. (Though it's also
    iterable.) You can access any item by its index number.
    
@@ -49,9 +52,20 @@ These are smaller, simpler classes that are included in ``combi``.
 
    A space of sequences chained together.
    
-   This is similar to :func:`itertools.chain`, except that items can be fetched
+   This is similar to Python's :func:`itertools.chain`, except that items can be fetched
    by index number rather than just iteration.
-    
+   
+   Example:
+   
+      >>> chain_space = ChainSpace(('abc', (1, 2, 3)))
+      >>> chain_space
+      <ChainSpace: 3+3>
+      >>> chain_space[4]
+      2
+      >>> tuple(chain_space)
+      ('a', 'b', 'c', 1, 2, 3)
+      >>> chain_space.index(2)
+      4
 
 .. class:: SelectionSpace(sequence)
 
@@ -66,8 +80,8 @@ These are smaller, simpler classes that are included in ``combi``.
    the length of the sequence.
 
    Of course, this is a smart object that doesn't really create all these sets
-   in advance, but rather on demand. So you can create a `SelectionSpace` like
-   this:
+   in advance, but rather on demand. So you can create a
+   :class:`SelectionSpace` like this:
    
       >>> selection_space = SelectionSpace(range(10**4))
        
