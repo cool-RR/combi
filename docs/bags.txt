@@ -151,7 +151,7 @@ Combi provides 4 bag classes for you to choose from according to your needs:
          >>> Bag('abracadabra').most_common(3)
          (('a', 5), ('r', 2), ('b', 2))
          
-   .. method:: pop(key, [default])
+   .. method:: pop(key[, default])
    
       Get the count of ``key`` and remove it from the bag, optionally with a
       default fallback.
@@ -160,7 +160,7 @@ Combi provides 4 bag classes for you to choose from according to your needs:
    
       Remove a key from the bag, and get a tuple ``(key, count)``.
       
-   .. method:: setdefault(key, [default])
+   .. method:: setdefault(key, default=None)
    
       Get the count of `key`, optionally with a default fallback. If `key` is
       missing, its count in the bag will be set to the default.
