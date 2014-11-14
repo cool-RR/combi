@@ -109,9 +109,29 @@
    
    A perm space that has none of these variations is called **pure**.
 
-   .. method:: index(key) blocktododoc real methods here
+   .. method:: coerce_perm(perm)
    
-      Sup yo
+      Coerce a sequence to be a permutation of this space.
+      
+   .. method:: index(perm)
+   
+      Get the index number of permutation ``perm`` in this space.
+      
+      For example: 
+      
+         >>> perm_space = PermSpace(3)
+         >>> perm_space.index((2, 1, 0))
+         5
+         >>> perm_space[5]
+         <Perm: (2, 1, 0)>
+      
+   .. attribute:: length
+   
+      The :class:`PermSpace`'s length, i.e. the number of permutations in it.
+      
+      This is also accessible as ``len(perm_space)``, but since CPython doesn't
+      support very large length numbers, it's best to access it through
+      ``perm_space.length``.
       
    **Methods and properties for adding a variation to a perm space:** (A new
    perm space is returned, the original one does not get modified)
