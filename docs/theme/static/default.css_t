@@ -170,9 +170,29 @@ div.body p, div.body dd, div.body li, div.body blockquote {
     line-height: 160%;
 }
 
+/* Cutesy quote styling */
 blockquote {
-    border-left: 3px dashed #CCC;
-    padding-left: 8px;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0.25em 0;
+  padding: 0.25em 40px;
+  line-height: 1.45;
+  position: relative;
+  /*color: #383838;*/
+  border-left: none;
+  background: url('quote.png') no-repeat top left;
+}
+
+blockquote p:last-child {
+  /*color: #999999;*/
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+blockquote em {
+  font-style: normal;
 }
 
 div.section {

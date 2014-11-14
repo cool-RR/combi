@@ -9,6 +9,10 @@
 Bags
 ====
 
+  `"This sort of thing is my bag, baby!"`_
+ 
+  -- Austin Powers
+
 The 4 bag classes
 -----------------
 
@@ -366,3 +370,4 @@ for all operations, so you can elegantly mutate bags in-place like this:
 .. _partial order: https://en.wikipedia.org/wiki/Partially_ordered_set
 .. _union: http://en.wikipedia.org/wiki/Union_(set_theory)
 .. _intersection: http://en.wikipedia.org/wiki/Intersection_(set_theory)
+.. _"This sort of thing is my bag, baby!": https://www.youtube.com/watch?v=3WCvULMRUq8
