@@ -68,7 +68,8 @@
      
    - **Fixed:** Having a specified number of indices always pointing at certain
      values, making the space smaller. To make one, pass a dict from each
-     key to the value it should be fixed to as the argument ``fixed_map``.
+     key to the value it should be fixed to as the argument ``fixed_map``, like
+     ``PermSpace('meow', fixed_map={0: 'm', 1: 'w'})``
      
    - **Sliced:** A perm space can be sliced like any Python sequence (except you
      can't change the step.) To make one, use slice notation on an existing
@@ -92,9 +93,9 @@
      
    - **Typed:** If you pass in a perm subclass as ``perm_type``, you'll get a 
      typed :class:`PermSpace`, meaning that the perms will use the class you 
-     provide rather than the default :class:`Perm`. This is useful when you want 
-     to provide extra functionality on top of `Perm` that's specific to your use 
-     case.
+     provide rather than the default :class:`Perm`. This is useful when you 
+     want to provide extra functionality on top of :class:`Perm` that's 
+     specific to your use case.
   
    Most of these variations can be used in conjuction with each other, but
    some cannot:
@@ -366,11 +367,6 @@
    
       A non-combination version of this permutation.
    
-       
-Examples of :class:`PermSpace`\ s
-=================================
-
-Tits
        
 .. _permutation: https://en.wikipedia.org/wiki/Permutation
 .. _permutations: https://en.wikipedia.org/wiki/Permutation
