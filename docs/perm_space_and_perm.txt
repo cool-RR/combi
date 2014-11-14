@@ -109,81 +109,100 @@
    
    A perm space that has none of these variations is called **pure**.
 
-   
-   
-   .. method:: index(key)
+   .. method:: index(key) blocktododoc real methods here
    
       Sup yo
       
-   Methods and properties for adding a variation to a perm space: (A new perm
-   space is returned, the original one does not get modified)
+   **Methods and properties for adding a variation to a perm space:** (A new
+   perm space is returned, the original one does not get modified)
    
    .. method:: get_rapplied(sequence)
    
-      Get a version of this :class:`PermSpace` that has a range of `sequence`
+      Get a rapplied version of this :class:`PermSpace` that has a range of
+      `sequence`.
       
    .. method:: get_dapplied(domain)
    
-      Get a version of this :class:`PermSpace` that has a domain of `domain`
+      Get a dapplied version of this :class:`PermSpace` that has a domain of
+      `domain`.
     
-    (There's no ``get_recurrented`` method because we can't know which
-    sequence you'd want. If you want a recurrent perm space you need to use
-    :meth:`.get_rapplied` with a recurrent sequence.)
+   (There's no ``get_recurrented`` method because we can't know which
+   sequence you'd want. If you want a recurrent perm space you need to use
+   :meth:`.get_rapplied` with a recurrent sequence.)
     
-   .. get_partialled(n_elements):
-   
-      Get a partialled version of this :class:`PermSpace`, i.e. a 
-      `k_permutation`_.
-        
-    
-   .. combinationed():
-   
-      Get a combination version of this perm space. (i.e. a :class:`CombSpace`.)
-    
-   .. get_fixed(fixed_map)
+   .. method::get_fixed(fixed_map)
    
       Get a fixed version of this :class:`PermSpace`. `fixed_map` should be a
       `dict` of keys to sequence values.
     
+   (There's no ``get_sliced`` method because slicing is done using Python's
+   normal slice notation, e.g. ``perm_space[4:-7]``.)
+   
    .. method:: get_degreed(degrees)
    
-      Get a version of this `PermSpace` restricted to certain degrees.
+      Get a degreed version of this `PermSpace` restricted to certain degrees.
       
       You may use a single integer for `degrees` to limit it to permutations of
       that degree, or a sequence of integers like ``(1, 3, 7)``.
+   
+   .. method:: get_partialled(n_elements):
+   
+      Get a partialled version of this :class:`PermSpace`, i.e. a 
+      `k_permutation`_.
     
-    (There's no ``get_sliced`` method because slicing is done using Python's normal
-    slice notation, e.g. ``perm_space[4:-7]``.)
+   .. method:: combinationed():
+   
+      Get a combination version of this perm space. (i.e. a
+      :class:`CombSpace`.)
     
-    def get_typed(self, perm_type):
-        '''
-        Get a version of this `PermSpace` where perms are of a custom type.
-        '''
-        return PermSpace(
-            self.sequence, n_elements=self.n_elements, domain=self.domain,
-            fixed_map=self.fixed_map, degrees=self.degrees,
-            slice_=self.canonical_slice, is_combination=self.is_combination,
-            perm_type=perm_type
-        )
-    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-      Sup yo
+   .. method:: get_typed(perm_type)
       
-   Properties for removing a variation from a perm space: (A new perm space is
-   returned, the original one does not get modified)
+      Get a typed version of this :class:`PermSpace` where perms are of a
+      custom type.
+   
+   **Properties for removing a variation from a perm space:** (A new perm space
+   is returned, the original one does not get modified)
       
-   .. attribute:: undegreed()
+   .. attribute:: purified
    
-      Sup yo
+      A purified version of this :class:`PermSpace`, i.e. with all variations removed.
+      
+   .. attribute:: unrapplied
    
+      A version of this :class:`PermSpace` without a custom range.
+      
+   .. attribute:: undapplied
+   
+      A version of this :class:`PermSpace` without a custom domain.
+   
+   .. attribute:: unrecurrented
+   
+      A version of this :class:`PermSpace` with no recurrences.
+
+   .. attribute:: unfixed
+   
+      An unfixed version of this :class:`PermSpace`.
+    
+   .. attribute:: unsliced
+    
+      An unsliced version of this :class:`PermSpace`.
+   
+   .. attribute:: undegreed
+        
+      An undegreed version of this :class:`PermSpace`.
+        
+   .. attribute:: unpartialled
+   
+      A non-partial version of this :class:`PermSpace`.
+    
+   .. attribute:: uncombinationed
+   
+      A version of this :class:`PermSpace` where permutations have order.
+        
+   .. attribute:: untyped
+   
+      An untyped version of this :class:`PermSpace`.
+       
 .. _permutations: https://en.wikipedia.org/wiki/Permutation
 .. _k-permutations: https://en.wikipedia.org/wiki/Permutation#k-permutations_of_n
 .. _combinations: https://en.wikipedia.org/wiki/Combination
