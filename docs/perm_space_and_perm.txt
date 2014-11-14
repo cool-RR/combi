@@ -9,9 +9,6 @@
 :class:`PermSpace` and :class:`Perm`
 ====================================
 
-..
-   blocktododoc: There should be some examples of permspace arguments
-
 :class:`PermSpace`
 ------------------
 

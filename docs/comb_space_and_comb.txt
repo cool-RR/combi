@@ -1,0 +1,71 @@
+..
+   Copyright 2009-2015 Ram Rachum. This work is licensed under a Creative
+   Commons Attribution-ShareAlike 3.0 Unported License, with attribution to
+   "Ram Rachum at ram.rachum.com" including link. The license may be obtained
+   at http://creativecommons.org/licenses/by-sa/3.0/
+
+.. _comb_space_and_comb:
+
+:class:`CombSpace` and :class:`Comb`
+====================================
+
+:class:`CombSpace`
+------------------
+
+.. class:: CombSpace(iterable_or_length, n_elements, *, slice_=None, perm_type=None)
+
+   A space of `combinations`_.
+   
+   This is a subclass of :class:`PermSpace`; see its documentation for more
+   details.
+   
+   Each item in a :class:`CombSpace` is a :class:`Comb`, i.e. a combination.
+   This is similar to :func:`itertools.combinations`, except it offers far, far
+   more functionality. The combinations may be accessed by index number, the
+   combinations can be of a custom type, the space may be sliced, etc.
+   
+   Here is the simplest possible :class:`CombSpace`:
+   
+      >>> comb_space = CombSpace(4, 2)
+      <CombSpace: 0..3, n_elements=2>
+      >>> comb_space[2]
+      <Comb, n_elements=2: (0, 3)>
+      >>> tuple(comb_space)
+      (<Comb, n_elements=2: (0, 1)>, <Comb, n_elements=2: (0, 2)>,
+       <Comb, n_elements=2: (0, 3)>, <Comb, n_elements=2: (1, 2)>,
+       <Comb, n_elements=2: (1, 3)>, <Comb, n_elements=2: (2, 3)>)
+
+   The members are :class:`Comb` objects, which are sequence-like objects that
+   have extra functionality. (See documentation of :class:`Comb` and its base
+   class :class:`Perm` for more info.)
+       
+
+:class:`Comb`
+-------------
+
+.. class:: Comb(perm_sequence, perm_space=None)
+   
+   A combination of items from a :class:`CombSpace`.
+   
+   In combinatorics, a `combination`_ is like a `permutation`_ except with no order.
+   In the ``combi`` package, we implement that by making the items in :class:`Comb` be
+   in canonical order. (This has the same effect as having no order because
+   each combination of items can only appear once, in the canonical order,
+   rather than many different times in many different orders like with
+   :class:`Perm`.)
+   
+   Example:
+   
+      >>> comb_space = CombSpace('abcde', 3)
+      >>> comb = Comb('bcd', comb_space)
+      >>> comb
+      <Comb, n_elements=3: ('a', 'b', 'c')>
+      >>> comb_space.index(comb)
+      6
+    
+   
+
+.. _permutation: https://en.wikipedia.org/wiki/Permutation
+.. _combination: https://en.wikipedia.org/wiki/Combination
+.. _combinations: https://en.wikipedia.org/wiki/Combination
+
