@@ -9,7 +9,7 @@ spaces.
 Basic usage
 ===========
 
-Use :class:`PermSpace` to create a permutation space:
+Use :class:`PermSpace` to create a permutation space::
 
   >>> from combi import *
   >>> perm_space = PermSpace('meow')
