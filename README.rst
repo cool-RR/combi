@@ -126,6 +126,12 @@ There are three Combi groups, a.k.a. mailing lists:
 - If you want to be informed on new releases of Combi, sign up for
   `the low-traffic combi-announce Google Group
   <https://groups.google.com/forum/#!forum/combi-announce>`_.
+  
+  
+Roadmap
+=======
+
+Combi is currently at a version 
 
 
 .. _mailing list: https://groups.google.com/forum/#!forum/combi-users
