@@ -68,13 +68,13 @@ Features
 - `CombSpace`_ lets you explore a space of combinations as if it was a
   Python sequence.
   
-- `MapSpace`_ is like Python's built-in :func:`map`, except it's a
+- `MapSpace`_ is like Python's built-in `map`_, except it's a
   sequence that allows index access.
   
-- `ProductSpace`_ is like Python's :func:`itertools.product`, except
+- `ProductSpace`_ is like Python's `itertools.product`_, except
   it's a sequence that allows index access.
   
-- `ChainSpace`_ is like Python's :func:`itertools.chain`, except
+- `ChainSpace`_ is like Python's `itertools.chain`_, except
   it's a sequence that allows index access.
   
 - `SelectionSpace`_ is a space of all selections from a sequence, of all
@@ -149,3 +149,6 @@ There are three Combi groups, a.k.a. mailing lists:
 .. _collections.Counter: https://docs.python.org/3/library/collections.html#collections.Counter
 .. _try the tutorial: https://combi.readthedocs.org/en/latest/intro.html
 .. _documentation contents: https://combi.readthedocs.org/en/latest/index.html
+.. _map: https://docs.python.org/3/library/functions.html#map
+.. _itertools.product: https://docs.python.org/3/library/itertools.html#itertools.product
+.. _itertools.chain: https://docs.python.org/3/library/itertools.html#itertools.chain
