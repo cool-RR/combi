@@ -101,9 +101,9 @@ Requirements
 Installation
 ============
 
-Use `pip`_ to install Combi::
+Use `pip`_ to install Combi:
 
-.. code:: sh
+.. code:: bash
 
    $ pip install combi
 
