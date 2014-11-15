@@ -86,7 +86,7 @@ Features
   Python's `collections.Counter`_, it only allows natural numbers as keys.)
   
 - Classes `FrozenBag`_, `OrderedBag`_ and `FrozenOrderedBag`_ are provided, 
-which are variations on `Bag`_.
+  which are variations on `Bag`_.
 
 
 Requirements
