@@ -285,7 +285,7 @@ Combi provides 4 bag classes for you to choose from according to your needs:
    :class:`FrozenBag` and :class:`OrderedBag`.
    
    
-.. _comparisons:
+.. _bags-comparisons:
    
 Comparisons between bags
 ------------------------
@@ -316,7 +316,7 @@ rather than a total one, meaning that for some pairs of bags, neither ``x >=
 y`` nor ``y >= x`` holds true. This is similar to set comparison in Python.
 
 
-.. _operations:
+.. _bags-operations:
 
 Arithmetic operations on bags
 -----------------------------

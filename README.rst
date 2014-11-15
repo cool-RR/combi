@@ -81,8 +81,8 @@ Features
   possible lengths.
   
 - The `Bag`_ class is a multiset like Python's `collections.Counter`_, except 
-  it offers far more functionality, like more arithmetic operations between 
-  bags, comparison between bags, and more. (It can do that because unlike 
+  it offers far more functionality, like more `arithmetic operations between 
+  bags`_, `comparison between bags`_, and more. (It can do that because unlike 
   Python's `collections.Counter`_, it only allows natural numbers as keys.)
   
 - Classes `FrozenBag`_, `OrderedBag`_ and `FrozenOrderedBag`_ are provided, 
@@ -152,3 +152,5 @@ There are three Combi groups, a.k.a. mailing lists:
 .. _map: https://docs.python.org/3/library/functions.html#map
 .. _itertools.product: https://docs.python.org/3/library/itertools.html#itertools.product
 .. _itertools.chain: https://docs.python.org/3/library/itertools.html#itertools.chain
+.. _arithmetic operations between bags: https://combi.readthedocs.org/en/latest/bags.html#bags-operations
+.. _comparison between bags: https://combi.readthedocs.org/en/latest/bags.html#bags-comparisons
