@@ -13,8 +13,8 @@ Use :class:`PermSpace` to create a permutation space:
 
 .. code:: python
 
-  >>> from combi import *
-  >>> perm_space = PermSpace('meow')
+   >>> from combi import *
+   >>> perm_space = PermSpace('meow')
    
 It behaves like a sequence:
 
