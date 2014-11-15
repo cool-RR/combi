@@ -103,7 +103,7 @@ Installation
 
 Use `pip`_ to install Combi::
 
-.. code:: bash
+.. code:: shell
 
    $ pip install combi
 
