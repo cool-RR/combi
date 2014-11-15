@@ -1,6 +1,3 @@
-=======================
-The Combi Documentation
-=======================
 
 Combi is a Pythonic package for `combinatorics`_.
 
@@ -9,27 +6,13 @@ were Python sequences, but without generating all the permutations/combinations
 in advance. It also lets you specify a lot of special conditions on these
 spaces. 
 
-.. _index-contents:
-
-Documentation contents
-======================
-
-.. toctree::
-   :maxdepth: 2
-   
-   intro
-   perm_space_and_perm
-   comb_space_and_comb
-   bags
-   other_classes
-   
 Basic usage
 ===========
 
 Use :class:`PermSpace` to create a permutation space:
 
-   >>> from combi import *
-   >>> perm_space = PermSpace('meow')
+  >>> from combi import *
+  >>> perm_space = PermSpace('meow')
    
 It behaves like a sequence:
 
