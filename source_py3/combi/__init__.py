@@ -13,7 +13,7 @@ programming.
 Visit http://pypi.python.org/pypi/combi/ for more info.
 '''
 
-import combi._python_toolbox
+import combi._python_toolbox.version_info
 
 from combi._python_toolbox.math_tools import binomial
 
