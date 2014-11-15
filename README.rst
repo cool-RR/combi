@@ -18,6 +18,8 @@ Use :class:`PermSpace` to create a permutation space:
    
 It behaves like a sequence:
 
+.. code:: python
+
    >>> len(perm_space)
    24
    >>> perm_space[7]
@@ -30,6 +32,8 @@ And yet the permutations are created on-demand rather than in advance.
 Use :class:`CombSpace` to create a combination space, where order doesn't
 matter:
 
+.. code:: python
+
    >>> comb_space = CombSpace(('vanilla', 'chocolate', 'strawberry'), 2)
    >>> comb_space
    <CombSpace: ('vanilla', 'chocolate', 'strawberry'), n_elements=2>
@@ -40,8 +44,6 @@ matter:
 
 For more details, :ref:`try the tutorial <intro>` or see the
 :ref:`documentation contents <index-contents>`.
-
-.. _index-features:
 
 Features
 ========
@@ -103,6 +105,8 @@ Installation
 
 Use `pip`_ to install Combi::
 
+.. code:: bash
+
    $ pip install combi
 
 
@@ -133,6 +137,3 @@ There are three Combi groups, a.k.a. mailing lists:
 .. _combinations: https://en.wikipedia.org/wiki/Combination
 .. _Setuptools: https://pypi.python.org/pypi/setuptools
 .. _pip: https://pypi.python.org/pypi/pip
-
-.. * :ref:`genindex`
-.. * :ref:`modindex`
