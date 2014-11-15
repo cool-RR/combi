@@ -13,15 +13,16 @@ Bags
  
   -- Austin Powers
 
-The 4 bag classes
------------------
-
 Combi provides 4 bag classes for you to choose from according to your needs: 
 
 * :class:`Bag` - The simplest bag class
 * :class:`FrozenBag` - An immutable (and thus hashable) bag class
 * :class:`OrderedBag` - A bag class where items are ordered by insertion order
 * :class:`FrozenOrderedBag` - An immutable, ordered bag class
+
+
+:class:`Bag`
+------------
 
 .. class:: Bag(iterable={})
 
@@ -190,6 +191,10 @@ Combi provides 4 bag classes for you to choose from according to your needs:
          >>> contained_bags[7] < bag # Contained bag is contained.
          True
 
+
+:class:`FrozenBag`
+------------------
+
 .. class:: FrozenBag(iterable={})
 
    :class:`FrozenBag` is a multiset just like :class:`Bag`, except it's
@@ -215,6 +220,9 @@ Combi provides 4 bag classes for you to choose from according to your needs:
          >>> frozen_bag.get_mutable()
          Bag({'d': 1, 'c': 1, 'b': 2, 'a': 5, 'r': 2})
          
+         
+:class:`OrderedBag`
+-------------------
    
 .. class:: OrderedBag(iterable={})
 
@@ -265,6 +273,10 @@ Combi provides 4 bag classes for you to choose from according to your needs:
       used.
       
       If ``reverse=True`` is used, the keys will be sorted in reverse order.
+
+      
+:class:`FrozenOrderedBag`
+-------------------------
       
 .. class:: FrozenOrderedBag(iterable={})
 

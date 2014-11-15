@@ -9,7 +9,7 @@ spaces.
 Basic usage
 ===========
 
-Use :class:`PermSpace` to create a permutation space:
+Use `PermSpace`_ to create a permutation space:
 
 .. code:: python
 
@@ -29,7 +29,7 @@ It behaves like a sequence:
    
 And yet the permutations are created on-demand rather than in advance.
 
-Use :class:`CombSpace` to create a combination space, where order doesn't
+Use `CombSpace`_ to create a combination space, where order doesn't
 matter:
 
 .. code:: python
@@ -42,20 +42,19 @@ matter:
    >>> len(comb_space)
    3
 
-For more details, :ref:`try the tutorial <intro>` or see the
-:ref:`documentation contents <index-contents>`.
+For more details, `try the tutorial`_ or see the `documentation contents`_.
 
 Features
 ========
 
-- :class:`PermSpace` lets you explore a space of permutations as if it was a
+- `PermSpace`_ lets you explore a space of permutations as if it was a
   Python sequence.
   
   * Permutations are generated on-demand, so huge permutation spaces can be 
     created easily without big memory footprint.
-  * :class:`PermSpace` will notice if you have repeating elements in your
-    sequence, and treat all occurences of the same value as interchangable 
-    rather than create redundant permutations.
+  * `PermSpace`_ will notice if you have repeating elements in your sequence, 
+    and treat all occurences of the same value as interchangable rather than 
+    create redundant permutations.
   * A custom domain can be specified instead of just using index numbers.
   * You may specify some elements to be fixed, so they'll point to the same
     value in all permutations. (Useful for limiting an experiment to a subset 
@@ -66,29 +65,28 @@ Features
   * You may specify a custom type for the generated permutations, so you could 
     implement your own functionality on them.
     
-- :class:`CombSpace` lets you explore a space of combinations as if it was a
+- `CombSpace`_ lets you explore a space of combinations as if it was a
   Python sequence.
   
-- :class:`MapSpace` is like Python's built-in :func:`map`, except it's a
+- `MapSpace`_ is like Python's built-in :func:`map`, except it's a
   sequence that allows index access.
   
-- :class:`ProductSpace` is like Python's :func:`itertools.product`, except
+- `ProductSpace`_ is like Python's :func:`itertools.product`, except
   it's a sequence that allows index access.
   
-- :class:`ChainSpace` is like Python's :func:`itertools.chain`, except
+- `ChainSpace`_ is like Python's :func:`itertools.chain`, except
   it's a sequence that allows index access.
   
-- :class:`SelectionSpace` is a space of all selections from a sequence, of all
+- `SelectionSpace`_ is a space of all selections from a sequence, of all
   possible lengths.
   
-- The :class:`Bag` class is a multiset like Python's 
-  :class:`collections.Counter`, except it offers far more functionality, like 
-  more arithmetic operations between bags, comparison between bags, and more. 
-  (It can do that because unlike Python's :class:`collections.Counter`, 
-  it only allows natural numbers as keys.)
+- The `Bag`_ class is a multiset like Python's `collections.Counter`_, except 
+  it offers far more functionality, like more arithmetic operations between 
+  bags, comparison between bags, and more. (It can do that because unlike 
+  Python's `collections.Counter`_, it only allows natural numbers as keys.)
   
-- Classes :class:`FrozenBag`, :class:`OrderedBag` and 
-  :class:`FrozenOrderedBag` are provided, which are variations on :class:`Bag`.
+- Classes `FrozenBag`_, `OrderedBag`_ and `FrozenOrderedBag`_ are provided, 
+which are variations on `Bag`_.
 
 
 Requirements
@@ -137,3 +135,17 @@ There are three Combi groups, a.k.a. mailing lists:
 .. _combinations: https://en.wikipedia.org/wiki/Combination
 .. _Setuptools: https://pypi.python.org/pypi/setuptools
 .. _pip: https://pypi.python.org/pypi/pip
+
+.. _PermSpace: https://combi.readthedocs.org/en/latest/perm_space_and_perm.html#permspace
+.. _CombSpace: https://combi.readthedocs.org/en/latest/comb_space_and_comb.html#combspace
+.. _MapSpace: https://combi.readthedocs.org/en/latest/other_classes.html#mapspace
+.. _ProductSpace: https://combi.readthedocs.org/en/latest/other_classes.html#productspace
+.. _ChainSpace: https://combi.readthedocs.org/en/latest/other_classes.html#chainspace
+.. _SelectionSpace: https://combi.readthedocs.org/en/latest/other_classes.html#selectionspace
+.. _Bag: https://combi.readthedocs.org/en/latest/bags.html#bag
+.. _FrozenBag: https://combi.readthedocs.org/en/latest/bags.html#frozenbag
+.. _OrderedBag: https://combi.readthedocs.org/en/latest/bags.html#orderedbag
+.. _FrozenOrderedBag: https://combi.readthedocs.org/en/latest/bags.html#frozenorderedbag
+.. _collections.Counter: https://docs.python.org/3/library/collections.html#collections.Counter
+.. _try the tutorial: https://combi.readthedocs.org/en/latest/intro.html
+.. _documentation contents: https://combi.readthedocs.org/en/latest/index.html
