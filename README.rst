@@ -3,8 +3,10 @@ Combi is a Pythonic package for `combinatorics`_.
 
 Combi lets you explore spaces of `permutations`_ and `combinations`_ as if they
 were Python sequences, but without generating all the permutations/combinations
-in advance. It also lets you specify a lot of special conditions on these
-spaces. 
+in advance. It lets you specify a lot of special conditions on these spaces. It
+also provides a few more classes that might be useful in combinatorics
+programming.
+
 
 Basic usage
 ===========
@@ -131,7 +133,12 @@ There are three Combi groups, a.k.a. mailing lists:
 Roadmap
 =======
 
-Combi is currently at a version 
+Combi is currently at a version 0.1.0. It's in a very early phase, and
+currently backward compatibility will not be maintained, to allow for freedom
+in changing the API. After more feedback and revisions to the API, backward
+compatibility will start being maintained.
+
+Combi has an extensive test suite.
 
 
 .. _mailing list: https://groups.google.com/forum/#!forum/combi-users

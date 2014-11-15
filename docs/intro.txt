@@ -13,8 +13,9 @@ Combi is a Pythonic package for `combinatorics`_.
 
 Combi lets you explore spaces of `permutations`_ and `combinations`_ as if they
 were Python sequences, but without generating all the permutations/combinations
-in advance. It also lets you specify a lot of special conditions on these
-spaces.
+in advance. It lets you specify a lot of special conditions on these spaces. It
+also provides a few more classes that might be useful in combinatorics
+programming.
 
 Let’s look at the simplest example of using Combi. Check out this $5 padlock
 in the picture:
