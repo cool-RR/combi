@@ -104,9 +104,10 @@ Features
   
 - The :class:`Bag` class is a multiset like Python's 
   :class:`collections.Counter`, except it offers far more functionality, like 
-  more arithmetic operations between bags, comparison between bags, and more. 
-  (It can do that because unlike Python's :class:`collections.Counter`, 
-  it only allows natural numbers as keys.)
+  more :ref:`arithmetic operations between bags <bags-operations>`, 
+  :ref:`comparison between bags <bags-comparisons>`, and more. (It can do that
+  because unlike Python's :class:`collections.Counter`, it only allows natural
+  numbers as keys.)
   
 - Classes :class:`FrozenBag`, :class:`OrderedBag` and 
   :class:`FrozenOrderedBag` are provided, which are variations on :class:`Bag`.
