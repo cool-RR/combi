@@ -1,0 +1,153 @@
+=======================
+The Combi Documentation
+=======================
+
+Combi is a Pythonic package for `combinatorics`_.
+
+Combi lets you explore spaces of `permutations`_ and `combinations`_ as if they
+were Python sequences, but without generating all the permutations/combinations
+in advance. It also lets you specify a lot of special conditions on these
+spaces. 
+
+.. _index-contents:
+
+Documentation contents
+======================
+
+.. toctree::
+   :maxdepth: 2
+   
+   intro
+   perm_space_and_perm
+   comb_space_and_comb
+   bags
+   other_classes
+   
+Basic usage
+===========
+
+Use :class:`PermSpace` to create a permutation space:
+
+   >>> from combi import *
+   >>> perm_space = PermSpace('meow')
+   
+It behaves like a sequence:
+
+   >>> len(perm_space)
+   24
+   >>> perm_space[7]
+   <Perm: ('e', 'm', 'w', 'o')>
+   >>> perm_space.index('mowe')
+   3
+   
+And yet the permutations are created on-demand rather than in advance.
+
+Use :class:`CombSpace` to create a combination space, where order doesn't
+matter:
+
+   >>> comb_space = CombSpace(('vanilla', 'chocolate', 'strawberry'), 2)
+   >>> comb_space
+   <CombSpace: ('vanilla', 'chocolate', 'strawberry'), n_elements=2>
+   >>> comb_space[2]
+   <Comb, n_elements=2: ('chocolate', 'strawberry')>
+   >>> len(comb_space)
+   3
+
+For more details, :ref:`try the tutorial <intro>` or see the
+:ref:`documentation contents <index-contents>`.
+
+.. _index-features:
+
+Features
+========
+
+- :class:`PermSpace` lets you explore a space of permutations as if it was a
+  Python sequence.
+  
+  * Permutations are generated on-demand, so huge permutation spaces can be 
+    created easily without big memory footprint.
+  * :class:`PermSpace` will notice if you have repeating elements in your
+    sequence, and treat all occurences of the same value as interchangable 
+    rather than create redundant permutations.
+  * A custom domain can be specified instead of just using index numbers.
+  * You may specify some elements to be fixed, so they'll point to the same
+    value in all permutations. (Useful for limiting an experiment to a subset 
+    of the original permutation space.)
+  * Permutation spaces may be limited to a certain degree of permutations. (A
+    permutation's degree is the number of transformations it takes to make it.)
+  * `k-permutations`_ are supported.
+  * You may specify a custom type for the generated permutations, so you could 
+    implement your own functionality on them.
+    
+- :class:`CombSpace` lets you explore a space of combinations as if it was a
+  Python sequence.
+  
+- :class:`MapSpace` is like Python's built-in :func:`map`, except it's a
+  sequence that allows index access.
+  
+- :class:`ProductSpace` is like Python's :func:`itertools.product`, except
+  it's a sequence that allows index access.
+  
+- :class:`ChainSpace` is like Python's :func:`itertools.chain`, except
+  it's a sequence that allows index access.
+  
+- :class:`SelectionSpace` is a space of all selections from a sequence, of all
+  possible lengths.
+  
+- The :class:`Bag` class is a multiset like Python's 
+  :class:`collections.Counter`, except it offers far more functionality, like 
+  more arithmetic operations between bags, comparison between bags, and more. 
+  (It can do that because unlike Python's :class:`collections.Counter`, 
+  it only allows natural numbers as keys.)
+  
+- Classes :class:`FrozenBag`, :class:`OrderedBag` and 
+  :class:`FrozenOrderedBag` are provided, which are variations on :class:`Bag`.
+
+
+Requirements
+============
+
+* Python, version 2.7 or 3.3 or above. If you're new to Python, `download
+  the newest version from here <http://python.org/download>`_.
+ 
+* `Setuptools`_.
+
+
+Installation
+============
+
+Use `pip`_ to install Combi::
+
+   $ pip install combi
+
+
+Community
+=========
+
+Combi on GitHub: https://github.com/cool-RR/combi Feel free to fork and send
+pull requests!
+
+There are three Combi groups, a.k.a. mailing lists:
+
+- If you need help with Combi, post a message on `the combi-users
+  Google Group <https://groups.google.com/forum/#!forum/combi-users>`_.
+
+- If you want to help on the development of Combi itself, come say
+  hello on `the combi-dev Google Group
+  <https://groups.google.com/forum/#!forum/combi-dev>`_.
+
+- If you want to be informed on new releases of Combi, sign up for
+  `the low-traffic combi-announce Google Group
+  <https://groups.google.com/forum/#!forum/combi-announce>`_.
+
+
+.. _mailing list: https://groups.google.com/forum/#!forum/combi-users
+.. _combinatorics: https://en.wikipedia.org/wiki/Combinatorics
+.. _permutations: https://en.wikipedia.org/wiki/Permutation
+.. _k-permutations: https://en.wikipedia.org/wiki/Permutation#k-permutations_of_n
+.. _combinations: https://en.wikipedia.org/wiki/Combination
+.. _Setuptools: https://pypi.python.org/pypi/setuptools
+.. _pip: https://pypi.python.org/pypi/pip
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
