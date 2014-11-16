@@ -261,7 +261,7 @@ install_requires = ['setuptools']
 
 setuptools.setup(
     name='combi',
-    version='0.1',
+    version='0.1.0',
     test_suite='nose.collector',
     install_requires=install_requires,
     tests_require=['nose>=1.0.0',
