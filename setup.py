@@ -271,7 +271,11 @@ setuptools.setup(
     author_email='ram@rachum.com',
     package_dir={'': source_folder}, 
     packages=get_packages(),
-    scripts=['%s/test_combi/scripts/_test_combi.py' % source_folder],
+    entry_points={
+        'console_scripts': [
+            '_test_combi = test_combi:invoke_nose',
+        ],
+    }, 
     long_description=my_long_description,
     license='MIT',
     classifiers=my_classifiers,
