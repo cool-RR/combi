@@ -266,7 +266,7 @@ setuptools.setup(
     install_requires=install_requires,
     tests_require=['nose>=1.0.0',
                    'docutils>=0.8'],
-    description='A Pythonic framework for combinatoricss',
+    description='A Pythonic package for combinatorics',
     author='Ram Rachum',
     author_email='ram@rachum.com',
     package_dir={'': source_folder}, 
