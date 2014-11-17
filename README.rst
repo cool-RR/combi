@@ -149,21 +149,21 @@ Combi has an extensive test suite.
 .. _Setuptools: https://pypi.python.org/pypi/setuptools
 .. _pip: https://pypi.python.org/pypi/pip
 
-.. _PermSpace: https://combi.readthedocs.org/en/latest/perm_space_and_perm.html#permspace
-.. _CombSpace: https://combi.readthedocs.org/en/latest/comb_space_and_comb.html#combspace
-.. _MapSpace: https://combi.readthedocs.org/en/latest/other_classes.html#mapspace
-.. _ProductSpace: https://combi.readthedocs.org/en/latest/other_classes.html#productspace
-.. _ChainSpace: https://combi.readthedocs.org/en/latest/other_classes.html#chainspace
-.. _SelectionSpace: https://combi.readthedocs.org/en/latest/other_classes.html#selectionspace
-.. _Bag: https://combi.readthedocs.org/en/latest/bags.html#bag
-.. _FrozenBag: https://combi.readthedocs.org/en/latest/bags.html#frozenbag
-.. _OrderedBag: https://combi.readthedocs.org/en/latest/bags.html#orderedbag
-.. _FrozenOrderedBag: https://combi.readthedocs.org/en/latest/bags.html#frozenorderedbag
+.. _PermSpace: https://combi.readthedocs.org/en/stable/perm_space_and_perm.html#permspace
+.. _CombSpace: https://combi.readthedocs.org/en/stable/comb_space_and_comb.html#combspace
+.. _MapSpace: https://combi.readthedocs.org/en/stable/other_classes.html#mapspace
+.. _ProductSpace: https://combi.readthedocs.org/en/stable/other_classes.html#productspace
+.. _ChainSpace: https://combi.readthedocs.org/en/stable/other_classes.html#chainspace
+.. _SelectionSpace: https://combi.readthedocs.org/en/stable/other_classes.html#selectionspace
+.. _Bag: https://combi.readthedocs.org/en/stable/bags.html#bag
+.. _FrozenBag: https://combi.readthedocs.org/en/stable/bags.html#frozenbag
+.. _OrderedBag: https://combi.readthedocs.org/en/stable/bags.html#orderedbag
+.. _FrozenOrderedBag: https://combi.readthedocs.org/en/stable/bags.html#frozenorderedbag
 .. _collections.Counter: https://docs.python.org/3/library/collections.html#collections.Counter
-.. _try the tutorial: https://combi.readthedocs.org/en/latest/intro.html
-.. _documentation contents: https://combi.readthedocs.org/en/latest/index.html
+.. _try the tutorial: https://combi.readthedocs.org/en/stable/intro.html
+.. _documentation contents: https://combi.readthedocs.org/en/stable/index.html
 .. _map: https://docs.python.org/3/library/functions.html#map
 .. _itertools.product: https://docs.python.org/3/library/itertools.html#itertools.product
 .. _itertools.chain: https://docs.python.org/3/library/itertools.html#itertools.chain
-.. _arithmetic operations between bags: https://combi.readthedocs.org/en/latest/bags.html#bags-operations
-.. _comparison between bags: https://combi.readthedocs.org/en/latest/bags.html#bags-comparisons
+.. _arithmetic operations between bags: https://combi.readthedocs.org/en/stable/bags.html#bags-operations
+.. _comparison between bags: https://combi.readthedocs.org/en/stable/bags.html#bags-comparisons
