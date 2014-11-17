@@ -371,3 +371,5 @@ div.highlight * {
 }
 
 /* Done overriding Pygments */
+
+div.injected {display: none !important;}
