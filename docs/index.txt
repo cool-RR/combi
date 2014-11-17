@@ -161,6 +161,8 @@ compatibility will start being maintained.
 
 Combi has an extensive test suite.
 
+:ref:`Changelog <changelog>`.
+
 
 .. _mailing list: https://groups.google.com/forum/#!forum/combi-users
 .. _combinatorics: https://en.wikipedia.org/wiki/Combinatorics

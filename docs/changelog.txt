@@ -1,0 +1,16 @@
+..
+   Copyright 2009-2015 Ram Rachum. This work is licensed under a Creative
+   Commons Attribution-ShareAlike 3.0 Unported License, with attribution to
+   "Ram Rachum at ram.rachum.com" including link. The license may be obtained
+   at http://creativecommons.org/licenses/by-sa/3.0/
+
+.. _changelog:
+
+Combi changelog
+===============
+
+
+Version 0.1.0 - 2014-11-17
+--------------------------
+
+- First release of Combi :)
