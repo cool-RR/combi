@@ -7,6 +7,8 @@ in advance. It lets you specify a lot of special conditions on these spaces. It
 also provides a few more classes that might be useful in combinatorics
 programming.
 
+Combi is released under the MIT license.
+
 
 Basic usage
 ===========
