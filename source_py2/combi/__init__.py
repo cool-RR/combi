@@ -29,6 +29,6 @@ from .selection_space import SelectionSpace
 from .perming import (PermSpace, CombSpace, Perm, UnrecurrentedPerm, Comb,
                       UnrecurrentedComb, UnallowedVariationSelectionException)
 
-__version_info__ = combi._python_toolbox.version_info.VersionInfo(0, 1, 0)
+__version_info__ = combi._python_toolbox.version_info.VersionInfo(0, 1, 1)
 __version__ = __version_info__.version_text
 

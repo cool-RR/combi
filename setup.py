@@ -206,7 +206,7 @@ There are three Combi groups, a.k.a. mailing lists:
 Roadmap
 =======
 
-Combi is currently at a version 0.1.0. It's in a very early phase, and
+Combi is currently at a version 0.1.1. It's in a very early phase, and
 currently backward compatibility will not be maintained, to allow for freedom
 in changing the API. After more feedback and revisions to the API, backward
 compatibility will start being maintained.
@@ -261,7 +261,7 @@ install_requires = ['setuptools']
 
 setuptools.setup(
     name='combi',
-    version='0.1.0',
+    version='0.1.1',
     test_suite='nose.collector',
     install_requires=install_requires,
     tests_require=['nose>=1.0.0',
