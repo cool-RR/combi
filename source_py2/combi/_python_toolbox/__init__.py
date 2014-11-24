@@ -11,11 +11,11 @@ more.
 Visit http://pypi.python.org/pypi/python_toolbox/ for more info.
 '''
 
-import python_toolbox._bootstrap
-import python_toolbox.version_info
-import python_toolbox.monkeypatch_copy_reg
-import python_toolbox.monkeypatch_envelopes
+import combi._python_toolbox._bootstrap
+import combi._python_toolbox
+import combi._python_toolbox.monkeypatch_envelopes
+from .version_info import VersionInfo
 
-__version_info__ = python_toolbox.version_info.VersionInfo(0, 1, 0)
+__version_info__ = VersionInfo(0, 1, 0)
 __version__ = __version_info__.version_text
 

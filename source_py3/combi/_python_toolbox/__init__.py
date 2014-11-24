@@ -13,7 +13,6 @@ Visit http://pypi.python.org/pypi/python_toolbox/ for more info.
 
 import combi._python_toolbox._bootstrap
 import combi._python_toolbox
-import combi._python_toolbox.monkeypatch_copyreg
 import combi._python_toolbox.monkeypatch_envelopes
 from .version_info import VersionInfo
 
