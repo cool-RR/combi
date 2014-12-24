@@ -81,6 +81,10 @@ in advance. It lets you specify a lot of special conditions on these spaces. It
 also provides a few more classes that might be useful in combinatorics
 programming.
 
+Combi on GitHub: https://github.com/cool-RR/combi
+
+Combi on PyPI: https://pypi.python.org/pypi/combi
+
 Basic usage
 ===========
 
