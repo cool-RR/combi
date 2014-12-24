@@ -9,6 +9,8 @@ programming.
 
 Combi is released under the MIT license.
 
+Combi documentation: https://combi.readthedocs.org/en/stable/
+
 Combi on GitHub: https://github.com/cool-RR/combi
 
 Combi on PyPI: https://pypi.python.org/pypi/combi
