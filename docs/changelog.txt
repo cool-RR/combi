@@ -9,13 +9,14 @@
 Combi changelog
 ===============
 
+Version 0.1.1 - 2014-11-24
+--------------------------
+
+- Fixed installation bug on Python 2.7.
+
 
 Version 0.1.0 - 2014-11-17
 --------------------------
 
 - First release of Combi :)
 
-Version 0.1.1 - 2014-11-24
---------------------------
-
-- Fixed installation bug on Python 2.7.
