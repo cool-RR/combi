@@ -220,6 +220,12 @@ compatibility will start being maintained.
 Combi has an extensive test suite.
 
 
+------------------------------------------------
+
+Combi was created by Ram Rachum. I provide
+`freelance Django/Python development <https://chipmunkdev.com>`_.
+
+
 .. _mailing list: https://groups.google.com/forum/#!forum/combi-users
 .. _combinatorics: https://en.wikipedia.org/wiki/Combinatorics
 .. _permutations: https://en.wikipedia.org/wiki/Permutation
