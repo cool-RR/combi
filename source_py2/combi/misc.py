@@ -3,14 +3,14 @@
 
 import math
 
+from combi._python_toolbox import misc_tools
 from combi._python_toolbox import math_tools
 from combi._python_toolbox import cute_iter_tools
-from combi._python_toolbox import misc_tools
 
 infinity = float('inf')
 
 
-class MISSING_ELEMENT(object): 
+class MISSING_ELEMENT(misc_tools.NonInstantiable): 
     '''A placeholder for a missing element used in internal calculations.'''
         
         
