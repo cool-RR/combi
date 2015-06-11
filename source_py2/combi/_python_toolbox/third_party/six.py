@@ -161,7 +161,7 @@ class MovedAttribute(_LazyDescr):
 
 class _SixMetaPathImporter(object):
     """
-    A meta path importer to from python_toolbox.third_party import six.moves and its submodules.
+    A meta path importer to from combi._python_toolbox.third_party import six.moves and its submodules.
 
     This class implements a PEP302 finder and loader. It should be compatible
     with Python 2.5 and all existing versions of Python3
@@ -472,7 +472,7 @@ def add_move(move):
 
 
 def remove_move(name):
-    """Remove item from python_toolbox.third_party.six.moves."""
+    """Remove item from combi._python_toolbox.third_party.six.moves."""
     try:
         delattr(_MovedItems, name)
     except AttributeError:

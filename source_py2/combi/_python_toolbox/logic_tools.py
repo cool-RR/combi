@@ -35,7 +35,7 @@ def all_equivalent(iterable, relation=operator.eq, assume_reflexive=True,
     checks this function does before it concludes that the relation holds
     between all items.)
     '''
-    from python_toolbox import sequence_tools
+    from combi._python_toolbox import sequence_tools
     
     if not assume_transitive or not assume_reflexive:
         iterable = sequence_tools.ensure_iterable_is_sequence(iterable)
@@ -43,7 +43,7 @@ def all_equivalent(iterable, relation=operator.eq, assume_reflexive=True,
     if assume_transitive:
         pairs = cute_iter_tools.iterate_overlapping_subsequences(iterable)
     else:
-        from python_toolbox import combi
+        from combi._python_toolbox import combi
         pairs = tuple(
             iterable * comb for comb in combi.CombSpace(len(iterable), 2)
         )
@@ -103,7 +103,7 @@ def get_equivalence_classes(iterable, key=None, container=set,
     attribute name as the `sort_ordered_dict` argument.
     '''
             
-    from python_toolbox import comparison_tools
+    from combi._python_toolbox import comparison_tools
     
     ### Pre-processing input: #################################################
     #                                                                         #
@@ -128,7 +128,7 @@ def get_equivalence_classes(iterable, key=None, container=set,
     ### Finished pre-processing input. ########################################
     
     if use_ordered_dict or sort_ordered_dict:
-        from python_toolbox import nifty_collections
+        from combi._python_toolbox import nifty_collections
         new_dict = nifty_collections.OrderedDict()
     else:
         new_dict = {}

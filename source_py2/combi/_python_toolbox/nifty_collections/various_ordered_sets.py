@@ -177,7 +177,7 @@ class EmittingOrderedSet(OrderedSet):
     @misc_tools.limit_positional_arguments(2)
     def __init__(self, iterable=(), emitter=None):
         if emitter:
-            from python_toolbox.emitting import Emitter
+            from combi._python_toolbox.emitting import Emitter
             assert isinstance(emitter, Emitter)
         self.emitter = emitter
         OrderedSet.__init__(self, iterable)

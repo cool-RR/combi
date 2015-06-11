@@ -9,7 +9,7 @@ from combi._python_toolbox.third_party.six import u
 from combi._python_toolbox.third_party.unittest2 import result
 
 try:
-    from python_toolbox.third_party.unittest2.signals import registerResult
+    from combi._python_toolbox.third_party.unittest2.signals import registerResult
 except ImportError:
     def registerResult(_):
         pass

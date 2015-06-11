@@ -9,7 +9,7 @@ from combi._python_toolbox.third_party import six
 
 from combi._python_toolbox.third_party.unittest2 import loader, runner
 try:
-    from python_toolbox.third_party.unittest2.signals import installHandler
+    from combi._python_toolbox.third_party.unittest2.signals import installHandler
 except ImportError:
     installHandler = None
 

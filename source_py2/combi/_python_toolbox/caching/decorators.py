@@ -68,7 +68,7 @@ def cache(max_size=infinity, time_to_keep=None):
     # have to go through so much shit. update: probably it will help only for
     # completely argumentless function. so do one for those.
     
-    from python_toolbox.nifty_collections import OrderedDict
+    from combi._python_toolbox.nifty_collections import OrderedDict
     
     if time_to_keep is not None:
         if max_size != infinity:

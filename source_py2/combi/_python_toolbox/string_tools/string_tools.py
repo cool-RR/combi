@@ -47,7 +47,7 @@ def get_n_identical_edge_characters(string, character=None, head=True):
     
     Specify `head=False` to search the tail instead of the head.
     '''
-    from python_toolbox import cute_iter_tools
+    from combi._python_toolbox import cute_iter_tools
     
     if not string:
         return 0

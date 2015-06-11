@@ -52,7 +52,7 @@ from combi._python_toolbox.third_party.unittest2.main import TestProgram, main
 from combi._python_toolbox.third_party.unittest2.runner import TextTestRunner, TextTestResult
 
 try:
-    from python_toolbox.third_party.unittest2.signals import (
+    from combi._python_toolbox.third_party.unittest2.signals import (
         installHandler, registerResult, removeResult, removeHandler
     )
 except ImportError:
