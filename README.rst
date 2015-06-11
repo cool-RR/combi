@@ -136,16 +136,6 @@ There are three Combi groups, a.k.a. mailing lists:
   `the low-traffic combi-announce Google Group
   <https://groups.google.com/forum/#!forum/combi-announce>`_.
   
-  
-Roadmap
-=======
-
-Combi is currently at a version 0.1.1. It's in a very early phase, and
-currently backward compatibility will not be maintained, to allow for freedom
-in changing the API. After more feedback and revisions to the API, backward
-compatibility will start being maintained.
-
-Combi has an extensive test suite.
 
 -------------------------------------------------------------------------------
 

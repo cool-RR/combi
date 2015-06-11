@@ -9,6 +9,12 @@
 Combi changelog
 ===============
 
+Version 1.0.0 - 2015-06-11
+--------------------------
+
+- Upgraded internal version of Python Toolbox from 0.7.0 to 0.8.0.
+
+
 Version 0.1.1 - 2014-11-24
 --------------------------
 

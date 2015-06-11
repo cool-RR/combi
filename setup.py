@@ -209,17 +209,6 @@ There are three Combi groups, a.k.a. mailing lists:
   <https://groups.google.com/forum/#!forum/combi-announce>`_.
 
 
-Roadmap
-=======
-
-Combi is currently at a version 0.1.1. It's in a very early phase, and
-currently backward compatibility will not be maintained, to allow for freedom
-in changing the API. After more feedback and revisions to the API, backward
-compatibility will start being maintained.
-
-Combi has an extensive test suite.
-
-
 ------------------------------------------------
 
 Combi was created by Ram Rachum. I provide
@@ -273,7 +262,7 @@ install_requires = ['setuptools']
 
 setuptools.setup(
     name='combi',
-    version='0.1.1',
+    version='1.0.0',
     test_suite='nose.collector',
     install_requires=install_requires,
     tests_require=['nose>=1.0.0',
