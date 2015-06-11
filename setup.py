@@ -87,6 +87,8 @@ Combi on GitHub: https://github.com/cool-RR/combi
 
 Combi on PyPI: https://pypi.python.org/pypi/combi
 
+Changelog: https://combi.readthedocs.org/en/stable/changelog.html
+
 Basic usage
 ===========
 
