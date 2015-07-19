@@ -3,7 +3,11 @@
 
 from combi._python_toolbox import comparison_tools
 
-from collections import OrderedDict as StdlibOrderedDict
+try:
+    from collections import OrderedDict as StdlibOrderedDict
+except ImportError:
+    from combi._python_toolbox.third_party.collections import OrderedDict \
+                                                           as StdlibOrderedDict
 
 
 class OrderedDict(StdlibOrderedDict):

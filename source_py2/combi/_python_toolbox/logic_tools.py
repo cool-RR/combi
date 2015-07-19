@@ -123,7 +123,7 @@ def get_equivalence_classes(iterable, key=None, container=set,
         key_function = comparison_tools.process_key_function_or_attribute_name(
             key
         )
-        d = {key: key_function(key) for key in iterable}
+        d = dict((key, key_function(key)) for key in iterable)
     #                                                                         #
     ### Finished pre-processing input. ########################################
     
@@ -173,4 +173,4 @@ def logic_max(iterable, relation=lambda a, b: (a >= b)):
     return maximal_elements
                 
         
-        
+            

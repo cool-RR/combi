@@ -2,7 +2,7 @@
 # This program is distributed under the MIT license.
 
 from combi._python_toolbox.third_party import enum
-import functools
+from combi._python_toolbox.third_party import functools
 
 from combi._python_toolbox import caching
 

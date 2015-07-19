@@ -5,6 +5,7 @@ import functools
 import threading
 import collections
 import itertools
+from combi._python_toolbox.third_party import functools
 
 from combi._python_toolbox import misc_tools
 from combi._python_toolbox import decorator_tools
