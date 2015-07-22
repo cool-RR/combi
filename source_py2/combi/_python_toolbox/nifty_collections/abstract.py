@@ -5,7 +5,8 @@ import abc
 import collections
 import Queue as queue
 import multiprocessing.queues
-import combi._python_toolbox.third_party.collections
+from combi._python_toolbox.third_party import collections as \
+                                                            bundled_collections
 
 
 ###############################################################################
@@ -29,8 +30,9 @@ try:
 except AttributeError:
     # Python 2.6
     pass
-Ordered.register(combi._python_toolbox.third_party.collections.OrderedDict)
+Ordered.register(bundled_collections.OrderedDict)
 Ordered.register(collections.deque)
+Ordered.register(bundled_collections.deque)
 Ordered.register(queue.Queue)
 Ordered.register(multiprocessing.queues.Queue)
 
@@ -53,7 +55,7 @@ class DefinitelyUnordered():
             OrderedDict = collections.OrderedDict
         except AttributeError:
             # Python 2.6
-            OrderedDict = combi._python_toolbox.third_party.collections.OrderedDict
+            OrderedDict = bundled_collections.OrderedDict
         if cls is DefinitelyUnordered and issubclass(type_, OrderedDict):
             return False
         else:
@@ -64,9 +66,11 @@ DefinitelyUnordered.register(set)
 DefinitelyUnordered.register(frozenset)
 DefinitelyUnordered.register(dict)
 DefinitelyUnordered.register(collections.defaultdict)
+DefinitelyUnordered.register(bundled_collections.defaultdict)
 try:
     DefinitelyUnordered.register(collections.Counter)
 except AttributeError:
     # Python 2.6
     pass
+DefinitelyUnordered.register(bundled_collections.Counter)
     
