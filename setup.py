@@ -11,16 +11,16 @@ import sys
 
 ### Confirming correct Python version: ########################################
 #                                                                             #
-if sys.version_info[:2] <= (2, 6):
+if sys.version_info[:2] <= (2, 5):
     raise Exception(
         "You're using Python <= 2.6, but this package requires either Python "
-        "2.7, or 3.3 or above, so you can't use it unless you upgrade your "
-        "Python version."
+        "2.6, 2.7 or 3.3 or above, so you can't use it unless you upgrade "
+        "your Python version."
     )
 if sys.version_info[0] == 3 and sys.version_info[1] <= 2:
     raise Exception(
         "You're using Python <= 3.2, but this package requires either Python "
-        "3.3 or above, or Python 2.7, so you can't use it unless you upgrade "
+        "3.3 or above, or Python 2.6/2.7, so you can't use it unless you upgrade "
         "your Python version."
     )
 #                                                                             #
@@ -175,7 +175,7 @@ Features
 Requirements
 ============
 
-* Python, version 2.7 or 3.3 or above. If you're new to Python, `download
+* Python, version 2.6, 2.7 or 3.3 or above. If you're new to Python, `download
   the newest version from here <http://python.org/download>`_.
  
 * `Setuptools`_.
@@ -251,6 +251,7 @@ my_classifiers = [
     'License :: OSI Approved :: MIT License',
     'Operating System :: OS Independent', 
     'Programming Language :: Python',
+    'Programming Language :: Python :: 2.6',
     'Programming Language :: Python :: 2.7',
     'Programming Language :: Python :: 3.3',
     'Programming Language :: Python :: 3.4',
@@ -264,7 +265,7 @@ install_requires = ['setuptools']
 
 setuptools.setup(
     name='combi',
-    version='1.1.0',
+    version='1.1.1',
     test_suite='nose.collector',
     install_requires=install_requires,
     tests_require=['nose>=1.0.0',

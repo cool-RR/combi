@@ -9,7 +9,13 @@
 Combi changelog
 ===============
 
-Version 1.1.0 - 2015-07-19
+Version 1.1.1 - 2015-07-22
+--------------------------
+
+- Fix installation bugs
+
+
+Version 1.1.0 - 2015-07-22
 --------------------------
 
 - Support Python 2.6.

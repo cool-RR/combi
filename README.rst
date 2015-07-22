@@ -103,7 +103,7 @@ Features
 Requirements
 ============
 
-* Python, version 2.7 or 3.3 or above. If you're new to Python, `download
+* Python, version 2.6, 2.7 or 3.3 or above. If you're new to Python, `download
   the newest version from here <http://python.org/download>`_.
  
 * `Setuptools`_.
