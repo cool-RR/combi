@@ -22,7 +22,7 @@ Version 1.1.0 - 2015-07-22
 - Upgraded internal version of Python Toolbox from 0.8.0 to 0.9.0.
 
 
-Version 1.0.0 - 2015-06-11
+Version 1.0.0 -   -06-11
 --------------------------
 
 - Upgraded internal version of Python Toolbox from 0.7.0 to 0.8.0.

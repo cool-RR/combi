@@ -1,11 +1,10 @@
 # Copyright 2009-2017 Ram Rachum.
 # This program is distributed under the MIT license.
 
+from python_toolbox import decorator_tools
 
-from combi._python_toolbox import decorator_tools
 
-
-class DecoratingContextManager(object):
+class _DecoratingContextManagerMixin(object):
     '''
     Context manager that can decorate a function to use it.
     

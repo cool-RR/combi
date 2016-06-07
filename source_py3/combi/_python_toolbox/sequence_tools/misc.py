@@ -30,7 +30,8 @@ def are_equal_regardless_of_order(seq1, seq2):
 
     Currently will fail for items that have problems with comparing.
     '''
-    return collections.Counter(seq1) == collections.Counter(seq2)
+    from combi._python_toolbox import nifty_collections
+    return nifty_collections.Bag(seq1) == nifty_collections.Bag(seq2)
 
 
 def flatten(iterable):
@@ -224,8 +225,9 @@ def get_recurrences(sequence):
     
     The values of the dict are the numbers of repititions of each item.    
     '''
+    from combi._python_toolbox import nifty_collections
     return {item: n_recurrences for item, n_recurrences in
-            collections.Counter(sequence).most_common() if n_recurrences >= 2}
+            nifty_collections.Bag(sequence).most_common() if n_recurrences >= 2}
 
     
 def ensure_iterable_is_immutable_sequence(iterable, default_type=tuple,
@@ -318,4 +320,42 @@ def divide_to_slices(sequence, n_slices):
     return [sequence[x:y] for x, y in
                      cute_iter_tools.iterate_overlapping_subsequences(indices)]
 
+    def is_subsequence(big_sequence, small_sequence):
+    '''
+    Check whether `small_sequence` is a subsequence of `big_sequence`.
+    
+    For example:
+    
+        >>> is_subsequence([1, 2, 3, 4], [2, 3])
+        True
+        >>> is_subsequence([1, 2, 3, 4], [4, 5])
+        False
+        
+    This can be used on any kind of sequence, including tuples, lists and
+    strings.
+    '''
+    from combi._python_toolbox import nifty_collections
+    big_sequence = ensure_iterable_is_sequence(big_sequence,
+                                               allow_unordered=False)
+    small_sequence = ensure_iterable_is_sequence(small_sequence,
+                                                 allow_unordered=False)
+    small_sequence_length = len(small_sequence)
+    last_index_that_subsequence_can_start = \
+                                    len(big_sequence) - len(small_sequence) + 1
+    matches = {}
+    for i, item in enumerate(big_sequence):
+        if matches:
+            new_matches = {}
+            for match_position, match_length in matches.items():
+                if small_sequence[match_length] == item:
+                    new_matches[match_position] = match_length + 1
+            matches = new_matches
+        if (item == small_sequence[0]) and \
+                                   (i < last_index_that_subsequence_can_start):
+            matches[i] = 1
+        for match_position, match_length in matches.items():
+            if match_length == small_sequence_length:
+                return True
+        
+        
     
