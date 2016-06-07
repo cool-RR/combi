@@ -1,7 +1,7 @@
 # Copyright 2009-2017 Ram Rachum.
 # This program is distributed under the MIT license.
 
-from python_toolbox import decorator_tools
+from combi._python_toolbox import decorator_tools
 
 
 class _DecoratingContextManagerMixin(object):

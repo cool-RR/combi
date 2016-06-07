@@ -321,7 +321,8 @@ def divide_to_slices(sequence, n_slices):
     assert indices[-1] == sequence_length
     return [sequence[x:y] for x, y in
                      cute_iter_tools.iterate_overlapping_subsequences(indices)]
-    def is_subsequence(big_sequence, small_sequence):
+
+def is_subsequence(big_sequence, small_sequence):
     '''
     Check whether `small_sequence` is a subsequence of `big_sequence`.
     

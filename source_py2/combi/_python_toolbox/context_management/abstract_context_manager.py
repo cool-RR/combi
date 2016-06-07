@@ -5,7 +5,7 @@ import sys
 import types
 import abc
 
-from python_toolbox import decorator_tools
+from combi._python_toolbox import decorator_tools
 
 from .mixins.decorating_context_manager_mixin import _DecoratingContextManagerMixin
 from .context_manager_type import ContextManagerType

@@ -5,7 +5,7 @@ import numbers
 import math
 import random
 
-import combi._python_toolbox.cute_enum
+from combi._python_toolbox import cute_enum
 
 
 infinity = float('inf')
@@ -155,7 +155,7 @@ def is_integer(x):
         return False
     return inted_x == x
         
-class RoundMode(combi._python_toolbox.cute_enum.CuteEnum):
+class RoundMode(cute_enum.CuteEnum):
     '''
     A mode that determines how `cute_round` will round.
     

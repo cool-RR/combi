@@ -10,7 +10,7 @@ See their documentation for more information.
 import string
 import random
 
-from python_toolbox import caching
+from combi._python_toolbox import caching
 
 from .context_manager import ContextManager
 
