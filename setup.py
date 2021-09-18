@@ -265,7 +265,7 @@ install_requires = ['setuptools']
 
 setuptools.setup(
     name='combi',
-    version='1.1.3',
+    version='1.1.4',
     install_requires=install_requires,
     tests_require=['pytest',
                    'docutils>=0.8'],
