@@ -35,11 +35,11 @@ else:
 def get_combi_packages():
     '''
     Get all the packages in `combi`.
-    
+
     Returns something like:
-    
+
         ['combi', 'combi.perming', ... ]
-        
+
     '''
     return ['combi.' + p for p in
             setuptools.find_packages('%s/combi' % source_folder)] + \
@@ -49,11 +49,11 @@ def get_combi_packages():
 def get_test_combi_packages():
     '''
     Get all the packages in `test_combi`.
-    
+
     Returns something like:
-    
+
         ['test_combi', 'test_combi.test_whatever', ... ]
-        
+
     '''
     return ['test_combi.' + p for p in
             setuptools.find_packages('%s/test_combi' % source_folder)] + \
@@ -63,11 +63,11 @@ def get_test_combi_packages():
 def get_packages():
     '''
     Get all the packages in `combi` and `test_combi`.
-    
+
     Returns something like:
-    
+
         ['test_combi', 'combi', 'combi.perming', ... ]
-        
+
     '''
     return get_combi_packages() + get_test_combi_packages()
 
@@ -98,7 +98,7 @@ Use `PermSpace`_ to create a permutation space:
 
    >>> from combi import *
    >>> perm_space = PermSpace('meow')
-   
+
 It behaves like a sequence:
 
 .. code:: python
@@ -109,7 +109,7 @@ It behaves like a sequence:
    <Perm: ('e', 'm', 'w', 'o')>
    >>> perm_space.index('mowe')
    3
-   
+
 And yet the permutations are created on-demand rather than in advance.
 
 Use `CombSpace`_ to create a combination space, where order doesn't
@@ -132,43 +132,43 @@ Features
 
 - `PermSpace`_ lets you explore a space of permutations as if it was a
   Python sequence.
-  
-  * Permutations are generated on-demand, so huge permutation spaces can be 
+
+  * Permutations are generated on-demand, so huge permutation spaces can be
     created easily without big memory footprint.
-  * `PermSpace`_ will notice if you have repeating elements in your sequence, 
-    and treat all occurences of the same value as interchangable rather than 
+  * `PermSpace`_ will notice if you have repeating elements in your sequence,
+    and treat all occurences of the same value as interchangable rather than
     create redundant permutations.
   * A custom domain can be specified instead of just using index numbers.
   * You may specify some elements to be fixed, so they'll point to the same
-    value in all permutations. (Useful for limiting an experiment to a subset 
+    value in all permutations. (Useful for limiting an experiment to a subset
     of the original permutation space.)
   * Permutation spaces may be limited to a certain degree of permutations. (A
     permutation's degree is the number of transformations it takes to make it.)
   * `k-permutations`_ are supported.
-  * You may specify a custom type for the generated permutations, so you could 
+  * You may specify a custom type for the generated permutations, so you could
     implement your own functionality on them.
-    
+
 - `CombSpace`_ lets you explore a space of combinations as if it was a
   Python sequence.
-  
+
 - `MapSpace`_ is like Python's built-in `map`_, except it's a
   sequence that allows index access.
-  
+
 - `ProductSpace`_ is like Python's `itertools.product`_, except
   it's a sequence that allows index access.
-  
+
 - `ChainSpace`_ is like Python's `itertools.chain`_, except
   it's a sequence that allows index access.
-  
+
 - `SelectionSpace`_ is a space of all selections from a sequence, of all
   possible lengths.
-  
-- The `Bag`_ class is a multiset like Python's `collections.Counter`_, except 
-  it offers far more functionality, like more `arithmetic operations between 
-  bags`_, `comparison between bags`_, and more. (It can do that because unlike 
+
+- The `Bag`_ class is a multiset like Python's `collections.Counter`_, except
+  it offers far more functionality, like more `arithmetic operations between
+  bags`_, `comparison between bags`_, and more. (It can do that because unlike
   Python's `collections.Counter`_, it only allows natural numbers as keys.)
-  
-- Classes `FrozenBag`_, `OrderedBag`_ and `FrozenOrderedBag`_ are provided, 
+
+- Classes `FrozenBag`_, `OrderedBag`_ and `FrozenOrderedBag`_ are provided,
   which are variations on `Bag`_.
 
 
@@ -177,7 +177,7 @@ Requirements
 
 * Python, version 2.6, 2.7 or 3.3 or above. If you're new to Python, `download
   the newest version from here <http://python.org/download>`_.
- 
+
 * `Setuptools`_.
 
 
@@ -247,9 +247,9 @@ Combi was created by Ram Rachum. I provide
 
 my_classifiers = [
     'Development Status :: 3 - Alpha',
-    'Intended Audience :: Developers', 
+    'Intended Audience :: Developers',
     'License :: OSI Approved :: MIT License',
-    'Operating System :: OS Independent', 
+    'Operating System :: OS Independent',
     'Programming Language :: Python',
     'Programming Language :: Python :: 2.6',
     'Programming Language :: Python :: 2.7',
@@ -261,7 +261,7 @@ my_classifiers = [
 
 
 install_requires = ['setuptools']
-    
+
 
 setuptools.setup(
     name='combi',
@@ -273,13 +273,13 @@ setuptools.setup(
     description='A Pythonic package for combinatorics',
     author='Ram Rachum',
     author_email='ram@rachum.com',
-    package_dir={'': source_folder}, 
+    package_dir={'': source_folder},
     packages=get_packages(),
     entry_points={
         'console_scripts': [
             '_test_combi = test_combi:invoke_nose',
         ],
-    }, 
+    },
     long_description=my_long_description,
     license='MIT',
     classifiers=my_classifiers,
