@@ -17,7 +17,7 @@ import combi._python_toolbox.version_info
 
 from combi._python_toolbox.math_tools import binomial
 
-from combi._python_toolbox.nifty_collections import (Bag, OrderedBag, 
+from combi._python_toolbox.nifty_collections import (Bag, OrderedBag,
                                                      FrozenBag,
                                                      FrozenOrderedBag)
 
@@ -29,6 +29,6 @@ from .selection_space import SelectionSpace
 from .perming import (PermSpace, CombSpace, Perm, UnrecurrentedPerm, Comb,
                       UnrecurrentedComb, UnallowedVariationSelectionException)
 
-__version_info__ = combi._python_toolbox.version_info.VersionInfo(1, 1, 2)
+__version_info__ = combi._python_toolbox.version_info.VersionInfo(1, 1, 3)
 __version__ = __version_info__.version_text
 
