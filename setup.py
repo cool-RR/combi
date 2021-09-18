@@ -266,20 +266,14 @@ install_requires = ['setuptools']
 setuptools.setup(
     name='combi',
     version='1.1.2',
-    test_suite='nose.collector',
     install_requires=install_requires,
-    tests_require=['nose>=1.0.0',
+    tests_require=['pytest',
                    'docutils>=0.8'],
     description='A Pythonic package for combinatorics',
     author='Ram Rachum',
     author_email='ram@rachum.com',
     package_dir={'': source_folder},
     packages=get_packages(),
-    entry_points={
-        'console_scripts': [
-            '_test_combi = test_combi:invoke_nose',
-        ],
-    },
     long_description=my_long_description,
     license='MIT',
     classifiers=my_classifiers,

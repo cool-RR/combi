@@ -7,14 +7,6 @@ try:
 except:
     from combi._python_toolbox.third_party import pathlib
 
-
-import nose
-
-
-if nose.__versioninfo__ < (1, 0, 0):
-    raise Exception('Nose version 1.0.0 or higher is required to run tests.')
-
-
 def __bootstrap():
     '''
     Add needed packages in repo to path if we can't find them.
@@ -50,19 +42,3 @@ def __bootstrap():
 
 
 __bootstrap()
-
-
-_default_nose_arguments = [
-    '--verbosity=3',
-    '--detailed-errors',
-    '--with-xunit',
-    '--cover-erase',
-    '--cover-package=combi,test_combi',
-    '--exe', # Needed because `setup.py` makes our test modules executable
-]
-
-
-def invoke_nose(arguments=_default_nose_arguments):
-    '''Start Nose using this `test_combi` test package.'''
-    nose.run(defaultTest='test_combi',
-             argv=(arguments + sys.argv[1:]))

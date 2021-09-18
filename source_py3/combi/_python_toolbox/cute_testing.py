@@ -3,7 +3,6 @@
 
 '''This module defines tools for testing.'''
 
-import nose
 import sys
 
 from combi._python_toolbox.third_party import unittest2
@@ -153,5 +152,3 @@ class TestCase(unittest2.TestCase, context_management.ContextManager):
         # todo: Should probably do something with exception-swallowing here to
         # abide with the context manager protocol, but I don't need it yet.
         return self.__exit__(*sys.exc_info())
-
-

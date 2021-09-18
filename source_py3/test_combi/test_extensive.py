@@ -6,7 +6,7 @@ import itertools
 import collections
 import ast
 
-import nose
+import pytest
 
 from combi._python_toolbox import nifty_collections
 from combi._python_toolbox import context_management
@@ -508,22 +508,13 @@ def _iterate_tests():
         )
 
         for i in range(len(product_space_)):
-            fucking_globals = dict(globals())
-            fucking_globals.update(locals())
+            f_globals = dict(globals())
+            f_globals.update(locals())
             yield eval(
                 'lambda: _check_variation_selection(*product_space_[%s])' % i,
-                fucking_globals, locals()
+                f_globals, locals()
             )
 
-
-# We use this shit because Nose can't parallelize generator tests:
-lambdas = []
-for i, f in enumerate(_iterate_tests()):
-    f.name = 'f_%s' % i
-    locals()[f.name] = f
-    lambdas.append(f)
-for i, partition in enumerate(sequence_tools.partitions(lambdas, 500)):
-    exec('def test_%s(): return (%s)' %
-         (i, ', '.join('%s()'% f.name for f in partition)))
-
-
+@pytest.mark.parametrize("f", _iterate_tests())
+def test_extensive(f):
+    return (f)
